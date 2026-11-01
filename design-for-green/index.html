@@ -84,7 +84,7 @@ extra_css2: /assets/css/book.css
   <div class="head"><p class="eyebrow">試讀 Excerpt</p><h2 id="ex-title">試讀</h2><p>作者序<br>第一章　導言（節選）</p></div>
   <div class="body longtext">
     {%- capture pr %}{% include dfg/preface.md %}{% endcapture %}{% assign pp = pr | markdownify | split: '</p>' %}
-    <article class="ex" id="preface"><h3>作者序</h3>
+    <article class="ex" id="preface"><h3>作者序　從一個小問題開始</h3>
     {{ pp[0] }}</p>{{ pp[1] }}</p>
     <details><summary data-goatcounter-click="書籍頁-展開-作者序">繼續閱讀 ↓</summary>{% for x in pp offset: 2 %}{{ x }}{% unless forloop.last %}</p>{% endunless %}{% endfor %}</details>
     </article>
