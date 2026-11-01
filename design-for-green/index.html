@@ -33,7 +33,7 @@ extra_css2: /assets/css/book.css
 </section>
 
 <nav class="anchors" aria-label="本頁目錄">
-  <a href="#cover">書衣</a><a href="#forewords">推薦序</a><a href="#argmap">論證的旅程</a><a href="#excerpt">試讀</a><a href="#features">本書特色</a><a href="#events">活動</a>{% if site.data.dfg.responses.size > 0 %}<a href="#responses">迴響</a>{% endif %}<a href="#specs">書籍資料</a>
+  <a href="#cover">書衣</a><a href="#forewords">推薦序</a><a href="#features">本書特色</a><a href="#argmap">論證的旅程</a><a href="#excerpt">試讀</a><a href="#events">活動</a>{% if site.data.dfg.responses.size > 0 %}<a href="#responses">迴響</a>{% endif %}<a href="#specs">書籍資料</a>
 </nav>
 
 <section class="blk" id="cover" aria-labelledby="cover-title">
@@ -66,6 +66,17 @@ extra_css2: /assets/css/book.css
   </div>
 </section>
 
+<section class="blk" id="features" aria-labelledby="ft-title">
+  <div class="head"><p class="eyebrow">特色 Features</p><h2 id="ft-title">本書特色</h2></div>
+  <div class="body">
+    <p class="features-lede">{{ d.features_lede }}</p>
+    <div class="features">
+      {%- for x in d.features %}<section><div><h3>{{ x.title }}</h3><p>{{ x.text }}</p></div></section>{% endfor %}
+    </div>
+    <p class="features-close">{{ d.features_close }}</p>
+  </div>
+</section>
+
 <section id="argmap" aria-labelledby="arg-title">
   <svg id="argrib" aria-hidden="true"></svg>
   <p class="eyebrow">論證 Argument</p>
@@ -95,22 +106,14 @@ extra_css2: /assets/css/book.css
     <details><summary data-goatcounter-click="書籍頁-展開-第一章試讀">繼續閱讀 ↓</summary>{% for x in cp offset: 2 %}{{ x }}{% unless forloop.last %}</p>{% endunless %}{% endfor %}
     {% include dfg/excerpt-notes.html %}</details>
     </article>
+    <aside class="rg-call" aria-labelledby="rg-title">
+      <p class="eyebrow">讀書會 Reading Group</p>
+      <h3 id="rg-title">三人以上的讀書會，作者樂意和你們一起討論。</h3>
+      <a class="btn" href="{{ d.reading_group }}" rel="noopener">填寫讀書會邀請表單 <span class="arrow" aria-hidden="true">↗</span></a>
+    </aside>
   </div>
 </section>
 
-<section class="blk" id="features" aria-labelledby="ft-title">
-  <div class="head"><p class="eyebrow">特色 Features</p><h2 id="ft-title">本書特色</h2></div>
-  <div class="body">
-    <p class="features-lede">{{ d.features_lede }}</p>
-    <div class="features">
-      {%- for x in d.features %}<section><div><h3>{{ x.title }}</h3><p>{{ x.text }}</p></div></section>{% endfor %}
-    </div>
-    <p class="features-close">{{ d.features_close }}</p>
-    <ul class="invite">
-      <li>三人以上的讀書會，作者樂意和你們一起討論。<br><a class="textlink" href="{{ d.reading_group }}" rel="noopener">填寫讀書會邀請表單 <span aria-hidden="true">↗</span></a></li>
-    </ul>
-  </div>
-</section>
 
 {%- assign ev = site.data.news | where: "book", "design-for-green" | where_exp: "n", "n.type != '出版'" %}
 <section class="blk" id="events" aria-labelledby="ev-title">
