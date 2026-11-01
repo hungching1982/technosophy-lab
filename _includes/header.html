@@ -6,11 +6,11 @@
   <nav class="nav" aria-label="主要選單">
     {%- for item in site.data.navigation %}
     {%- if item.contact %}
-    <a class="ext" href="{{ site.contact_form }}" rel="noopener">{{ item.title }}<span aria-hidden="true">↗</span></a>
+    <a class="ext" href="{{ site.contact_form }}" target="_blank" rel="noopener">{{ item.title }}<span aria-hidden="true">↗</span></a>
     {%- elsif item.external %}
-    <a class="ext" href="{{ item.url }}" rel="noopener">{{ item.title }}<span aria-hidden="true">↗</span></a>
+    <a class="ext" href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}<span aria-hidden="true">↗</span></a>
     {%- else %}
-    <a href="{{ item.url | relative_url }}"{% if cur contains item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+    <a href="{{ item.url | relative_url }}"{% if item.url == "/" %}{% if page.url == "/" %} aria-current="page"{% endif %}{% elsif cur contains item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
     {%- endif %}
     {%- endfor %}
     {%- if site.english_ready %}
@@ -22,11 +22,11 @@
     <nav aria-label="行動版選單">
       {%- for item in site.data.navigation %}
       {%- if item.contact %}
-      <a href="{{ site.contact_form }}" rel="noopener">{{ item.title }} ↗</a>
+      <a href="{{ site.contact_form }}" target="_blank" rel="noopener">{{ item.title }} ↗</a>
       {%- elsif item.external %}
-      <a href="{{ item.url }}" rel="noopener">{{ item.title }} ↗</a>
+      <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }} ↗</a>
       {%- else %}
-      <a href="{{ item.url | relative_url }}"{% if cur contains item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+      <a href="{{ item.url | relative_url }}"{% if item.url == "/" %}{% if page.url == "/" %} aria-current="page"{% endif %}{% elsif cur contains item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
       {%- endif %}
       {%- endfor %}
       {%- if site.english_ready %}

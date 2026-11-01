@@ -1,14 +1,14 @@
 ---
 title: 研究
-description: 從具體的技術與社會問題出發，讓技術安排暴露既有概念的不足，再重建自由、能動性、政治與人類圖像。
+description: 同一條路徑，不同的測試場域：技術哲學、科技與社會（STS）、社會設計，以及關鍵概念與研究計畫。
 layout: default
 extra_css: /assets/css/pages.css
 ---
 {%- assign pinterval = 8 -%}
 <section class="page-hero" aria-labelledby="page-title">
   <div class="head"><p class="eyebrow">研究 Research</p><h1 id="page-title"><span class="nw">同一條路徑，</span><br><span class="nw">不同的測試場域</span></h1></div>
-  <div class="lede">
-    <p>從具體的技術與社會問題出發，讓技術安排暴露既有概念的不足，再重建自由、能動性、政治與人類圖像。不同的研究主題，是同一條研究路徑在不同問題場域中的測試。</p>
+  <div class="lede fitlede">
+    <p>從具體的技術與社會問題出發，<br class="lg">讓技術安排暴露既有概念的不足，再重建自由、能動性、政治與人類圖像。<br class="lg">不同的研究主題，是同一條研究路徑在不同問題場域中的測試。</p>
     <p class="en" lang="en">Technology is not treated only as an object to be evaluated. It is also a site from which inherited philosophical and political concepts can be tested and rebuilt.</p>
   </div>
 </section>
@@ -22,10 +22,10 @@ extra_css: /assets/css/pages.css
 <section class="blk" aria-labelledby="concept-title">
   <div class="head"><p class="eyebrow">概念 Concepts</p><h2 id="concept-title">關鍵概念</h2></div>
   <div class="body">
-    <div class="clist">
+    <div class="clist ct-b">
       {%- for c in site.data.concepts %}
       <article class="citem" aria-labelledby="c{{ forloop.index }}">
-        <h3 id="c{{ forloop.index }}">{{ c.name }}<span class="en" lang="en">{{ c.en }}</span></h3>
+        <h3 id="c{{ forloop.index }}"><span class="t">{{ c.name }}</span><span class="en" lang="en">{{ c.en }}</span></h3>
         <p>{{ c.text }}</p>
         <p class="see"><a href="{{ c.link | relative_url }}"{% if c.see_en %} lang="en"{% endif %}>{{ c.see }}</a></p>
       </article>

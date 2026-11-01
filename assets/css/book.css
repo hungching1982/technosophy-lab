@@ -23,10 +23,10 @@
 .buy .textlink { font-size: 14px; }
 
 /* 錨點列 */
-.anchors { position: sticky; top: 0; z-index: 20; display: flex; gap: 6px 26px; flex-wrap: wrap; padding: 13px var(--gutter); background: var(--paper); border-bottom: 1px solid var(--rule); font-size: 14px; }
+.anchors { position: sticky; top: var(--hdr, 72px); z-index: 20; display: flex; gap: 6px 26px; flex-wrap: wrap; padding: 13px var(--gutter); background: var(--paper); border-bottom: 1px solid var(--rule); font-size: 14px; }
 .anchors a { text-decoration: none; white-space: nowrap; }
 .anchors a:hover { color: var(--orange); }
-.bk [id] { scroll-margin-top: 64px; }
+.bk [id] { scroll-margin-top: 50px; }
 
 /* 書衣與照片 */
 .spread { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 3vw, 40px); }
@@ -69,7 +69,7 @@
 #argmap .mobile-map { display: none; }
 
 /* 特別之處 */
-.features { counter-reset: f; display: grid; gap: 28px; max-width: 44em; }
+.features { counter-reset: f; display: grid; gap: 28px; max-width: calc(40em + 58px); }
 .features section { counter-increment: f; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 0 14px; }
 .features section::before { content: counter(f, decimal-leading-zero); font-size: 13px; color: var(--orange); font-weight: 500; padding-top: 6px; font-variant-numeric: tabular-nums; }
 .features h3 { margin: 0 0 6px; font-size: 20px; font-weight: 700; }
@@ -153,7 +153,7 @@ sup.fn a:hover, sup.fn a:focus-visible { text-decoration: underline; }
 html.lb-open { overflow: hidden; }
 
 /* 引用本書 */
-.cite-book { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--hair); max-width: 44em; }
+.cite-book { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--hair); max-width: 48em; }
 .cite-book h3 { margin: 0 0 12px; font-size: 16px; font-weight: 700; }
 .cite-book ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
 .cite-book li { display: grid; grid-template-columns: 5.5em minmax(0, 1fr) auto; gap: 4px 14px; align-items: baseline; }
@@ -164,3 +164,6 @@ html.lb-open { overflow: hidden; }
 @media (max-width: 760px) { .cite-book li { grid-template-columns: minmax(0, 1fr) auto; } .cite-book .fmt { grid-column: 1 / -1; } }
 .cite-book h4 { margin: 18px 0 10px; font-size: 13px; font-weight: 500; color: var(--ink-2); letter-spacing: .04em; }
 .cite-book h3 + h4 { margin-top: 0; }
+.specs .buy-list { display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.specs .buy-list .shop { display: inline-flex; align-items: baseline; gap: 6px; }
+.specs .buy-list .disc { font-size: 12px; font-weight: 500; color: var(--orange); }

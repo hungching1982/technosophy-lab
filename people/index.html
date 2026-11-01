@@ -1,6 +1,6 @@
 ---
 title: 成員
-description: 社技哲學實驗室的主理人、工作團隊，以及學生表現與榮譽。
+description: 主理人洪靖、工作團隊，以及學生的表現與榮譽。
 layout: default
 extra_css: /assets/css/pages.css
 ---
@@ -17,9 +17,9 @@ extra_css: /assets/css/pages.css
     <ul class="roles">{% for r in h.roles %}<li>{{ r }}</li>{% endfor %}</ul>
     <div class="cv">
       <div><h3>學歷</h3><ul>{% for e in h.education %}<li><span>{{ e.years }}</span><div>{{ e.text }}{% if e.note %}<small>{{ e.note }}</small>{% endif %}</div></li>{% endfor %}</ul></div>
-      <div class="cv-col"><h3>經歷</h3><ul>{% for e in h.appointments %}<li><span>{{ e.years }}</span><div>{{ e.text }}</div></li>{% endfor %}</ul>
-        <p class="hostlinks">{% for l in h.links %}<a class="textlink" href="{{ l.url }}" rel="noopener"{% if l.label == "Facebook" or l.label == "Instagram" or l.label == "X" %} data-goatcounter-click="社群-成員頁主理人-{{ l.label }}"{% endif %}>{{ l.label }} <span aria-hidden="true">↗</span></a>{% endfor %}</p></div>
+      <div class="cv-col"><h3>經歷</h3><ul>{% for e in h.appointments %}<li><span>{{ e.years }}</span><div>{{ e.text }}</div></li>{% endfor %}</ul></div>
     </div>
+    <p class="hostlinks">{% for l in h.links %}<a class="textlink" href="{{ l.url }}" rel="noopener"{% if l.label == "Facebook" or l.label == "Instagram" or l.label == "X" %} data-goatcounter-click="社群-成員頁主理人-{{ l.label }}"{% endif %}>{{ l.label }} <span aria-hidden="true">↗</span></a>{% endfor %}</p>
   </div>
 </section>
 

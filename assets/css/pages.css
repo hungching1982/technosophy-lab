@@ -495,3 +495,17 @@ a.chip { text-decoration: none; }
 .honfold .older { display: none; }
 .honfold:has(.cv-more[open]) .older { display: grid; }
 .recs-list p .textlink { font-size: 13px; margin-left: 4px; }
+
+/* 2026-11 調整 */
+.fitlede { width: fit-content; max-width: 100%; }
+.fitlede .en { width: 0; min-width: 100%; }
+@media (max-width: 1080px) { .fitlede br.lg { display: none; } }
+.bookband h2 .nwb { display: inline-block; }
+.hostcard .hostlinks { margin-top: 2px; }
+.pubstats .plus, b > .plus { font-size: .55em; vertical-align: .9em; margin-left: 1px; color: var(--orange); font-weight: 500; }
+/* 關鍵概念標題：三種樣本 */
+.clist.ct-a .citem h3 > :first-child, .clist.ct-a .citem h3 { color: var(--orange); }
+.clist.ct-a .citem h3 .en { color: var(--ink-3); }
+.clist.ct-b .citem h3 .t, .clist.ct-c .citem h3 .t { display: inline-block; padding: 2px 12px 3px; background: var(--orange); }
+.clist.ct-b .citem h3 .t { color: #fff; }
+.clist.ct-c .citem h3 .t { color: var(--black); }

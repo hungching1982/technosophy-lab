@@ -1,6 +1,6 @@
 ---
 title: 設計永續：技術干預的倫理與政治
-description: 洪靖《設計永續：技術干預的倫理與政治》：從一個關於行為與技術的小問題出發，一路追問自由、人類圖像與民主政治的前提。
+description: 從一個小問題出發：技術能不能、該不該干預人的行為？一路追問自由、人類圖像與民主政治的前提。洪靖著，劉旭鈞譯；Peter-Paul Verbeek、傅大為專文推薦。
 nav_active: /publications/
 image:
   path: /assets/img/og/og_book.jpg
@@ -32,7 +32,7 @@ extra_css2: /assets/css/book.css
 </section>
 
 <nav class="anchors" aria-label="本頁目錄">
-  <a href="#cover">書衣</a><a href="#forewords">推薦序</a><a href="#argmap">論證的旅程</a><a href="#excerpt">試讀</a><a href="#features">本書特色</a><a href="#events">活動</a>{% if site.data.dfg.responses.size > 0 %}<a href="#responses">迴響</a>{% endif %}<a href="#specs">書籍資料</a><a href="#buy">購書</a>
+  <a href="#cover">書衣</a><a href="#forewords">推薦序</a><a href="#argmap">論證的旅程</a><a href="#excerpt">試讀</a><a href="#features">本書特色</a><a href="#events">活動</a>{% if site.data.dfg.responses.size > 0 %}<a href="#responses">迴響</a>{% endif %}<a href="#specs">書籍資料</a>
 </nav>
 
 <section class="blk" id="cover" aria-labelledby="cover-title">
@@ -106,7 +106,7 @@ extra_css2: /assets/css/book.css
     </div>
     <p class="features-close">{{ d.features_close }}</p>
     <ul class="invite">
-      <li>三人以上的讀書會，作者樂意和你們一起討論。<a class="textlink" href="{{ d.reading_group }}" rel="noopener">讀書會邀請 <span aria-hidden="true">↗</span></a></li>
+      <li>三人以上的讀書會，作者樂意和你們一起討論。<br><a class="textlink" href="{{ d.reading_group }}" rel="noopener">填寫讀書會邀請表單 <span aria-hidden="true">↗</span></a></li>
     </ul>
   </div>
 </section>
@@ -137,6 +137,7 @@ extra_css2: /assets/css/book.css
       <dt>定價</dt><dd>{{ b.price }}</dd>
       <dt>ISBN</dt><dd>978-626-7612-41-5</dd>
       <dt>封面設計</dt><dd>{{ b.cover_design }}</dd>
+      <dt>網路購書</dt><dd class="buy-list">{%- for s in b.buy %}<span class="shop"><a class="textlink" href="{{ s.url }}" rel="noopener" data-goatcounter-click="書籍頁-購書-{{ s.name }}-書籍資料">{{ s.name }}</a>{% if s.discount %}<small class="disc">{{ s.discount }}</small>{% endif %}</span>{% endfor %}</dd>
     </dl>
     <div class="cite-book">
       <h3>引用本書</h3>

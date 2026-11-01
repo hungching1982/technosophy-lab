@@ -16,7 +16,6 @@ layout: default
     <p class="lead-en" lang="en">Philosophy from technology—starting from concrete sociotechnical problems.</p>
     <div class="actions">
       <a class="btn" href="{{ '/research/' | relative_url }}">認識研究 <span class="arrow" aria-hidden="true">→</span></a>
-      <a class="textlink" href="{{ '/news/' | relative_url }}">最新消息</a>
     </div>
   </div>
 
@@ -53,7 +52,6 @@ layout: default
     <p class="eyebrow">消息 News</p>
     <h2 id="news-title">最新消息</h2>
     <p>出版、獲獎、發表、演講與活動</p>
-    <a class="textlink more" href="{{ '/news/' | relative_url }}">所有消息 →</a>
   </div>
   <div class="body">
     {%- if news_pinned %}
@@ -64,5 +62,6 @@ layout: default
       {% include news-row.html item=n %}
       {%- endfor %}
     </ul>
+    <p class="more-below"><a class="textlink" href="{{ '/news/' | relative_url }}">所有消息 →</a></p>
   </div>
 </section>

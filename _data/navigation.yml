@@ -1,6 +1,8 @@
 # 上方選單。順序就是顯示的順序。
 # external: true 代表連到站外，名稱後面會自動加上 ↗
 # contact: true 代表連到 _config.yml 的 contact_form（聯絡表單網址只改那裡）
+- title: 首頁
+  url: /
 - title: 關於
   url: /about/
 - title: 研究
