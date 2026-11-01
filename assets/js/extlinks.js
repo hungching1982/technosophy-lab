@@ -9,11 +9,13 @@
     var url;
     try { url = new URL(a.getAttribute('href'), location.href); } catch (e) { continue; }
     var external = url.protocol.indexOf('http') === 0 && url.host !== location.host;
-    var book = url.host === location.host && url.pathname.indexOf('/design-for-green/') === 0 && here.indexOf('/design-for-green/') !== 0;
+    // 不在選單上的站內頁（書籍頁、課程頁），從其他頁面連過去時也視為對外連結
+    var special = ['/design-for-green/', '/courses/'].filter(function (p) { return url.pathname.indexOf(p) === 0; })[0];
+    var book = url.host === location.host && special && here.indexOf(special) !== 0;
     if (!external && !book) continue;
     a.target = '_blank';
     a.rel = 'noopener';
-    if (!a.textContent.trim()) continue;                       // 只有圖片的連結不加箭頭
+    if (!a.textContent.trim() || a.hasAttribute('data-noarrow')) continue;   // 只有圖片、或指定不加箭頭的連結
     var box = a.querySelector('.arrow');                       // 黑色按鈕裡的方塊箭頭
     if (box) { box.textContent = '↗'; }
     else if (a.textContent.indexOf('↗') === -1) {

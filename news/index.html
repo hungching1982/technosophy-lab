@@ -1,6 +1,6 @@
 ---
 title: 最新消息
-description: 出版、獲獎、發表、演講與活動的最新消息。
+description: 出版、獲獎、發表、演講、課程與活動的最新消息。
 layout: default
 extra_css: /assets/css/pages.css
 ---
@@ -8,7 +8,7 @@ extra_css: /assets/css/pages.css
 {%- assign byyear = news_rest | group_by_exp: "n", "n.date | date: '%Y'" %}
 <section class="page-hero" aria-labelledby="page-title">
   <div class="head"><p class="eyebrow">消息 News</p><h1 id="page-title">最新消息</h1></div>
-  <div class="lede"><p>近兩年的出版、獲獎、發表、演講與活動。</p><p class="en" lang="en">Publications, awards, papers, talks, and events from the past two years.</p></div>
+  <div class="lede"><p>近兩年的出版、獲獎、發表、演講、課程與活動。</p><p class="en" lang="en">Publications, awards, papers, talks, courses, and events from the past two years.</p></div>
 </section>
 <div id="newslist">
   {%- if byyear.size == 0 and news_pinned %}

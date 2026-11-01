@@ -531,3 +531,23 @@ a.chip { text-decoration: none; }
   .shelf.flat .book h3 { margin-top: 2px; }
   .shelf.flat .book .y { display: block; line-height: 1; }
 }
+
+/* 課程頁 */
+.page-hero h1 .h1-sub { display: block; margin-top: 10px; font-size: .42em; font-weight: 500; color: var(--ink-2); letter-spacing: .04em; }
+.course-kv { border-top: 0; }
+.course-kv dt:last-of-type, .course-kv dd:last-of-type { border-bottom: 0; }
+.course-weeks { list-style: none; margin: 0; padding: 0; }
+.course-weeks li { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 20px; padding: 18px 0 20px; border-bottom: 1px solid var(--hair); }
+.course-weeks li:first-child { padding-top: 0; }
+.course-weeks li:last-child { border-bottom: 0; }
+.course-weeks .d { font-size: 13px; color: var(--ink-2); }
+.course-weeks .d b { display: block; font-size: 26px; font-weight: 700; line-height: 1.1; color: var(--orange); font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+.course-weeks h3 { margin: 0 0 6px; font-size: 19px; font-weight: 700; line-height: 1.45; }
+.course-weeks p { margin: 0; font-size: 15px; line-height: 1.8; color: var(--ink-2); }
+.course-weeks p a { color: inherit; text-decoration-color: var(--orange); text-underline-offset: 3px; }
+.course-cta { margin: 26px 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; }
+.course-cta .mail { font-size: 14px; color: var(--ink-2); }
+@media (max-width: 760px) {
+  .course-weeks li { grid-template-columns: 1fr; gap: 6px; }
+  .course-weeks .d { display: flex; align-items: baseline; gap: 8px; }
+}
