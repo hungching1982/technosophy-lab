@@ -321,7 +321,8 @@
 
 /* ---------- S7. responsive ---------- */
 @media (max-width: 1080px) {
-  .page-hero { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+  /* 欄寬維持 4:8，與下方區塊的分隔線對齊；標題改為隨寬度縮小 */
+  .page-hero h1 { font-size: clamp(26px, 3.3vw, 38px); }
   .method { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .method li:nth-child(4) { border-left: 0; padding-left: var(--gutter); }
   .method li:nth-child(n+4) { border-top: 1px solid var(--hair); }
@@ -342,6 +343,7 @@
   .bookband figure img { width: 150px; }
   .page-hero > .head, .blk > .head, .toc, .theme > .head, .yearnav, .yeargroup > .head, .hostcard > .pic { border-right: 0; }
   .page-hero > .head { padding-bottom: 6px; }
+  .page-hero h1 { font-size: 34px; }
   .page-hero > .lede { padding-top: 14px; }
   .blk > .head { padding-bottom: 4px; }
   .blk.sticky > .head > div, .toc > div, .yearnav > div { position: static; }
@@ -551,3 +553,13 @@ a.chip { text-decoration: none; }
   .course-weeks li { grid-template-columns: 1fr; gap: 6px; }
   .course-weeks .d { display: flex; align-items: baseline; gap: 8px; }
 }
+
+/* 關於頁「名稱」區塊 */
+.blk.term { border-top: 0; border-bottom: 1px solid var(--rule); }
+.blk.term .h2-sub { display: block; margin-top: 8px; font-size: .42em; font-weight: 500; color: var(--ink-2); letter-spacing: .06em; }
+.blk.term .body { display: flex; flex-direction: column; justify-content: flex-end; gap: 14px; }
+.blk.term .body p { margin: 0; max-width: 40em; font-size: clamp(16px, 1.2vw, 18px); color: var(--ink-2); line-height: 1.85; }
+.blk.term .body .en { font-size: 14px; color: var(--ink-3); line-height: 1.65; }
+/* 以片語為單位換行（課程頁開頭與上課時間） */
+.page-hero .lede .nwb, .course-kv .nwb { display: inline-block; }
+.page-hero h1 .h1-sub { font-size: max(.42em, 14px); }
