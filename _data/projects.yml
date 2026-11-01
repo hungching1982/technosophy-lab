@@ -1,0 +1,34 @@
+# 研究計畫。start／end 為年份（單年計畫兩者相同）。
+# role 只填來源明載的角色；area 對應首頁三個研究專長，用來在研究頁分組（暫定，請主理人確認）。
+
+- start: 2026
+  end: 2028
+  title: 縫合治理網絡斷層：嘉義科技產業廊帶的制度網絡分析與公正轉型指標
+  en: 'Suturing Governance Network Fragmentation: Institutional Network Analysis and the Construction of Just Transition Indicators for the Chiayi Science and Technology Industrial Corridor'
+  funder: 國科會專題研究計畫
+  role: 整合型計畫共同主持人
+  area: 社會設計
+- start: 2025
+  end: 2028
+  title: 逆向跨域：台灣的 iGEM 經驗如何形塑合成生物學與生技產業的在地軌跡
+  en: 'Bottom-up Interdisciplinarity: An Intertwined History of Taiwan’s iGEM Participation, Synthetic Biology, and Bio-industry'
+  funder: 國科會專題研究計畫
+  area: 科技與社會（STS）
+- start: 2025
+  end: 2025
+  title: 行為嚮導技術的民主難題：自由概念的重構與制度架構的反思
+  en: 'The Democratic Dilemma of Behavioral-Steering Technologies: Reconstructing the Concept of Freedom and Reflecting on Institutional Frameworks'
+  funder: 台綜大系統人文及社會科學跨校合作研究計畫
+  area: 技術哲學
+- start: 2023
+  end: 2025
+  title: 技術研究向前走：人類形象的重構與政治應用 1 & 2
+  en: 'The Next Step for Technology Studies: Refiguring the Image of Humanity for a Techno-Society'
+  funder: 國科會 2030 跨世代年輕學者方案新秀學者研究計畫
+  area: 技術哲學
+- start: 2024
+  end: 2024
+  title: STS-Inside：科技與社會研究如何融入不分系跨領域核心
+  en: STS as Foundation for the Program of Interdisciplinary Studies?
+  funder: 台綜大系統人文及社會科學跨校合作研究計畫
+  area: 科技與社會（STS）

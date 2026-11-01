@@ -1,0 +1,2 @@
+{%- assign t = include.item -%}
+{%- if t.who %}{{ t.who }}｜{% endif %}{% if t.lang %}<span lang="{{ t.lang }}">{{ t.title }}</span>{% else %}{{ t.title }}{% endif %}

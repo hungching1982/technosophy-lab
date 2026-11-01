@@ -1,0 +1,5 @@
+{%- assign p = include.p -%}
+{%- assign yr = site.time | date: '%Y' | plus: 0 -%}
+{%- assign act = false %}{% if p.end >= yr %}{% assign act = true %}{% endif -%}
+<li><span class="y{% if act %} now{% endif %}">{{ p.start }}{% if p.end != p.start %}–{{ p.end }}{% endif %}</span>
+  <div><strong>{{ p.title }}{% if act %}<span class="status">執行中</span>{% endif %}</strong><small>{{ p.funder }}{% if p.role %}・{{ p.role }}{% endif %}</small><span class="en" lang="en">{{ p.en }}</span></div></li>

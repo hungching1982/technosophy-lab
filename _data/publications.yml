@@ -1,0 +1,110 @@
+# 期刊論文（journal）、專書章節（chapter）、會議論文（conference）。
+# 依年份由新到舊排列；同一年新的放上面。
+# text：完整書目（照原格式）；english: true 代表 text 是英文；
+# link：DOI 或線上版本；award：得獎；note：Invited 等附註；en：英文書目（英文版網站用）。
+
+- year: 2023
+  kind: journal
+  text: 洪靖、羅尹悅（2023），〈被《推力》趨動的人〉。《傳播、文化與政治》18 期，頁 113-119。
+  en: 'Hung, C., & Lo, Y.-Y. (2023). The Review of Nudge: Improving Decisions about Health, Wealth, and Happiness (the final edition). Communication, Culture & Politics, 18, 113-119.'
+- year: 2022
+  kind: journal
+  text: 洪靖、郭文華（2022），〈從 STS 到博雅通識：跟著《科技．社會．人 4》去旅行〉。《科技、醫療與社會》35 期，頁 293-297。
+  link: https://doi.org/10.6464/TJSSTM.202210_(35).0010
+  en: 'Hung, C., & Kuo, W.-H. (2022). From STS to Liberal Arts Education: Traveling with Technology, Society and Human Beings (Volume 4). Taiwanese Journal for Studies of Science, Technology and Medicine, 35, 293-297.'
+- year: 2022
+  kind: journal
+  text: 洪靖（2022），〈设计、权力、与民主：重探技术物的政治性〉。《科技伦理研究》第一輯，頁 206-220。
+  en: 'Hung, C. (2022). Rethinking Technology’s Politics: Design, Power, and Democracy. Technoethics Inquiry, 1, 206-220.'
+- year: 2021
+  kind: journal
+  text: 洪靖（2021），〈設計與自由：行為嚮導技術的分類與倫理考量〉。《科技、醫療與社會》32 期，頁 133-185。
+  link: https://doi.org/10.6464/TJSSTM.202104_(32).0003
+  award: 2023 台灣科技與社會研究（STS）學會王玉豐年輕學者論文紀念獎
+  en: 'Hung, C. (2021). Design and Freedom: A Classification and Ethical Concerns for Behavior-Steering Technology. Taiwanese Journal for Studies of Science, Technology and Medicine, 32, 133-185.'
+- year: 2020
+  kind: journal
+  text: '洪靖（2020），〈CSI: Kuhn, SSK 與 STS：評《STS 的緣起與多重建構》〉。《科技、醫療與社會》31 期，頁 203-211。'
+  en: 'Hung, C. (2020). CSI: Kuhn, SSK, and STS: A Review of A Genealogical History of STS and Its Multiple Constructions. Taiwanese Journal for Studies of Science, Technology and Medicine, 31, 203-211.'
+- year: 2020
+  kind: journal
+  english: true
+  text: 'Hung, C. & Jia, L. (2020). “From Assessment to Design: What Is Really Needed in Technology Accompaniment to Achieve Subject Constitution?” Frontiers of Philosophy in China 15(1): 73-92.'
+  link: https://doi.org/10.3868/s030-009-020-0006-2
+- year: 2015
+  kind: journal
+  text: 洪靖（2015），〈道德的技術或技術的道德：評 Verbeek’s Moralizing Technology〉。《科技、醫療與社會》20 期，頁 223-234。
+  en: 'Hung, C. (2015). Moralized Technology or Technologized Morality: A Book Review on Verbeek’s Moralizing Technology. Taiwanese Journal for Studies of Science, Technology and Medicine, 20, 223-234.'
+- year: 即將出版
+  kind: chapter
+  english: true
+  text: 'Hung, C. (forthcoming). “The Birth of Sci-fi Robot in Taiwan’s Manga, 1950-1970”. In MIT (Made-in-Taiwan), Redux: New Approaches to Material and Technological Cultures in Taiwan.'
+- year: 2021
+  kind: chapter
+  english: true
+  text: 'Hung, C. (2021). “Technological Mediation in and for Confucianism-Based Cultures”. In Harmonious Technology: A Confucian Ethics of Technology, edited by Pak-Hang Wong & Xiaowei Wang, 50-65. London: Routledge.'
+  link: https://www.routledge.com/Harmonious-Technology-A-Confucian-Ethics-of-Technology/Wong-Wang/p/book/9780367263522
+- year: 2014
+  kind: chapter
+  text: 洪靖（2014），〈核能，到底能不能？活動報導與 STS 評析〉，收錄於王文基、傅大為、范玫芳編，《台灣科技爭議島》。國立交通大學出版社，頁 95-123。
+- year: 2014
+  kind: chapter
+  text: 洪靖（2014），〈建築與社會：綠色設計如何促進永續生活〉，收錄於林文源、楊谷洋、陳永平、陳榮泰、駱冠宏編，《科技社會人 2：跨領域新挑戰》。國立交通大學出版社，頁 248-260。
+- year: 2010
+  kind: chapter
+  text: 洪靖（2010），〈台灣科幻漫畫機器人的誕生，1950-1970〉，收錄於楊谷洋、陳永平、林文源、方俊育編，《科技社會人：STS 跨領域新視界》。國立交通大學出版社，頁 140-155。
+- year: 2026
+  kind: conference
+  english: true
+  text: 'Hung, C. (2026). “A Universal Format, Locally Inscribed: Taiwan’s Teams in the iGEM Synthetic Biology Competition, 2007–2025”. International Conference on STS for Resilient Futures 2026, Bangkok, Thailand.'
+- year: 2025
+  kind: conference
+  text: 洪靖（2025），〈當技術無所不在：行為主義與人類自由〉。台北：台灣哲學學會 2025 年暨創會卅年學術研討會。
+- year: 2025
+  kind: conference
+  english: true
+  text: 'Hung, C. (2025). “Rethinking Human-Nonhuman Relationships: Beyond Agency and Symmetry”. 2025 Annual Conference of the Society for Social Studies of Science (4S), Seattle, US.'
+- year: 2025
+  kind: conference
+  english: true
+  text: 'Hung, C. (2025). “Outside-in: Rethinking Technologically Mediated Moral Enhancement”. 24th Biennial Conference of the Society for Philosophy and Technology, Eindhoven, the Netherlands.'
+- year: 2025
+  kind: conference
+  english: true
+  note: Invited
+  text: 'Hung, C. (2025). “The Birth of Taiwan’s Local Sci-Fi Comic Robot: A Mirror of Taiwan’s Science and Technology Culture”. UCLA-NTNU Taiwan Studies Initiative Conference, Los Angeles, US.'
+- year: 2024
+  kind: conference
+  english: true
+  text: 'Hung, C. (2024). “More than Protecting: Technological Shaping of Freedom”. Workshop on Engineering, Ethics and Technological Mediation, Osaka, Japan.'
+- year: 2023
+  kind: conference
+  english: true
+  note: Invited
+  text: 'Hung, C. (2023). “Outside-in: An External Approach to Technologically Moral Enhancement”. 10th Biennial Meeting of the Asia-Pacific Philosophy of Science Association, Hanoi, Vietnam.'
+- year: 2023
+  kind: conference
+  english: true
+  text: 'Hung, C. (2023). “An External Approach to Technologically Moral Enhancement: The Real-life Examples from Taiwan”. 23rd Biennial Conference of the Society for Philosophy and Technology, Tokyo, Japan.'
+- year: 2022
+  kind: conference
+  text: 洪靖（2022），〈由外而內：道德增強的外在進路〉。屏東：2022 台灣社會學年會。
+- year: 2022
+  kind: conference
+  text: 洪靖（2022），〈由外而內：技術性道德增強的路徑翻轉〉。花蓮：第十四屆台灣科技與社會（STS）年會。
+- year: 2021
+  kind: conference
+  text: 洪靖（2021），〈將行為主義進行到底：新物質轉向的最後一哩路〉。台北：2021 台灣社會學年會。
+- year: 2021
+  kind: conference
+  english: true
+  text: 'Hung, C. (2021). “Freedom Is Not the Issue, But Relation Is: Contextualizing and Extending Technological Mediation Theory in East Asia”. 13th Taiwan STS Association Annual Conference, Hualien, Taiwan.'
+- year: 2020
+  kind: conference
+  text: 洪靖（2020），〈拋棄能動性：人類與非人的大對稱〉。台北：2020 台灣社會學年會。
+- year: 2020
+  kind: conference
+  text: 洪靖（2020），〈設計、權力、與民主：重探技術物的政治性〉。新竹：第十二屆台灣科技與社會（STS）年會。
+- year: 2018
+  kind: conference
+  text: 洪靖（2018），〈保全自由？行為嚮導科技的倫理解方〉。北京：2018 世界哲學大會。

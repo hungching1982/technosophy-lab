@@ -1,0 +1,15 @@
+# 研究專長三欄。編號 01、02、03 依順序自動產生。
+# title：首頁用；name＋en：研究頁用（中文名稱＋英文）。
+
+- title: 技術哲學
+  name: 技術哲學
+  en: Philosophy of Technology
+  text: 從具體技術出發，重新檢驗自由、能動性與人類圖像。
+- title: 科技與社會（STS）
+  name: 科技與社會
+  en: 'STS: Science and Technology Studies'
+  text: 追蹤技術、制度與社會如何彼此形塑與構成。
+- title: 社會設計
+  name: 社會設計
+  en: Social Design
+  text: 把研究轉成可實驗、可修正的設計與物質安排。

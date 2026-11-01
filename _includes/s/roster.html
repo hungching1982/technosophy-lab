@@ -1,0 +1,9 @@
+{%- assign list = include.list -%}
+<table class="roster">
+  <thead><tr><th scope="col">姓名</th><th scope="col">科系</th><th scope="col">任務</th><th scope="col">{% if include.current %}加入時間{% else %}期間{% endif %}</th></tr></thead>
+  <tbody>
+    {%- for m in list %}
+    <tr><td>{{ m.name }}</td><td>{{ m.dept }}</td><td>{{ m.role }}</td><td class="period">{% if include.current %}{{ m.from }}{% else %}{{ m.from }}–{{ m.to }}{% endif %}</td></tr>
+    {%- endfor %}
+  </tbody>
+</table>

@@ -1,0 +1,2 @@
+{%- assign p = include.p -%}
+<div class="cite"{% if p.english %} lang="en"{% endif %}>{{ p.text }}{% if p.award or p.link or p.note %}<div class="meta">{% if p.award %}<span class="award" lang="zh-Hant">{{ p.award }}</span>{% endif %}{% if p.note %}<span lang="en">{{ p.note }}</span>{% endif %}{% if p.link %}<a href="{{ p.link }}" rel="noopener" lang="en">DOI／Online ↗</a>{% endif %}</div>{% endif %}</div>

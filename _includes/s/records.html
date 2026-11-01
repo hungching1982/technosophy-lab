@@ -1,0 +1,40 @@
+{%- comment -%}
+  學生表現與榮譽：_data/records.yml ＋ _data/news.yml 裡的學生紀錄（who 含「（成員）」或 student: true），
+  依日期排列（新的在上；只有年份的排在同年有日期者之後），最近 8 則直接顯示，其餘折疊。
+{%- endcomment -%}
+{%- assign keys = "" | split: "" -%}
+{%- for n in site.data.news -%}
+  {%- if n.student or n.who contains "（成員）" -%}
+  {%- assign idx = forloop.index0 | plus: 1000 -%}
+  {%- assign k = n.date | date: '%Y-%m-%d' | append: "~n~" | append: idx -%}
+  {%- assign keys = keys | push: k -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- for r in site.data.records -%}
+  {%- assign idx = forloop.index0 | plus: 1000 -%}
+  {%- assign d = r.date | append: "" -%}
+  {%- if d.size == 4 %}{% assign d = d | append: "-00-00" %}{% elsif d.size == 7 %}{% assign d = d | append: "-00" %}{% endif -%}
+  {%- assign k = d | append: "~r~" | append: idx -%}
+  {%- assign keys = keys | push: k -%}
+{%- endfor -%}
+{%- assign keys = keys | sort | reverse -%}
+{%- capture rows_all -%}
+{%- for k in keys -%}
+  {%- assign parts = k | split: "~" -%}
+  {%- assign i = parts[2] | plus: 0 | minus: 1000 -%}
+  {%- if parts[1] == "n" %}{% assign r = site.data.news[i] %}{% else %}{% assign r = site.data.records[i] %}{% endif -%}
+  <li class="row"><span class="y">{{ parts[0] | slice: 0, 4 }}</span><span class="tag">{{ r.type }}</span>
+    <div><h3>{% if r.who %}{{ r.who }}｜{% endif %}{% if r.lang %}<span lang="{{ r.lang }}">{{ r.title }}</span>{% else %}{{ r.title }}{% endif %}</h3>{%- if r.advisor == true %}{% assign adv = "洪靖" %}{% else %}{% assign adv = r.advisor %}{% endif -%}
+    {%- if r.summary or r.advisor or r.link or r.links %}<p>{% if r.summary %}{{ r.summary }}{% endif %}{% if r.advisor %}{% if r.summary %}{% unless r.summary contains "。" or r.summary contains "." %}。{% endunless %}{% endif %}指導老師：{{ adv }}。{% endif %}{% if r.link %} {% include news-link.html item=r %}{% endif %}{% for l in r.links %} <a class="textlink" href="{{ l.url }}" rel="noopener">{{ l.text }} <span aria-hidden="true">↗</span></a>{% endfor %}</p>{% endif %}</div></li>
+  @@SPLIT@@
+{%- endfor -%}
+{%- endcapture -%}
+{%- assign items = rows_all | split: "@@SPLIT@@" -%}
+<ul class="rows recs-list">
+  {%- for it in items limit: 8 %}{{ it }}{% endfor %}
+</ul>
+{%- if keys.size > 8 %}
+<details class="talks-more more-talks"><summary>顯示較早紀錄 ↓</summary>
+  <ul class="rows recs-list recs-more">{% for it in items offset: 8 %}{{ it }}{% endfor %}</ul>
+</details>
+{%- endif %}

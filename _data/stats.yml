@@ -1,0 +1,9 @@
+# 首頁右側數字欄，由上而下顯示。只改 value 的數字即可。
+- value: 2
+  label: 書籍
+- value: 7
+  label: 期刊論文
+- value: 15
+  label: 會議論文
+- value: 5
+  label: 研究計畫

@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<section class="section page-section" aria-labelledby="page-title">
+  <div class="head">
+    {%- if page.eyebrow %}
+    <p class="eyebrow">{{ page.eyebrow }}</p>
+    {%- endif %}
+    <h1 id="page-title">{{ page.title }}</h1>
+    {%- if page.lead %}
+    <p>{{ page.lead }}</p>
+    {%- endif %}
+  </div>
+  <div class="body prose">
+{{ content }}
+  </div>
+</section>

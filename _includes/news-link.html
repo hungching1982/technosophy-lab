@@ -1,0 +1,7 @@
+{%- assign l = include.item -%}
+{%- if l.link -%}
+{%- assign c0 = l.link | slice: 0 -%}
+{%- assign ltext = l.link_text | default: "詳細資訊" -%}
+{%- if c0 == "/" -%}<a class="textlink" href="{{ l.link | relative_url }}">{{ ltext }} →</a>
+{%- else -%}<a class="textlink" href="{{ l.link }}" rel="noopener">{{ ltext }} <span aria-hidden="true">↗</span></a>{%- endif -%}
+{%- endif -%}

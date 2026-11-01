@@ -1,0 +1,68 @@
+---
+layout: default
+---
+{%- comment -%}
+  首頁。三個區塊的資料來源：
+  - 數字欄：_data/stats.yml
+  - 研究專長：_data/areas.yml
+  - 最新消息：_data/news.yml（置頂一則＋最新三則，自動產生）
+  定位文字與主理人資訊直接寫在這個檔案裡。
+{%- endcomment -%}
+<section class="hero" aria-labelledby="hero-title">
+  <div class="intro">
+    <p class="eyebrow">社技哲學實驗室 · Technosophy Lab</p>
+    <h1 id="hero-title"><span>讓技術成為</span><br><span>重做哲學的起點。</span></h1>
+    <p class="lead">從具體的社會—技術問題出發，重新思考行動、自由、設計與政治。</p>
+    <p class="lead-en" lang="en">Philosophy from technology—starting from concrete sociotechnical problems.</p>
+    <div class="actions">
+      <a class="btn" href="{{ '/research/' | relative_url }}">認識研究 <span class="arrow" aria-hidden="true">→</span></a>
+      <a class="textlink" href="{{ '/news/' | relative_url }}">最新消息</a>
+    </div>
+  </div>
+
+  <aside class="host" aria-label="主理人">
+    <p class="eyebrow">主理人</p>
+    <figure class="host-art">
+      <img src="{{ '/assets/img/host.jpg' | relative_url }}" alt="主理人洪靖在座談中發言" width="440" height="550">
+      <img class="tint" src="{{ '/assets/img/host_tint.jpg' | relative_url }}" alt="" width="440" height="550" aria-hidden="true">
+      <span class="dots" aria-hidden="true"></span>
+    </figure>
+    <div class="meta">
+      <p class="host-name">洪靖<small lang="en">Ching Hung</small></p>
+      <p class="host-role">國立中正大學紫荊不分系學士學位學程助理教授</p>
+      <a class="textlink" href="{{ '/people/' | relative_url }}">關於主理人 →</a>
+    </div>
+  </aside>
+
+  <aside class="stats" aria-label="研究紀錄">
+    {%- for s in site.data.stats %}
+    <div class="stat"><b>{{ s.value }}</b><span>{{ s.label }}</span></div>
+    {%- endfor %}
+  </aside>
+</section>
+
+<div class="areas" aria-label="研究專長">
+  {%- for a in site.data.areas %}
+  <div class="area"><span class="no">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span><h3>{{ a.title }}</h3><p>{{ a.text }}</p></div>
+  {%- endfor %}
+</div>
+
+{% include news-items.html %}
+<section class="section" aria-labelledby="news-title">
+  <div class="head">
+    <p class="eyebrow">消息 News</p>
+    <h2 id="news-title">最新消息</h2>
+    <p>出版、獲獎、發表、演講與活動</p>
+    <a class="textlink more" href="{{ '/news/' | relative_url }}">所有消息 →</a>
+  </div>
+  <div class="body">
+    {%- if news_pinned %}
+    {% include news-featured.html item=news_pinned %}
+    {%- endif %}
+    <ul class="rows latest">
+      {%- for n in news_rest limit: 3 %}
+      {% include news-row.html item=n %}
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

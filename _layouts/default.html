@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+{% include head.html %}
+</head>
+<body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
+<a class="skip" href="#main">跳到主要內容</a>
+<div class="frame">
+  {% include header.html %}
+  <main id="main">
+{{ content }}
+  </main>
+  {% include footer.html %}
+</div>
+<script src="{{ '/assets/js/upcoming.js' | relative_url }}" defer></script>
+{%- if site.goatcounter and jekyll.environment == "production" %}
+<script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+{%- endif %}
+</body>
+</html>

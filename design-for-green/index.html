@@ -1,0 +1,158 @@
+---
+title: 設計永續：技術干預的倫理與政治
+description: 洪靖《設計永續：技術干預的倫理與政治》：從一個關於行為與技術的小問題出發，一路追問自由、人類圖像與民主政治的前提。
+nav_active: /publications/
+image:
+  path: /assets/img/og/og_book.jpg
+  width: 1200
+  height: 630
+  alt: 《設計永續：技術干預的倫理與政治》，洪靖著、劉旭鈞譯，國立陽明交通大學出版社
+layout: default
+extra_css: /assets/css/pages.css
+extra_css2: /assets/css/book.css
+---
+{%- assign b = site.data.books | where: "id", "design-for-green-zh" | first -%}
+{%- assign d = site.data.dfg -%}
+<div class="bk">
+<section class="bk-hero" aria-labelledby="bk-title">
+  <div class="art"><img src="{{ '/assets/img/book/dfg_3d.webp' | relative_url }}" alt="《設計永續》立體書封" width="438" height="640"></div>
+  <div class="txt">
+    <p class="eyebrow">專書 Book</p>
+    <div class="tt"><h1 id="bk-title">設計永續</h1><p class="subt">技術干預的倫理與政治</p></div>
+    <p class="by"><a href="{{ '/people/' | relative_url }}">洪靖</a> 著／{{ b.translator }} 譯　{{ b.publisher }}，2026</p>
+    <div class="quotes">
+      {%- for q in d.quotes %}
+      <blockquote><p>{{ q.text }}</p><footer><span{% if q.name contains "Verbeek" %} lang="en"{% endif %}>{{ q.name }}</span>｜{{ q.title }}</footer></blockquote>
+      {%- endfor %}
+    </div>
+    <div class="buy" id="buy">
+      {%- for s in b.buy %}<span class="shop"><a class="textlink" href="{{ s.url }}" rel="noopener" data-goatcounter-click="書籍頁-購書-{{ s.name }}">{{ s.name }}</a>{% if s.discount %}<small class="disc">{{ s.discount }}</small>{% endif %}</span>{% endfor %}
+    </div>
+  </div>
+</section>
+
+<nav class="anchors" aria-label="本頁目錄">
+  <a href="#cover">書衣</a><a href="#forewords">推薦序</a><a href="#argmap">論證的旅程</a><a href="#excerpt">試讀</a><a href="#features">本書特色</a><a href="#events">活動</a>{% if site.data.dfg.responses.size > 0 %}<a href="#responses">迴響</a>{% endif %}<a href="#specs">書籍資料</a><a href="#buy">購書</a>
+</nav>
+
+<section class="blk" id="cover" aria-labelledby="cover-title">
+  <div class="head"><p class="eyebrow">書衣 Cover</p><h2 id="cover-title">封面與封底</h2></div>
+  <div class="body">
+    <div class="spread">
+      <figure><a class="zoom" href="{{ '/assets/img/book/dfg_front_large.jpg' | relative_url }}" data-zoom data-goatcounter-click="書籍頁-放大-封面"><img src="{{ '/assets/img/book/dfg_front.jpg' | relative_url }}" alt="《設計永續》封面，點擊放大" width="900" height="1276" loading="lazy"></a><figcaption>封面</figcaption></figure>
+      <figure><a class="zoom" href="{{ '/assets/img/book/dfg_back_large.jpg' | relative_url }}" data-zoom data-goatcounter-click="書籍頁-放大-封底"><img src="{{ '/assets/img/book/dfg_back.jpg' | relative_url }}" alt="《設計永續》封底，點擊放大" width="900" height="1276" loading="lazy"></a><figcaption>封底</figcaption></figure>
+    </div>
+    <div class="sr-only"><p>封底文字：</p>{%- for p in d.back_cover %}<p>{{ p }}</p>{% endfor %}</div>
+    <p class="zoom-hint">點擊圖片可放大檢視</p>
+  </div>
+</section>
+
+<section class="blk" id="forewords" aria-labelledby="fw-title">
+  <div class="head"><p class="eyebrow">推薦 Forewords</p><h2 id="fw-title">推薦序</h2></div>
+  <div class="body longtext">
+    {%- capture v %}{% include dfg/verbeek.md %}{% endcapture %}{% assign vp = v | markdownify | split: '</p>' %}
+    <article class="fw"><h3>從技術出發的哲學思考</h3>
+      <p class="who"><b lang="en">Peter-Paul Verbeek</b><br>荷蘭皇家藝術與科學院（KNAW）院長／阿姆斯特丹大學科技哲學暨倫理學教授<span class="note">KNAW 是荷蘭最高學術機構，地位等同台灣的中央研究院。</span></p>
+      {{ vp[0] }}</p>
+      <details><summary data-goatcounter-click="書籍頁-展開-推薦序Verbeek">閱讀全文 ↓</summary>{% for x in vp offset: 1 %}{{ x }}{% unless forloop.last %}</p>{% endunless %}{% endfor %}</details>
+    </article>
+    {%- capture f %}{% include dfg/fu.md %}{% endcapture %}{% assign fp = f | markdownify | split: '</p>' %}
+    <article class="fw"><h3>一個新穎而獨創的東亞拼裝</h3>
+      <p class="who"><b>傅大為</b><br>國立陽明交通大學榮譽教授</p>
+      {{ fp[0] }}</p>
+      <details><summary data-goatcounter-click="書籍頁-展開-推薦序傅大為">閱讀全文 ↓</summary>{% for x in fp offset: 1 %}{{ x }}{% unless forloop.last %}</p>{% endunless %}{% endfor %}</details>
+    </article>
+  </div>
+</section>
+
+<section id="argmap" aria-labelledby="arg-title">
+  <svg id="argrib" aria-hidden="true"></svg>
+  <p class="eyebrow">論證 Argument</p>
+  <h2 id="arg-title">論證的旅程</h2>
+  <figure class="mobile-map"><a href="{{ '/assets/img/book/journey.jpg' | relative_url }}"><img src="{{ '/assets/img/book/journey.jpg' | relative_url }}" alt="" loading="lazy"></a><figcaption>點圖可放大檢視</figcaption></figure>
+  <ol class="route">
+    {%- for s in d.journey %}
+    <li class="st{% if forloop.index0 > 0 %}{% assign pv = forloop.index0 | minus: 1 %}{% if d.journey[pv].seg != s.seg %} newseg{% endif %}{% endif %}" data-seg="{{ s.seg }}">
+      <p class="lab">{{ s.label }}</p><h3 class="ttl">{{ s.title }}</h3>{% if s.sub %}<p class="sub">{{ s.sub }}</p>{% endif %}
+      {%- if s.sections %}<ul>{% for x in s.sections %}<li>{{ x }}</li>{% endfor %}</ul>{% endif %}
+    </li>
+    {%- endfor %}
+  </ol>
+</section>
+
+<section class="blk" id="excerpt" aria-labelledby="ex-title">
+  <div class="head"><p class="eyebrow">試讀 Excerpt</p><h2 id="ex-title">試讀</h2><p>作者序<br>第一章　導言（節選）</p></div>
+  <div class="body longtext">
+    {%- capture pr %}{% include dfg/preface.md %}{% endcapture %}{% assign pp = pr | markdownify | split: '</p>' %}
+    <article class="ex" id="preface"><h3>作者序</h3>
+    {{ pp[0] }}</p>{{ pp[1] }}</p>
+    <details><summary data-goatcounter-click="書籍頁-展開-作者序">繼續閱讀 ↓</summary>{% for x in pp offset: 2 %}{{ x }}{% unless forloop.last %}</p>{% endunless %}{% endfor %}</details>
+    </article>
+    {%- capture ch %}{% include dfg/excerpt.md %}{% endcapture %}{% assign cp = ch | markdownify | split: '</p>' %}
+    <article class="ex" id="chapter1"><h3>第一章　導言<small>（節選）</small></h3>
+    {{ cp[0] }}</p>{{ cp[1] }}</p>
+    <details><summary data-goatcounter-click="書籍頁-展開-第一章試讀">繼續閱讀 ↓</summary>{% for x in cp offset: 2 %}{{ x }}{% unless forloop.last %}</p>{% endunless %}{% endfor %}
+    {% include dfg/excerpt-notes.html %}</details>
+    </article>
+  </div>
+</section>
+
+<section class="blk" id="features" aria-labelledby="ft-title">
+  <div class="head"><p class="eyebrow">特色 Features</p><h2 id="ft-title">本書特色</h2></div>
+  <div class="body">
+    <p class="features-lede">{{ d.features_lede }}</p>
+    <div class="features">
+      {%- for x in d.features %}<section><div><h3>{{ x.title }}</h3><p>{{ x.text }}</p></div></section>{% endfor %}
+    </div>
+    <p class="features-close">{{ d.features_close }}</p>
+    <ul class="invite">
+      <li>三人以上的讀書會，作者樂意和你們一起討論。<a class="textlink" href="{{ d.reading_group }}" rel="noopener">讀書會邀請 <span aria-hidden="true">↗</span></a></li>
+    </ul>
+  </div>
+</section>
+
+{%- assign ev = site.data.news | where: "book", "design-for-green" | where_exp: "n", "n.type != '出版'" %}
+<section class="blk" id="events" aria-labelledby="ev-title">
+  <div class="head"><p class="eyebrow">活動 Events</p><h2 id="ev-title">活動</h2></div>
+  <div class="body"><ul class="rows{% if ev.size == 1 %} single{% endif %}">{% for n in ev %}{% include news-row.html item=n %}{% endfor %}</ul></div>
+</section>
+
+{%- if site.data.dfg.responses.size > 0 %}
+<section class="blk" id="responses" aria-labelledby="rs-title">
+  <div class="head"><p class="eyebrow">迴響 Responses</p><h2 id="rs-title">迴響</h2></div>
+  <div class="body"><ul class="rows">{% for r in site.data.dfg.responses %}<li class="row"><span class="y">{{ r.date | date: '%Y.%m.%d' }}</span><span class="tag">{{ r.type }}</span><div><h3>{% if r.link %}<a href="{{ r.link }}" rel="noopener">{{ r.title }}</a>{% else %}{{ r.title }}{% endif %}</h3><p>{{ r.source }}</p></div></li>{% endfor %}</ul></div>
+</section>
+{%- endif %}
+
+<section class="blk" id="specs" aria-labelledby="sp-title">
+  <div class="head"><p class="eyebrow">資料 Details</p><h2 id="sp-title">書籍資料</h2></div>
+  <div class="body">
+    <dl class="specs">
+      <dt>書名</dt><dd>設計永續：技術干預的倫理與政治</dd>
+      <dt>作者</dt><dd><a href="{{ '/people/' | relative_url }}">洪靖</a></dd>
+      <dt>譯者</dt><dd>{{ b.translator }}</dd>
+      <dt>出版社</dt><dd>{{ b.publisher }}（{{ b.series }}）</dd>
+      <dt>出版日期</dt><dd>{{ b.pubdate }}</dd>
+      <dt>頁數</dt><dd>{{ b.pages }} 頁</dd>
+      <dt>定價</dt><dd>{{ b.price }}</dd>
+      <dt>ISBN</dt><dd>978-626-7612-41-5</dd>
+      <dt>封面設計</dt><dd>{{ b.cover_design }}</dd>
+    </dl>
+    <div class="cite-book">
+      <h3>引用本書</h3>
+      {%- for g in site.data.dfg.citations %}
+      <h4>{% if g[0] == "zh" %}中文{% else %}英文{% endif %}</h4>
+      <ul>
+        {%- for c in g[1] %}
+        <li><span class="fmt"{% if g[0] == "en" %} lang="en"{% endif %}>{{ c.label }}</span><p class="ctext"{% if g[0] == "en" %} lang="en"{% endif %}>{{ c.text }}</p><button type="button" class="copy" data-copy="{{ c.text | strip_html | escape }}" aria-label="複製{% if g[0] == "zh" %}中文{% else %}英文{% endif %}{{ c.label }}">複製</button></li>
+        {%- endfor %}
+      </ul>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+</div>
+<script src="{{ '/assets/js/journey.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/footnotes.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/zoom.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/copy.js' | relative_url }}" defer></script>

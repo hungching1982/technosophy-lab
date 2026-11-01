@@ -1,0 +1,155 @@
+# 最新消息。新的一則加在最上面。只放與 Lab 直接相關的消息；
+# 學生的其他表現與榮譽（例如洪靖指導、但與 Lab 無關的競賽）寫在 _data/records.yml。
+# 網站只顯示「最近一次更新往前兩年內」的消息，最多 20 則；更早的會自動隱藏，不必刪除。
+#
+# 欄位：
+#   date       日期（YYYY-MM-DD）
+#   type       類別：出版、獲獎、發表、演講、活動（兩個字）
+#   who        人名（可省略）：洪靖；成員寫成「陸柏臻（成員）」；多人用頓號。
+#              有 who 時，標題顯示為「who｜title」；活動本身當主詞時不寫 who。
+#   title      標題：論文或講題、書名、獎項名稱、活動名稱
+#   summary    第二行（可省略）：場合。時間，城市：地點。主辦單位。
+#   lang: en   title 與 summary 是英文時加上
+#   link       連結（可省略）；站內頁面以 / 開頭
+#   link_text  連結文字，例如：報名表單、官方報導、研討會資訊、關於此書
+#   pinned     置頂（同時只放一則）
+#   book       與某本書相關，例如 book: design-for-green，會自動列在該書專頁的「活動」
+#   student    學生的表現與榮譽：設為 true 會自動列入成員頁「學生表現與榮譽」
+#              （who 裡有「（成員）」的會自動列入，不必另外寫）
+#   advisor    設為 true 時，成員頁的第二行會加註「指導老師：洪靖」；
+#              有多位指導老師時直接寫名字，例如 advisor: 余俊頴（生醫系）、洪靖
+#
+# ※ 舊消息請不要刪除：消息頁只顯示兩年內，但成員頁「學生表現與榮譽」會一直讀取。
+
+- date: 2026-11-14
+  type: 發表
+  who: 洪靖
+  title: 政治的技術性：技術物、霸權與爭對民主
+  summary: 台灣哲學學會 2026 年學術研討會：技術、技藝與公共哲學，嘉義：國立中正大學。
+  link: https://tpatw.org/events/annual-conference/%E5%8F%B0%E7%81%A3%E5%93%B2%E5%AD%B8%E5%AD%B8%E6%9C%832026%E5%B9%B4%E5%AD%B8%E8%A1%93%E7%A0%94%E8%A8%8E%E6%9C%83/
+  link_text: 研討會資訊
+
+- date: 2026-10-17
+  type: 出版
+  who: 洪靖
+  title: 《設計永續：技術干預的倫理與政治》
+  summary: "國立陽明交通大學出版社，定價：420 元，ISBN: 9786267612415。"
+  link: /design-for-green/
+  link_text: 關於此書
+  pinned: true
+  book: design-for-green
+
+- date: 2026-10-17
+  type: 活動
+  title: 《設計永續：技術干預的倫理與政治》新書座談
+  summary: 14:00，台北：誠品 R79。國立陽明交通大學出版社主辦。
+  link: https://reurl.cc/rkVZ0y
+  link_text: 報名表單
+  book: design-for-green
+
+- date: 2026-07-24
+  type: 發表
+  who: 洪靖
+  title: "A Universal Format, Locally Inscribed: Taiwan’s Teams in the iGEM Synthetic Biology Competition, 2007–2025."
+  summary: "International Conference on STS for Resilient Futures 2026, Thailand: Bangkok."
+  lang: en
+
+- date: 2026-06-28
+  type: 活動
+  title: 《頂尖大學必修的領導思辨》新書發表會
+  summary: 台灣 STS 年會，新書發表會場次（共六本）。12:50–14:20，台北：國立陽明交通大學陽明校區。
+
+- date: 2026-06-09
+  type: 獲獎
+  who: 洪靖
+  title: 114 學年度國立中正大學教學優良獎
+  link: https://www.ccu.edu.tw/p/406-1000-90985,r981.php?Lang=zh-tw
+  link_text: 官方報導
+
+- date: 2026-06-02
+  type: 獲獎
+  who: 陸柏臻（成員）
+  title: 114 學年度國立中正大學優良教學助理
+  summary: 課程：世界文明經典閱讀。
+
+- date: 2026-05-14
+  type: 出版
+  who: 洪紹洋、徐詩偉、洪靖
+  title: 《頂尖大學必修的領導思辨：用經濟史、管理學與技術哲學看懂決策本質》
+  summary: "國立陽明交通大學出版社，定價：350 元，ISBN: 9786267612330。"
+
+- date: 2026-02-07
+  type: 演講
+  who: 洪靖
+  title: 設計道德：技術如何影響人類行為
+  summary: 2026 台北國際書展，13:30–14:30，台北：世貿一館。
+
+- date: 2026-01-24
+  type: 演講
+  who: 洪靖
+  title: 造怪之欲，常在我心？
+  summary: 《製造怪物：創造「非人物種」的全球人類歷史》（八旗文化）新書講座，19:00–20:30，台北：現流冊店。
+
+- date: 2025-12-08
+  type: 獲獎
+  who: 洪靖
+  title: 114 年台綜大年輕學者創新研發成果選拔人社領域優等獎
+
+- date: 2025-10-15
+  type: 演講
+  who: 洪靖
+  title: 設計與行為：技術與人類的關係
+  summary: 國立中正大學心理學系，嘉義：國立中正大學。
+
+- date: 2025-09-04
+  type: 發表
+  who: 洪靖
+  title: "Rethinking Human-Nonhuman Relationships: Beyond Agency and Symmetry."
+  summary: "2025 Annual Conference of the Society for Social Studies of Science (4S), USA: Seattle."
+  lang: en
+
+- date: 2025-06-27
+  type: 發表
+  who: 洪靖
+  title: "Outside-in: Rethinking Technologically Mediated Moral Enhancement."
+  summary: "24th Biennial Conference of the Society for Philosophy and Technology, The Netherlands: Eindhoven."
+  lang: en
+
+- date: 2025-06-22
+  type: 發表
+  who: 洪靖
+  title: 技術物如何造就叛逆？滑板挑戰主流空間的物質根源
+  summary: 台灣 STS 年會，台中：國立自然科學博物館。
+
+- date: 2025-06-22
+  type: 發表
+  who: 陸柏臻（成員）、黃雅芬
+  title: 技術依賴與應變失靈：從 STS 觀點檢視台中捷運事故
+  summary: 台灣 STS 年會，台中：國立自然科學博物館。
+  advisor: true
+
+- date: 2025-06-14
+  type: 演講
+  who: 洪靖
+  title: 哥吉拉：戰爭產物、怪獸之王，或人類的保護者？
+  summary: 底加書店。國立陽明交通大學出版社主辦。
+
+- date: 2025-05-21
+  type: 獲獎
+  who: 周沛穎（成員）
+  title: 113 學年度國立中正大學優良教學助理
+  summary: 課程：系統性創新方法與實務。
+
+- date: 2025-05-14
+  type: 獲獎
+  who: 洪靖
+  title: 113 學年度國立中正大學青年學者獎
+  link: https://www.ccu.edu.tw/p/406-1000-74093,r981.php
+  link_text: 官方報導
+
+- date: 2025-05-02
+  type: 發表
+  who: 洪靖
+  title: "The Birth of Taiwan’s Local Sci-Fi Comic Robot: A Mirror of Taiwan’s Science and Technology Culture."
+  summary: "2025 UCLA-NTNU Taiwan Studies Initiative Conference, USA: Los Angeles."
+  lang: en

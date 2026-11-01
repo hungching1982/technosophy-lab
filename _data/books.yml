@@ -1,0 +1,68 @@
+# 專書（monograph）與博士論文（dissertation）。出版頁與研究頁共用；新書加在最上面。
+# cover：正面書封（420×597）；cite：書目；buy：購書連結；review：書評連結。
+
+- id: design-for-green-zh
+  kind: monograph
+  year: 2026
+  date: '2026.10'
+  title: 設計永續：技術干預的倫理與政治
+  authors: 洪靖 著／劉旭鈞 譯
+  publisher: 國立陽明交通大學出版社
+  series: 科技與社會系列
+  pages: 300
+  isbn: '9786267612415'
+  cover: /assets/img/cover_design_for_green_zh.jpg
+  note: 以英文博士論文 Design for Green 大幅修訂擴充的中文版。
+  link: /design-for-green/
+  cite: 洪靖（2026），《設計永續：技術干預的倫理與政治》。國立陽明交通大學出版社。
+  pubdate: 2026 年 10 月 17 日
+  price: 420 元
+  translator: 劉旭鈞
+  cover_design: '蔡尚儒（<a class="textlink" href="https://shangrutsaiart.com/Index" rel="noopener">shangrutsai.art</a>）'
+  # 購書：有 discount 的會在書籍專頁的書店名稱後加上橘色折扣小字（折扣變動時記得改或刪掉）
+  buy:
+  - name: 誠品
+    url: https://www.eslite.com/product/10012107272683234325002
+    discount: 79 折
+  - name: 三民
+    url: https://www.sanmin.com.tw/product/index/015880957
+    discount: 79 折
+  - name: 博客來
+    url: https://www.books.com.tw/products/0011064025
+  - name: 金石堂
+    url: https://www.kingstone.com.tw/basic/2014010003065
+  - name: 五南文化
+    url: https://www.wunanbooks.com.tw/product.php?isbn=9786267612415
+- id: leadership
+  kind: monograph
+  year: 2026
+  date: '2026.05'
+  title: 頂尖大學必修的領導思辨：用經濟史、管理學與技術哲學看懂決策本質
+  authors: 洪紹洋、徐詩偉、洪靖 著
+  publisher: 國立陽明交通大學出版社
+  pages: 184
+  isbn: '9786267612330'
+  cover: /assets/img/cover_leadership.jpg
+  note: 合著；洪靖負責技術哲學部分。
+  cite: 洪紹洋、徐詩偉、洪靖（2026），《頂尖大學必修的領導思辨：用經濟史、管理學與技術哲學看懂決策本質》。國立陽明交通大學出版社。
+  buy:
+  - name: 誠品
+    url: https://www.eslite.com/product/10012107272683136728000
+  - name: 三民
+    url: https://www.sanmin.com.tw/product/index/015480567
+  - name: 博客來
+    url: https://www.books.com.tw/products/0011051340
+- id: design-for-green-en
+  kind: dissertation
+  year: 2019
+  date: '2019'
+  english: true
+  title: 'Design for Green: Ethics and Politics for Behavior-Steering Technology'
+  authors: Ching Hung
+  publisher: 4TU.Centre for Ethics and Technology, Eindhoven
+  isbn: 978-90-386-4897-2
+  cover: /assets/img/cover_design_for_green_en.jpg
+  note: 博士論文（University of Twente）。
+  award: 2020 台灣科技與社會研究（STS）學會博士論文獎首獎
+  cite: 'Hung, C. (2019). Design for Green: Ethics and Politics for Behavior-Steering Technology. Eindhoven, The Netherlands: 4TU.Centre for Ethics and Technology. ISBN: 978-90-386-4897-2.'
+  review: https://www.airitilibrary.com/Publication/alDetailedMesh?DocID=16805585-202210-202211300001-202211300001-225-244&PublishTypeID=P001

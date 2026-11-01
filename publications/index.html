@@ -1,0 +1,85 @@
+---
+title: 出版
+description: 洪靖與社技哲學實驗室的專書、期刊論文、專書章節、博士論文、會議論文與邀請演講。
+layout: default
+extra_css: /assets/css/pages.css
+---
+{%- assign mono = site.data.books | where: "kind", "monograph" -%}
+{%- assign diss = site.data.books | where: "kind", "dissertation" -%}
+{%- assign nj = site.data.publications | where: "kind", "journal" -%}
+{%- assign nc = site.data.publications | where: "kind", "chapter" -%}
+{%- assign np = site.data.publications | where: "kind", "conference" -%}
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="head"><p class="eyebrow">出版 Publications</p><h1 id="page-title">出版與發表</h1></div>
+  <div class="lede">
+    <p>專書、期刊論文、專書章節、博士論文、會議論文與邀請演講。<br>另有一百二十餘篇公眾文章，列於部落格。</p>
+    <div class="counts">
+      <div><b>{{ mono.size }}</b><span>專書</span></div>
+      <div><b>{{ nj.size }}</b><span>期刊論文</span></div>
+      <div><b>{{ nc.size }}</b><span>專書章節</span></div>
+      <div><b>{{ diss.size }}</b><span>博士論文</span></div>
+      <div><b>{{ np.size }}</b><span>會議論文</span></div>
+      <div><b>{{ site.data.talks.size }}</b><span>邀請演講</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="shelf flat" aria-label="矚目專書">
+  {%- for b in site.data.books %}
+  <article class="book">
+    <div class="cover"><img src="{{ b.cover | relative_url }}" alt="《{{ b.title }}》書封" width="420" height="597" loading="lazy"></div>
+    <div>
+      <span class="y">{{ b.date }}</span>
+      <h3{% if b.english %} lang="en"{% endif %}>{% if b.link %}<a href="{{ b.link | relative_url }}">{{ b.title }}</a>{% else %}{{ b.title }}{% endif %}</h3>
+      <p>{{ b.authors }}<br>{{ b.publisher }}</p>
+      {%- if b.award %}<p class="award">{{ b.award }}</p>{% endif %}
+    </div>
+  </article>
+  {%- endfor %}
+</div>
+
+<nav class="pubbar" aria-label="跳至類別">
+  <span class="label">跳至</span>
+  <div class="chips">
+    <a class="chip" href="#g-monograph">專書</a>
+    <a class="chip" href="#g-journal">期刊論文</a>
+    <a class="chip" href="#g-chapter">專書章節</a>
+    <a class="chip" href="#g-dissertation">博士論文</a>
+    <a class="chip" href="#g-conference">會議論文</a>
+    <a class="chip" href="#g-talk">邀請演講</a>
+  </div>
+</nav>
+
+{%- assign groups = "monograph|專書|Monograph;journal|期刊論文|Journal Articles;chapter|專書章節|Book Chapters;dissertation|博士論文|Doctoral Dissertation;conference|會議論文|Conference Papers" | split: ";" %}
+<div id="publist">
+  {%- for g in groups %}{% assign gg = g | split: "|" %}{% assign k = gg[0] %}
+  <section class="blk pgroup" aria-labelledby="g-{{ k }}">
+    <div class="head"><p class="eyebrow" lang="en">{{ gg[2] }}</p><h2 id="g-{{ k }}">{{ gg[1] }}</h2></div>
+    <div class="body"><ul class="ylist flush">
+      {%- if k == "monograph" or k == "dissertation" %}
+      {%- assign items = site.data.books | where: "kind", k %}
+      {%- for b in items %}
+      <li><span class="y">{{ b.year }}</span><div class="cite"{% if b.english %} lang="en"{% endif %}>{{ b.cite }}{% if b.buy or b.award or b.review %}<div class="meta" lang="zh-Hant">{% if b.award %}<span class="award">{{ b.award }}</span>{% endif %}{% if b.review %}<a href="{{ b.review }}" rel="noopener">書評 ↗</a>{% endif %}{% if b.buy %}<span>購書：{% for x in b.buy %}<a href="{{ x.url }}" rel="noopener" data-goatcounter-click="出版頁-購書-{{ b.title | split: '：' | first }}-{{ x.name }}">{{ x.name }}</a>{% unless forloop.last %}・{% endunless %}{% endfor %}</span>{% endif %}</div>{% endif %}</div></li>
+      {%- endfor %}
+      {%- else %}
+      {%- assign items = site.data.publications | where: "kind", k %}
+      {%- for p in items %}
+      <li><span class="y">{{ p.year }}</span>{% include s/cite.html p=p %}</li>
+      {%- endfor %}
+      {%- endif %}
+    </ul></div>
+  </section>
+  {%- endfor %}
+  <section class="blk pgroup" aria-labelledby="g-talk">
+    <div class="head"><p class="eyebrow" lang="en">Invited Talks</p><h2 id="g-talk">邀請演講</h2><p>選列</p></div>
+    <div class="body">
+      <ul class="ylist flush">{% for t in site.data.talks limit: 10 %}{% include s/talk-item.html t=t %}{% endfor %}</ul>
+      {%- if site.data.talks.size > 10 %}
+      <details class="more-talks talks-more"><summary>顯示更多演講 ↓</summary>
+        <ul class="ylist">{% for t in site.data.talks offset: 10 %}{% include s/talk-item.html t=t %}{% endfor %}</ul>
+      </details>
+      {%- endif %}
+    </div>
+  </section>
+</div>
+{% include s/essays.html %}

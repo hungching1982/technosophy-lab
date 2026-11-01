@@ -1,0 +1,54 @@
+---
+title: 研究
+description: 從具體的技術與社會問題出發，讓技術安排暴露既有概念的不足，再重建自由、能動性、政治與人類圖像。
+layout: default
+extra_css: /assets/css/pages.css
+---
+{%- assign pinterval = 8 -%}
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="head"><p class="eyebrow">研究 Research</p><h1 id="page-title"><span class="nw">同一條路徑，</span><br><span class="nw">不同的測試場域</span></h1></div>
+  <div class="lede">
+    <p>從具體的技術與社會問題出發，讓技術安排暴露既有概念的不足，再重建自由、能動性、政治與人類圖像。不同的研究主題，是同一條研究路徑在不同問題場域中的測試。</p>
+    <p class="en" lang="en">Technology is not treated only as an object to be evaluated. It is also a site from which inherited philosophical and political concepts can be tested and rebuilt.</p>
+  </div>
+</section>
+
+<div class="areas named" aria-label="研究專長">
+  {%- for a in site.data.areas %}
+  <div class="area"><span class="no">0{{ forloop.index }}</span><h3>{{ a.name }}</h3><span class="en" lang="en">{{ a.en }}</span><p>{{ a.text }}</p></div>
+  {%- endfor %}
+</div>
+
+<section class="blk" aria-labelledby="concept-title">
+  <div class="head"><p class="eyebrow">概念 Concepts</p><h2 id="concept-title">關鍵概念</h2></div>
+  <div class="body">
+    <div class="clist">
+      {%- for c in site.data.concepts %}
+      <article class="citem" aria-labelledby="c{{ forloop.index }}">
+        <h3 id="c{{ forloop.index }}">{{ c.name }}<span class="en" lang="en">{{ c.en }}</span></h3>
+        <p>{{ c.text }}</p>
+        <p class="see"><a href="{{ c.link | relative_url }}"{% if c.see_en %} lang="en"{% endif %}>{{ c.see }}</a></p>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{%- assign byStart = site.data.projects | sort: "start" | reverse %}
+{%- assign yr = site.time | date: '%Y' | plus: 0 %}
+{%- assign active = byStart | where_exp: "p", "p.end >= yr" %}
+{%- assign done = byStart | where_exp: "p", "p.end < yr" %}
+{%- assign ordered = active | concat: done %}
+<section class="blk" aria-labelledby="proj-title">
+  <div class="head"><p class="eyebrow">計畫 Projects</p><h2 id="proj-title">研究計畫</h2></div>
+  <div class="body">
+    <ul class="plist flush">
+      {%- for p in ordered limit: pinterval %}{% include s/project-item.html p=p %}{% endfor %}
+    </ul>
+    {%- if ordered.size > pinterval %}
+    <details class="talks-more" style="margin-top:18px"><summary>顯示更早的計畫 ↓</summary>
+      <ul class="plist">{% for p in ordered offset: pinterval %}{% include s/project-item.html p=p %}{% endfor %}</ul>
+    </details>
+    {%- endif %}
+  </div>
+</section>

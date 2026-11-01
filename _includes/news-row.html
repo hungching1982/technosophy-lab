@@ -1,0 +1,3 @@
+{%- assign n = include.item -%}
+<li class="row" data-date="{{ n.date | date: '%Y-%m-%d' }}">{% include news-date.html item=n %}<span class="tag">{{ n.type }}</span>
+  <div><h3>{% include news-title.html item=n %}</h3>{% if n.summary %}<p{% if n.lang %} lang="{{ n.lang }}"{% endif %}>{{ n.summary }}</p>{% endif %}{% if n.link %}<p class="go">{% include news-link.html item=n %}</p>{% endif %}</div></li>

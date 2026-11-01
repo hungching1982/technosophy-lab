@@ -1,0 +1,2 @@
+{%- assign t = include.t -%}
+<li data-kind="talk"><span class="y">{{ t.date }}</span><div class="t"><span{% if t.english %} lang="en"{% endif %}>{{ t.title }}</span><small>{% if t.city %}{{ t.city }}・{% endif %}{{ t.venue }}{% if t.note %}（{{ t.note }}）{% endif %}</small></div></li>

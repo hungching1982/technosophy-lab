@@ -1,0 +1,30 @@
+---
+title: 最新消息
+description: 社技哲學實驗室近兩年的出版、獲獎、發表、演講與活動。
+layout: default
+extra_css: /assets/css/pages.css
+---
+{% include news-items.html %}
+{%- assign byyear = news_rest | group_by_exp: "n", "n.date | date: '%Y'" %}
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="head"><p class="eyebrow">消息 News</p><h1 id="page-title">最新消息</h1></div>
+  <div class="lede"><p>近兩年的出版、獲獎、發表、演講與活動。</p><p class="en" lang="en">Publications, awards, papers, talks, and events from the past two years.</p></div>
+</section>
+<div id="newslist">
+  {%- if byyear.size == 0 and news_pinned %}
+  <section class="yeargroup"><div class="head"><h2>{{ news_pinned.date | date: '%Y' }}</h2></div><div class="body"><div class="pinwrap-news">{% include news-featured.html item=news_pinned %}</div></div></section>
+  {%- endif %}
+  {%- for g in byyear %}
+  <section class="yeargroup" aria-labelledby="y{{ g.name }}">
+    <div class="head"><h2 id="y{{ g.name }}">{{ g.name }}</h2></div>
+    <div class="body">
+      {%- if forloop.first and news_pinned %}<div class="pinwrap-news">{% include news-featured.html item=news_pinned %}</div>{% endif %}
+      <ul class="rows">
+        {%- for n in g.items %}
+        {% include news-row.html item=n %}
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+  {%- endfor %}
+</div>

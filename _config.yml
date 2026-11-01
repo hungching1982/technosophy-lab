@@ -1,0 +1,53 @@
+# ──────────────────────────────────────────────
+# Technosophy Lab 網站設定
+# 改了這個檔案之後，GitHub 會自動重新產生網站（約 1–2 分鐘）。
+# 在自己電腦預覽時，改這個檔案需要重新啟動 jekyll serve。
+# ──────────────────────────────────────────────
+
+title: Technosophy Lab 社技哲學實驗室
+tagline: 讓技術成為重做哲學的起點
+description: 讓技術成為重做哲學的起點。從具體的社會—技術問題出發，重新思考行動、自由、設計與政治。
+url: https://lab.hungching.com
+baseurl: ""
+lang: zh_TW
+author: 洪靖 Ching Hung
+
+# 英文版完成後改成 true，右上角才會出現 EN 按鈕
+english_ready: false
+
+# 聯絡表單網址：選單「聯絡」、頁尾、關於頁都連到這裡
+contact_form: "https://forms.gle/EU4Bvk571gBMQ3ZA9"
+
+# 瀏覽統計（GoatCounter）：後台 https://hungching1982.goatcounter.com
+# 只在正式網站計算；要排除自己的瀏覽，在每個瀏覽器開一次 https://lab.hungching.com/#toggle-goatcounter
+goatcounter: hungching1982
+
+timezone: Asia/Taipei
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# 頁面預設值
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+      # 社群分享預覽圖（臉書、LINE、X 抓連結時用；不會出現在頁面上）。個別頁面可在開頭另設 image 覆寫。
+      image:
+        path: /assets/img/og/og_default.jpg
+        width: 1200
+        height: 630
+        alt: Technosophy Lab 社技哲學實驗室：讓技術成為重做哲學的起點
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .github

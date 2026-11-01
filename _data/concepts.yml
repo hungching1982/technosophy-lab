@@ -1,0 +1,24 @@
+# 研究頁「關鍵概念」。依順序顯示，編號自動產生。
+# text 可用 HTML；英文詞用 <span lang="en">…</span> 包起來。see：詳見；link：連結。
+
+- name: 漸進行為工程
+  en: Piecemeal-Behavioral Engineering
+  text: 運用行為嚮導技術（<span lang="en">behavior-steering technology</span>），得先面對兩個難題：干預難免觸及自由，而我們也無法證成該把人引向何方。漸進行為工程結合史金納的行為工程與波普的漸進工程：既然終極的善無從確知，設計就瞄準可辨認的有害行為，並讓其他選項開放而愉快；既然行為修改本質上是實驗，介入就應在社區尺度進行，可觀察、可調整、可撤回。在爭對民主（<span lang="en">agonistic democracy</span>）中，它更是一個厚概念：讓價值在實作中浮現與鞏固的方法。
+  see: 《設計永續：技術干預的倫理與政治》第六至八章
+  link: /design-for-green/
+- name: 教育性環境
+  en: Educational Environment
+  text: 環境教育（<span lang="en">environmental education</span>）試圖透過知識改變行為，卻一再落入知行鴻溝（<span lang="en">knowing-doing gap</span>）。教育性環境換了起點：要改變的是行為，而心智不是必經之路。由多種行為嚮導技術構成的人造環境，若能讓人持續做對的事，它就在做教育的工作。它補足而非取代環境教育，不剝奪道德技能，反而提供反覆練習的場所。它的目標也不限於永續：禮貌、正義、性別平等，乃至照護責任的合理分配，都能透過環境來培養。
+  see: 《設計永續：技術干預的倫理與政治》第九章
+  link: /design-for-green/
+- name: 政治化技術
+  en: Politicalizing Technology
+  text: 技術的政治性常被視為需要化解的問題，於是有了科技民主化（<span lang="en">democratization of technology</span>）。政治化技術翻轉這個方向：依照慕孚的政治本性，排除不可能消失，完全民主化的技術無法企及；但技術權力也不必然傷害民主。該追問的不是如何消除技術權力，而是如何善用它：在爭對民主中，為被排除者的價值而設計，以技術抗衡技術，讓技術物成為逆霸權（<span lang="en">counter-hegemony</span>）的實作與民主的資源，也讓平凡技術物（<span lang="en">mundane artifacts</span>）重回技術研究的視野。
+  see: 《設計永續：技術干預的倫理與政治》第九章
+  link: /design-for-green/
+- name: 由外而內
+  en: Outside-in
+  text: 主流的道德增強（<span lang="en">moral enhancement</span>）主張以藥物或神經技術強化同理心與道德動機，預設「內在先於外在」。由外而內指出，這條內在進路和環境教育一樣跨不過知行鴻溝，而行為本就不一定以知識或動機為前提。透過技術中介論（<span lang="en">technological mediation theory</span>）與行為強化理論（<span lang="en">behavioral reinforcement theory</span>），它把重點從改造內在能力，轉向設計讓道德行為更容易發生的外在條件：不侵入身體、影響可見、低技術可行，自由也被重新理解為在支持性環境中順暢行動。
+  see: 'Hung, C. (2025). “Outside-in: Rethinking Technologically Mediated Moral Enhancement”.'
+  see_en: true
+  link: /publications/

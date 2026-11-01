@@ -1,0 +1,63 @@
+---
+title: 成員
+description: 社技哲學實驗室的主理人、工作團隊，以及學生表現與榮譽。
+layout: default
+extra_css: /assets/css/pages.css
+---
+{%- assign h = site.data.host %}
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="head"><p class="eyebrow">成員 People</p><h1 id="page-title">成員</h1></div>
+  <div class="lede"><p>社技哲學實驗室由洪靖發起。<br>成員以國立中正大學學生為主，參與案例、資料、田野與設計工作。</p><p class="en" lang="en">Initiated by 洪靖 Ching Hung</p></div>
+</section>
+
+<section class="hostcard" aria-labelledby="host-name">
+  <div class="pic"><p class="eyebrow">主理人 PI</p>{% include s/host-art.html %}</div>
+  <div class="info">
+    <div><h2 class="name" id="host-name">{{ h.name }}<small lang="en">{{ h.name_en }}</small></h2><p class="role">{{ h.affiliation }}{{ h.title }}</p></div>
+    <ul class="roles">{% for r in h.roles %}<li>{{ r }}</li>{% endfor %}</ul>
+    <div class="cv">
+      <div><h3>學歷</h3><ul>{% for e in h.education %}<li><span>{{ e.years }}</span><div>{{ e.text }}{% if e.note %}<small>{{ e.note }}</small>{% endif %}</div></li>{% endfor %}</ul></div>
+      <div class="cv-col"><h3>經歷</h3><ul>{% for e in h.appointments %}<li><span>{{ e.years }}</span><div>{{ e.text }}</div></li>{% endfor %}</ul>
+        <p class="hostlinks">{% for l in h.links %}<a class="textlink" href="{{ l.url }}" rel="noopener"{% if l.label == "Facebook" or l.label == "Instagram" or l.label == "X" %} data-goatcounter-click="社群-成員頁主理人-{{ l.label }}"{% endif %}>{{ l.label }} <span aria-hidden="true">↗</span></a>{% endfor %}</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="blk" aria-labelledby="hon-title">
+  <div class="head"><p class="eyebrow">榮譽 Honors</p><h2 id="hon-title">學術與教學表現</h2></div>
+  <div class="body">
+    <div class="honfold">
+    <div class="cv">
+      <div><h3>學術榮譽</h3>{% include s/cvlist.html list=site.data.honors show=9 %}</div>
+      <div><h3>教學成績</h3>{% include s/cvlist.html list=site.data.teaching show=8 %}</div>
+    </div>
+    {%- if site.data.honors.size > 9 or site.data.teaching.size > 8 %}
+    <details class="talks-more more-talks cv-more"><summary>顯示較早紀錄 ↓</summary></details>
+    {%- endif %}
+    </div>
+  </div>
+</section>
+
+{%- assign current = site.data.members | where_exp: "m", "m.to == nil" %}
+{%- assign past = site.data.members | where_exp: "m", "m.to != nil" %}
+<section class="blk" aria-labelledby="team-title">
+  <div class="head"><p class="eyebrow">團隊 Team</p><h2 id="team-title">工作團隊</h2></div>
+  <div class="body">
+    <h3 class="roster-h">現任成員</h3>
+    {% include s/roster.html list=current current=true %}
+    {%- if past.size > 6 %}
+    <details class="talks-more more-talks roster-more"><summary>顯示歷屆成員 ↓</summary>
+      <h3 class="roster-h">歷屆成員</h3>
+      {% include s/roster.html list=past %}
+    </details>
+    {%- elsif past.size > 0 %}
+    <h3 class="roster-h">歷屆成員</h3>
+    {% include s/roster.html list=past %}
+    {%- endif %}
+  </div>
+</section>
+
+<section class="blk" aria-labelledby="rec-title">
+  <div class="head"><p class="eyebrow">學生表現 Student Records</p><h2 id="rec-title">學生表現與榮譽</h2><p>競賽、獲獎、研討會發表，不限團隊成員</p></div>
+  <div class="body">{% include s/records.html %}</div>
+</section>

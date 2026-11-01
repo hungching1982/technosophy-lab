@@ -1,0 +1,51 @@
+---
+title: 關於
+description: 社技哲學實驗室發展一套以問題為起點的研究路徑：追問技術、環境與制度如何塑造我們的行為，以及這些互動要求我們如何重新思考設計、自由、政治與人的能動性。
+layout: default
+extra_css: /assets/css/pages.css
+---
+{% include s/method-steps.html %}
+<section class="statement" aria-labelledby="about-title">
+  <p class="eyebrow">關於 About</p>
+  <h1 id="about-title"><span>從具體問題出發，</span><br><span>重建思考科技的哲學框架。</span></h1>
+  <div class="cols">
+    <p>社技哲學實驗室發展一套以問題為起點的研究路徑：追問技術、環境與制度如何塑造我們的行為，以及這些互動要求我們如何重新思考設計、自由、政治與人的能動性。</p>
+    <p class="en" lang="en">Technosophy Lab develops a problem-driven research programme concerned with how technologies, environments, and institutions shape our behavior—and what those interactions require us to rethink about design, freedom, politics, and human agency.</p>
+  </div>
+</section>
+
+<div class="band-head"><h2>研究方式</h2><span class="note" lang="en">How we work</span></div>
+<ol class="method">
+  {%- for s in steps %}{% assign p = s | split: "|" %}
+  <li><span class="no">0{{ forloop.index }}</span><h3>{{ p[0] }}</h3><p>{{ p[1] }}</p></li>
+  {%- endfor %}
+</ol>
+
+<div class="tenets">
+  <div class="tenet"><h3>問題先於學科</h3><p>學科是資源庫，不是思考的容器。順序是問題、需要的概念資源，然後才是框架的重建。</p><p class="en" lang="en">Organized around problems rather than disciplinary boundaries.</p></div>
+  <div class="tenet"><h3>從技術出發的哲學</h3><p>技術不只是被評價的對象，也是檢驗並重建既有哲學與政治概念的場所。</p><p class="en" lang="en">What do technologies force philosophy itself to reconsider?</p></div>
+  <div class="tenet"><h3>診斷之後，必須建構</h3><p>診斷很重要，但核心工作是建立能運作、能失敗、能被批判與修正的安排。</p><p class="en" lang="en">Arrangements that can work, fail, be criticized, and be revised.</p></div>
+</div>
+
+<section class="bookband" aria-labelledby="book-title">
+  <div class="txt">
+    <p class="eyebrow">代表作 Major Work</p>
+    <h2 id="book-title">《設計永續》是這套研究路徑目前最完整的呈現</h2>
+    <p>這本書追問：技術能不能、該不該、以什麼方式干預人的行為，以及這如何改寫我們對自由、人類圖像與民主的理解。社技哲學實驗室的成立，是為了讓書中的問題、方法與理論架構繼續被發展、測試、批判與延伸。</p>
+    <div class="links"><a class="btn" href="{{ '/design-for-green/' | relative_url }}">關於此書 <span class="arrow" aria-hidden="true">→</span></a><a class="textlink" href="{{ '/publications/' | relative_url }}">所有出版</a></div>
+  </div>
+  <figure><img src="{{ '/assets/img/book_design_for_green_zh.webp' | relative_url }}" alt="《設計永續：技術干預的倫理與政治》立體書封" width="380" height="552"></figure>
+  <aside class="recs-by" aria-label="專文推薦">
+    <p class="eyebrow">專文推薦</p>
+    <ul>
+      <li><b lang="en">Peter-Paul Verbeek</b><span>荷蘭皇家藝術與科學院（KNAW）院長</span></li>
+      <li><b>傅大為</b><span>國立陽明交通大學科技與社會研究所榮譽教授</span></li>
+    </ul>
+  </aside>
+</section>
+
+<dl class="facts">
+  <div class="fact"><dt>主理</dt><dd>洪靖 <span lang="en">Ching Hung</span><small>國立中正大學紫荊不分系學士學位學程助理教授</small></dd></div>
+  <div class="fact"><dt>所在</dt><dd>國立中正大學<small>共同教室大樓 403 室</small></dd></div>
+  <div class="fact"><dt>聯絡</dt><dd><a class="textlink" href="{{ site.contact_form }}" rel="noopener">聯絡表單 <span aria-hidden="true">↗</span></a><small>或在粉專 <a class="textlink" href="https://facebook.hungching.com/" rel="noopener" data-goatcounter-click="社群-關於頁-Facebook Lab" lang="en">Facebook · Lab</a> 留言</small></dd></div>
+</dl>

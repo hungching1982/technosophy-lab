@@ -1,0 +1,37 @@
+{%- assign cur = page.nav_active | default: page.url -%}
+<header class="site-header wrap">
+  <a class="brand" href="{{ '/' | relative_url }}" aria-label="Technosophy Lab 社技哲學實驗室 首頁">
+    <img src="{{ '/assets/brand/logo_P2_black_orange.png' | relative_url }}" alt="Technosophy Lab" width="231" height="22">
+  </a>
+  <nav class="nav" aria-label="主要選單">
+    {%- for item in site.data.navigation %}
+    {%- if item.contact %}
+    <a class="ext" href="{{ site.contact_form }}" rel="noopener">{{ item.title }}<span aria-hidden="true">↗</span></a>
+    {%- elsif item.external %}
+    <a class="ext" href="{{ item.url }}" rel="noopener">{{ item.title }}<span aria-hidden="true">↗</span></a>
+    {%- else %}
+    <a href="{{ item.url | relative_url }}"{% if cur contains item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+    {%- endif %}
+    {%- endfor %}
+    {%- if site.english_ready %}
+    <a class="lang" href="{{ '/en/' | relative_url }}" lang="en">EN</a>
+    {%- endif %}
+  </nav>
+  <details class="menu">
+    <summary>選單</summary>
+    <nav aria-label="行動版選單">
+      {%- for item in site.data.navigation %}
+      {%- if item.contact %}
+      <a href="{{ site.contact_form }}" rel="noopener">{{ item.title }} ↗</a>
+      {%- elsif item.external %}
+      <a href="{{ item.url }}" rel="noopener">{{ item.title }} ↗</a>
+      {%- else %}
+      <a href="{{ item.url | relative_url }}"{% if cur contains item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+      {%- endif %}
+      {%- endfor %}
+      {%- if site.english_ready %}
+      <a href="{{ '/en/' | relative_url }}" lang="en">English</a>
+      {%- endif %}
+    </nav>
+  </details>
+</header>

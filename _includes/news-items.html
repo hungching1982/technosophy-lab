@@ -1,0 +1,12 @@
+{%- comment -%}
+  從 _data/news.yml 取出要顯示的消息：最近一次建置往前兩年內，最多 20 則（依檔案順序，新的在上）。
+  結果放在 news_kept；news_pinned 是置頂那一則，news_rest 是其餘。
+{%- endcomment -%}
+{%- assign cutoff = site.time | date: '%s' | minus: 63158400 -%}
+{%- assign news_kept = "" | split: "" -%}
+{%- for n in site.data.news -%}
+  {%- assign t = n.date | date: '%s' | plus: 0 -%}
+  {%- if t >= cutoff and news_kept.size < 20 -%}{%- assign news_kept = news_kept | push: n -%}{%- endif -%}
+{%- endfor -%}
+{%- assign news_pinned = news_kept | where: "pinned", true | first -%}
+{%- assign news_rest = news_kept | where_exp: "n", "n.pinned != true" -%}

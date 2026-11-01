@@ -1,0 +1,5 @@
+# 頁尾「追蹤 Follow」：Lab 的對外帳號。主理人的個人 Facebook、X 放在成員頁主理人區塊（_data/host.yml 的 links）。
+- label: Facebook · Lab
+  url: https://facebook.hungching.com/
+- label: Instagram
+  url: https://instagram.hungching.com/

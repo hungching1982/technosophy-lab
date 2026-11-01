@@ -1,0 +1,48 @@
+# 主理人資料。成員頁與關於頁共用。
+
+name: 洪靖
+name_en: Ching Hung
+title: 助理教授
+affiliation: 國立中正大學紫荊不分系學士學位學程
+roles:
+- 國立中正大學清江進修推廣暨數位學習中心數位學習組組長
+- 台灣科技與社會研究（STS）學會理事
+- '<i lang="en">East Asian Science, Technology and Society: An International Journal</i> 書評委員'
+email_public: technosophy@hungching.com
+# 主理人區塊的連結（成員頁）。個人社群放這裡；頁尾只放 Lab 粉專與 Instagram（_data/social.yml）
+links:
+- label: 系上網頁
+  url: https://deptids.ccu.edu.tw/p/406-1154-16044,r401.php?Lang=zh-tw
+- label: Facebook
+  url: https://fbpersonal.hungching.com/
+- label: Instagram
+  url: https://instagram.hungching.com/
+- label: X
+  url: https://x.hungching.com/
+- label: 部落格
+  url: https://blog.hungching.com/
+education:
+- years: 2013–2019
+  text: 荷蘭 University of Twente 哲學系博士
+  note: 技術哲學
+- years: 2012–2013
+  text: 國立清華大學社會學研究所博士班
+- years: 2006–2009
+  text: 國立清華大學歷史研究所碩士
+  note: 科技與社會（STS）組
+- years: 2001–2006
+  text: 國立清華大學原子科學系學士
+appointments:
+- years: 2021.10–2022.07
+  text: 國立陽明交通大學博雅書苑博士級研究員
+- years: 2020.08–2022.01
+  text: 國立高雄大學通識教育中心兼任助理教授
+- years: 2020.02–2022.01
+  text: 逢甲大學通識教育中心兼任助理教授
+memberships:
+- years: 2015–
+  text: Society for Social Studies of Science (4S)
+- years: 2013–
+  text: Society for Philosophy and Technology (SPT)
+- years: 2009–
+  text: 台灣科技與社會研究（STS）學會

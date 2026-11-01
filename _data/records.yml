@@ -1,0 +1,81 @@
+# 學生表現與榮譽（沒有發過最新消息的紀錄放這裡）。
+# 發過最新消息的學生紀錄不必重寫：成員頁會自動從 _data/news.yml 讀取。
+# 兩邊合併後依日期排列，新的在上；畫面只顯示西元年份，最近 8 則直接顯示，其餘折疊。
+#
+# 欄位：
+#   date     日期。只知道年份寫 '2025'；知道月份寫 '2025-10'；知道日期寫 '2025-10-31'（請加引號）
+#   type     類別：獲獎、發表等（兩個字）
+#   who      學生姓名；成員寫成「盧怡薰（成員）」；團隊沒有完整名單時寫隊名（如 CCU-Taiwan 7th）或「修課學生」
+#   title    獎項或發表名稱
+#   summary  第二行補充（可省略）
+#   （同一天的多筆紀錄，寫在下面的會排在上面）
+#   links    連結（可省略），接在第二行最後；每個連結寫 url 與 text，例如 text: 全文
+#   advisor  指導老師：寫 true 代表「洪靖」；有多位時直接寫名字（依此順序顯示）
+
+- date: '2026-09-13'
+  type: 獲獎
+  who: 林恩毅、邱盈瑄、許敬崡、顏睿嫻
+  title: 2026 全球品牌大賽－六都創新永續城市行銷提案銀質獎
+  summary: 提案：《南波萬》。
+  advisor: true
+- date: '2025-10'
+  type: 獲獎
+  who: CCU-Taiwan 9th
+  title: iGEM 國際遺傳工程機器競賽金牌
+  advisor: 余俊頴（生醫系）、翁靖傑（生醫系）、洪靖
+- date: '2025'
+  type: 獲獎
+  who: 修課學生
+  title: 第十屆全國專業倫理個案競賽佳作
+  summary: 150 組參賽。課程：生物醫學的科學、技術與社會。
+  advisor: true
+- date: '2024-10'
+  type: 獲獎
+  who: CCU-Taiwan 8th
+  title: iGEM 國際遺傳工程機器競賽金牌
+  advisor: 余俊頴（生醫系）、翁靖傑（生醫系）、洪靖
+- date: '2024'
+  type: 獲獎
+  who: 盧怡薰（成員）
+  title: 112 學年度國立中正大學優良教學助理
+  summary: 課程：紫荊學習規劃（一）、（二）。
+- date: '2023-11'
+  type: 獲獎
+  who: CCU-Taiwan 7th
+  title: iGEM 國際遺傳工程機器競賽最佳診斷專案獎提名
+  advisor: 余俊頴（生醫系）、翁靖傑（生醫系）、洪靖
+- date: '2023-11'
+  type: 獲獎
+  who: CCU-Taiwan 7th
+  title: iGEM 國際遺傳工程機器競賽金牌
+  advisor: 余俊頴（生醫系）、翁靖傑（生醫系）、洪靖
+- date: '2020'
+  type: 獲獎
+  who: 修課學生（國立高雄大學）
+  title: 全國專業倫理個案競賽優等
+  summary: 191 組參賽。課程：科技與工程倫理。
+  advisor: true
+- date: '2022-10-28'
+  type: 獲獎
+  who: 劉冠甫（國立台灣大學）
+  title: 111 年全國夏季學院徵文比賽第一名
+  summary: 〈走入技術萬象的本質：與技術哲學的相遇〉。課程：技術哲學導論。
+  links:
+  - text: 全文
+    url: https://drive.google.com/file/d/1A94rvZc4xJQ2OFm_jMajMNA7vtiLadHF/view
+- date: '2021-11-01'
+  type: 獲獎
+  who: 邱立軒（國立台灣大學）
+  title: 110 年全國夏季學院徵文比賽佳作
+  summary: 〈重新理解技術——技術哲學導論修課心得〉。課程：技術哲學導論。
+  links:
+  - text: 全文
+    url: https://drive.google.com/file/d/1BV2ZB4k7xbBCcP9RRkJPHoGa07k0JRsw/view
+- date: '2021-11-01'
+  type: 獲獎
+  who: 洪心瑜（國立台灣大學）
+  title: 110 年全國夏季學院徵文比賽第一名
+  summary: 〈大衛的投石索〉。課程：技術哲學導論。
+  links:
+  - text: 全文
+    url: https://drive.google.com/file/d/1qM3iSwmVeIrHouS4xxduUB2rlwBRHqty/view
