@@ -5,7 +5,7 @@ layout: default
   首頁。三個區塊的資料來源：
   - 數字欄：_data/stats.yml
   - 研究專長：_data/areas.yml
-  - 最新消息：_data/news.yml（置頂一則＋最新三則，自動產生）
+  - 最新消息：_data/news.yml（置頂一則＋最新五則，自動產生）
   定位文字與主理人資訊直接寫在這個檔案裡。
 {%- endcomment -%}
 <section class="hero" aria-labelledby="hero-title">
@@ -58,7 +58,7 @@ layout: default
     {% include news-featured.html item=news_pinned %}
     {%- endif %}
     <ul class="rows latest">
-      {%- for n in news_rest limit: 3 %}
+      {%- for n in news_rest limit: 5 %}
       {% include news-row.html item=n %}
       {%- endfor %}
     </ul>
