@@ -113,6 +113,13 @@
 - 全站預設寫在 `_config.yml` 的 `defaults` → `image`；個別頁面在檔案開頭另寫 `image` 就會覆寫（例如 `design-for-green/index.html`）。
 - 換圖時用同樣檔名與尺寸。臉書會記住舊的預覽，換圖後到臉書的「分享偵錯工具」（Sharing Debugger）貼上網址、按「重新抓取」。
 
+## 機構資料標記（給搜尋引擎）
+
+- 首頁的 `<head>` 有一段讀者看不到的結構化資料（`_includes/head.html` 的 `ResearchOrganization`），告訴搜尋引擎 Lab 的名稱、標誌、Facebook 專頁，以及主理人洪靖的個人帳號。
+- 標誌用 C2 頭像（`assets/brand/logo_C2_512.png`，由識別定稿原檔縮成 512 px）。
+- 社群網址寫平台原網址（例如 `https://www.facebook.com/TechnosophyLab/`），不寫 hungching.com 的轉址。帳號網址改變時，記得一起改這裡。
+- 改完可用 Google 的「複合式搜尋結果測試」（Rich Results Test）或 <https://validator.schema.org> 檢查。
+
 ## 瀏覽統計（GoatCounter）
 
 - 後台：<https://hungching1982.goatcounter.com>。帳號代號寫在 `_config.yml` 的 `goatcounter`；刪掉這一行就會停止統計。

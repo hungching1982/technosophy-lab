@@ -7,6 +7,37 @@
 {%- assign seo_tags = seo_tags | replace: t_old, t_new -%}
 {%- endif -%}
 {{ seo_tags }}
+{%- if page.url == "/" %}
+{%- comment %}機構資料標記（給搜尋引擎，讀者看不到）。Lab 的社群帳號列在 sameAs；主理人的個人帳號列在 founder。網址用平台原網址，不用 hungching.com 的轉址。{% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ResearchOrganization",
+  "@id": "{{ site.url }}/#organization",
+  "name": "Technosophy Lab",
+  "alternateName": ["社技哲學實驗室", "TECHNOSOPHY LAB 社技哲學實驗室"],
+  "url": "{{ site.url }}/",
+  "logo": "{{ site.url }}/assets/brand/logo_C2_512.png",
+  "image": "{{ site.url }}/assets/img/og/og_default.jpg",
+  "description": {{ site.description | jsonify }},
+  "email": "{{ site.data.host.email_public }}",
+  "sameAs": ["https://www.facebook.com/TechnosophyLab/"],
+  "founder": {
+    "@type": "Person",
+    "name": "洪靖",
+    "alternateName": "Ching Hung",
+    "url": "{{ site.url }}/people/",
+    "sameAs": [
+      "https://www.facebook.com/hungching1982/",
+      "https://www.instagram.com/hungching1982/",
+      "https://x.com/hungching1982",
+      "https://blog.hungching.com/",
+      "https://deptids.ccu.edu.tw/p/406-1154-16044,r401.php?Lang=zh-tw"
+    ]
+  }
+}
+</script>
+{%- endif %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
