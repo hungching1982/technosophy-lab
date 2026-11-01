@@ -6,6 +6,8 @@
 {%- assign t_new = 'property="og:title" content="' | append: page.title | append: '｜' | append: site.title | append: '"' -%}
 {%- assign seo_tags = seo_tags | replace: t_old, t_new -%}
 {%- endif -%}
+{%- comment %}seo 外掛把圖片的 alt 寫進結構化資料，但 schema.org 的 ImageObject 沒有 alt，改成 caption（og:image:alt 不受影響）。{% endcomment -%}
+{%- assign seo_tags = seo_tags | replace: '"alt":"', '"caption":"' | replace: '"@type":"imageObject"', '"@type":"ImageObject"' -%}
 {{ seo_tags }}
 {%- if page.url == "/" %}
 {%- comment %}機構資料標記（給搜尋引擎，讀者看不到）。Lab 的社群帳號列在 sameAs；主理人的個人帳號列在 founder。網址用平台原網址，不用 hungching.com 的轉址。{% endcomment %}
