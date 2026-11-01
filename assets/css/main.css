@@ -47,9 +47,10 @@ img { display: block; max-width: 100%; height: auto; }
 
 /* ---------- 2. header ---------- */
 .site-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px; border-bottom: 1px solid var(--rule); }
-.brand img { height: 22px; width: auto; }
-.nav { display: flex; align-items: center; gap: clamp(14px, 2vw, 30px); font-size: 14px; font-weight: 500; }
-.nav a { text-decoration: none; position: relative; padding-block: 6px; }
+.brand { min-width: 0; flex: 0 1 auto; }
+.brand img { display: block; width: 346px; max-width: 100%; height: auto; }
+.nav { flex: none; display: flex; align-items: center; gap: clamp(14px, 2vw, 30px); font-size: 14px; font-weight: 500; }
+.nav a { white-space: nowrap; text-decoration: none; position: relative; padding-block: 6px; }
 .nav a:not(.lang)::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 2px; background: var(--orange); transition: right .18s ease; }
 .nav a:hover::after, .nav a[aria-current="page"]::after { right: 0; }
 .nav .ext::after { content: none; }
@@ -173,6 +174,7 @@ img { display: block; max-width: 100%; height: auto; }
 
 /* ---------- 8. responsive ---------- */
 @media (max-width: 1080px) {
+  .brand img { width: 290px; }
   .hero { grid-template-columns: minmax(0, 7fr) minmax(220px, 4fr); }
   .stats { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--rule); grid-template-rows: none; grid-template-columns: repeat(4, 1fr); }
   .stat { border-bottom: 0; border-right: 1px solid var(--hair); }
@@ -181,6 +183,11 @@ img { display: block; max-width: 100%; height: auto; }
 }
 @media (max-width: 760px) {
   .nav { display: none; }
+  .site-header { gap: 16px; }
+  .brand { flex: 1 1 auto; }
+  .brand img { width: 100%; max-width: 314px; }
+  .menu { flex: none; }
+  .menu summary { white-space: nowrap; }
   .menu { display: block; position: relative; }
   .menu summary { list-style: none; cursor: pointer; font-size: 14px; font-weight: 500; border: 1px solid var(--black); padding: 4px 10px; }
   .menu summary::-webkit-details-marker { display: none; }
