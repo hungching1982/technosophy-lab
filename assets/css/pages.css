@@ -509,3 +509,9 @@ a.chip { text-decoration: none; }
 .clist.ct-b .citem h3 .t, .clist.ct-c .citem h3 .t { display: inline-block; padding: 2px 12px 3px; background: var(--orange); }
 .clist.ct-b .citem h3 .t { color: #fff; }
 .clist.ct-c .citem h3 .t { color: var(--black); }
+
+/* 清單：第一筆上方、最後一筆下方不畫線；下方接「顯示更多」折疊時保留最後一條線 */
+.ylist, .plist, .recs, .cv ul { border-top: 0; }
+.ylist > li:last-child, .plist > li:last-child, .recs > li:last-child, .cv li:last-child, .roster tr:last-child td { border-bottom: 0; }
+:is(.rows, .ylist, .plist, .recs):has(+ details) > li:last-child { border-bottom: 1px solid var(--hair); }
+.roster:has(+ details) tr:last-child td { border-bottom: 1px solid var(--hair); }

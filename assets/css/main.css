@@ -226,4 +226,12 @@ img { display: block; max-width: 100%; height: auto; }
 :root { --hdr: 72px; }
 html { scroll-padding-top: calc(var(--hdr) + 12px); }
 .site-header { position: sticky; top: 0; z-index: 60; background: var(--paper); }
-.more-below { margin: 22px 0 0; text-align: right; }
+.more-below { margin: 22px 0 0; }
+
+/* 外框寬度上限：大螢幕時置中，兩側留紙色 */
+.frame { width: min(1440px, calc(100% - 2 * var(--frame))); margin: var(--frame) auto; }
+
+/* 清單：第一筆上方、最後一筆下方不畫線；下方接「顯示更多」折疊時保留最後一條線 */
+.rows { border-top: 0; }
+.rows > li:last-child { border-bottom: 0; }
+.rows:has(+ details) > li:last-child { border-bottom: 1px solid var(--hair); }
