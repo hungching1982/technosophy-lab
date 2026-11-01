@@ -104,7 +104,8 @@ img { display: block; max-width: 100%; height: auto; }
 /* 領域欄 */
 .areas { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--rule); }
 .area { padding: 26px var(--gutter) 30px; }
-.area + .area { border-left: 1px solid var(--hair); }
+/* 欄間直線放在前一欄的右側，才會和上下區塊的分隔線對齊 */
+.area:not(:last-child) { border-right: 1px solid var(--hair); }
 .area .no { font-size: 12px; color: var(--orange); font-weight: 700; letter-spacing: .1em; }
 .area h3 { margin: 10px 0 6px; font-size: 18px; font-weight: 700; line-height: 1.4; }
 .area p { margin: 0; font-size: 14px; color: var(--ink-2); line-height: 1.75; }
@@ -205,7 +206,8 @@ img { display: block; max-width: 100%; height: auto; }
   .stat:nth-child(-n+2) { border-bottom: 1px solid var(--hair); }
 
   .areas { grid-template-columns: 1fr; }
-  .area + .area { border-left: 0; border-top: 1px solid var(--hair); }
+  .area:not(:last-child) { border-right: 0; }
+  .area + .area { border-top: 1px solid var(--hair); }
 
   .section { grid-template-columns: 1fr; }
   .section > .head { border-right: 0; padding-bottom: 8px; }

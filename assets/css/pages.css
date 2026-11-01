@@ -78,8 +78,9 @@
 /* ---------- S2. about ---------- */
 /* A: method strip */
 .method { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin: 22px 0 0; padding: 0; border-top: 1px solid var(--rule); }
-.method li { list-style: none; position: relative; padding: 26px 22px 30px; border-left: 1px solid var(--hair); }
-.method li:first-child { border-left: 0; padding-left: var(--gutter); }
+.method li { list-style: none; position: relative; padding: 26px 22px 30px; border-right: 1px solid var(--hair); }
+.method li:last-child { border-right: 0; }
+.method li:first-child { padding-left: var(--gutter); }
 .method li::after { content: "→"; position: absolute; right: -9px; top: 22px; width: 18px; height: 18px; display: grid; place-items: center; font-size: 12px; background: var(--paper); color: var(--orange); z-index: 1; }
 .method li:last-child::after { content: none; }
 .method .no { font-size: 12px; font-weight: 700; letter-spacing: .1em; color: var(--orange); }
@@ -89,7 +90,7 @@
 
 .tenets { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--rule); }
 .tenet { padding: 30px var(--gutter) 34px; }
-.tenet + .tenet { border-left: 1px solid var(--hair); }
+.tenet:not(:last-child) { border-right: 1px solid var(--hair); }
 .tenet h3 { margin: 0; font-size: clamp(20px, 1.8vw, 26px); font-weight: 500; line-height: 1.4; }
 .tenet p { margin: 12px 0 0; font-size: 14px; color: var(--ink-2); line-height: 1.8; }
 .tenet .en { margin-top: 10px; font-size: 12px; color: var(--ink-3); line-height: 1.6; }
@@ -108,7 +109,7 @@
 
 .facts { margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--rule); }
 .fact { padding: 24px var(--gutter) 28px; }
-.fact + .fact { border-left: 1px solid var(--hair); }
+.fact:not(:last-child) { border-right: 1px solid var(--hair); }
 .fact dt { font-size: 12px; font-weight: 500; letter-spacing: .14em; color: var(--ink-2); }
 .fact dd { margin: 8px 0 0; font-size: 15px; line-height: 1.7; }
 .fact dd small { display: block; font-size: 13px; color: var(--ink-3); }
@@ -192,7 +193,7 @@
 
 .shelf { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-bottom: 1px solid var(--rule); }
 .book { display: grid; grid-template-columns: minmax(90px, 36%) minmax(0, 1fr); gap: 22px; padding: 30px var(--gutter) 32px; align-items: end; }
-.book + .book { border-left: 1px solid var(--hair); }
+.book:not(:last-child) { border-right: 1px solid var(--hair); }
 .book .cover { display: flex; align-items: flex-end; justify-content: center; min-height: 100%; }
 .book .cover img { width: 100%; filter: drop-shadow(0 12px 16px rgba(14,14,14,.16)); }
 .book .cover .tcover { width: 86%; }
@@ -324,11 +325,13 @@
   /* 欄寬維持 4:8，與下方區塊的分隔線對齊；標題改為隨寬度縮小 */
   .page-hero h1 { font-size: clamp(26px, 3.3vw, 38px); }
   .method { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .method li:nth-child(4) { border-left: 0; padding-left: var(--gutter); }
+  .method li:nth-child(3) { border-right: 0; }
+  .method li:nth-child(4) { padding-left: var(--gutter); }
   .method li:nth-child(n+4) { border-top: 1px solid var(--hair); }
   .method li:nth-child(3)::after { content: none; }
   .shelf { grid-template-columns: 1fr; }
-  .book + .book { border-left: 0; border-top: 1px solid var(--hair); }
+  .book:not(:last-child) { border-right: 0; }
+  .book + .book { border-top: 1px solid var(--hair); }
   .book { grid-template-columns: 140px minmax(0, 1fr); }
   .cards, .members { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cards .card:nth-child(3n), .members .member:nth-child(3n) { border-right: 1px solid var(--hair); }
@@ -350,13 +353,14 @@
   .statement .cols { grid-template-columns: 1fr; }
   .statement h1 span { white-space: normal; }
   .method { grid-template-columns: 1fr; }
-  .method li, .method li:first-child, .method li:nth-child(4) { border-left: 0; padding: 20px var(--gutter) 22px; border-top: 1px solid var(--hair); }
+  .method li, .method li:first-child, .method li:nth-child(3), .method li:nth-child(4) { border-right: 0; padding: 20px var(--gutter) 22px; border-top: 1px solid var(--hair); }
   .method li:first-child { border-top: 0; }
   .method li::after { content: "↓"; right: auto; left: var(--gutter); top: auto; bottom: -9px; }
   .method li:nth-child(3)::after { content: "↓"; }
   .method li:last-child::after { content: none; }
   .tenets, .facts { grid-template-columns: 1fr; }
-  .tenet + .tenet, .fact + .fact { border-left: 0; border-top: 1px solid var(--hair); }
+  .tenet:not(:last-child), .fact:not(:last-child) { border-right: 0; }
+  .tenet + .tenet, .fact + .fact { border-top: 1px solid var(--hair); }
   .toc { padding-bottom: 8px; }
   .toc ol { display: flex; overflow-x: auto; gap: 0; border-top: 0; }
   .toc li { border: 1px solid var(--hair); border-right: 0; flex: none; }
@@ -554,11 +558,11 @@ a.chip { text-decoration: none; }
   .course-weeks .d { display: flex; align-items: baseline; gap: 8px; }
 }
 
-/* 關於頁「名稱」區塊 */
+/* 關於頁「鑄詞」區塊；中英文段落同寬 */
 .blk.term { border-top: 0; border-bottom: 1px solid var(--rule); }
 .blk.term .h2-sub { display: block; margin-top: 8px; font-size: .42em; font-weight: 500; color: var(--ink-2); letter-spacing: .06em; }
 .blk.term .body { display: flex; flex-direction: column; justify-content: flex-end; gap: 14px; }
-.blk.term .body p { margin: 0; max-width: 40em; font-size: clamp(16px, 1.2vw, 18px); color: var(--ink-2); line-height: 1.85; }
+.blk.term .body p { margin: 0; max-width: 720px; font-size: clamp(16px, 1.2vw, 18px); color: var(--ink-2); line-height: 1.85; }
 .blk.term .body .en { font-size: 14px; color: var(--ink-3); line-height: 1.65; }
 /* 以片語為單位換行（課程頁開頭與上課時間） */
 .page-hero .lede .nwb, .course-kv .nwb { display: inline-block; }
