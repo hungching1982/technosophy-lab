@@ -515,3 +515,14 @@ a.chip { text-decoration: none; }
 .ylist > li:last-child, .plist > li:last-child, .recs > li:last-child, .cv li:last-child, .roster tr:last-child td { border-bottom: 0; }
 :is(.rows, .ylist, .plist, .recs):has(+ details) > li:last-child { border-bottom: 1px solid var(--hair); }
 .roster:has(+ details) tr:last-child td { border-bottom: 1px solid var(--hair); }
+
+/* 2026-11 手機版調整 */
+.roles li { position: relative; padding-left: 1.5em; }
+.roles li::before { position: absolute; left: 0; top: 0; }
+.pgroup > .body .ylist > li[data-kind="talk"] { grid-template-columns: 84px minmax(0, 1fr); }
+@media (max-width: 1080px) {
+  .shelf.flat .book { align-items: start; }
+}
+@media (max-width: 760px) {
+  .pgroup > .body .ylist > li[data-kind="talk"] { grid-template-columns: 1fr; gap: 2px; }
+}

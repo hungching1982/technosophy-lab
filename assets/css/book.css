@@ -173,3 +173,10 @@ html.lb-open { overflow: hidden; }
 .rg-call .eyebrow { font-size: 13px; }
 .rg-call h3 { margin: 0; font-size: 20px; font-weight: 700; line-height: 1.5; }
 .rg-call .btn { margin-top: 6px; }
+
+/* 手機：書籍頁目錄改為可堆疊的按鈕，不固定在上方 */
+@media (max-width: 760px) {
+  .anchors { position: static; overflow: visible; flex-wrap: wrap; gap: 8px; padding: 16px var(--gutter); }
+  .anchors a { border: 1px solid var(--black); padding: 4px 12px; font-size: 13px; font-weight: 500; }
+  .anchors a:hover { background: var(--paper-2); color: var(--black); }
+}
