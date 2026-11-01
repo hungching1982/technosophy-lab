@@ -526,3 +526,8 @@ a.chip { text-decoration: none; }
 @media (max-width: 760px) {
   .pgroup > .body .ylist > li[data-kind="talk"] { grid-template-columns: 1fr; gap: 2px; }
 }
+@media (max-width: 760px) {
+  .shelf.flat .book { grid-template-columns: 76px minmax(0, 1fr); gap: 18px; align-items: start; padding: 24px var(--gutter); }
+  .shelf.flat .book h3 { margin-top: 2px; }
+  .shelf.flat .book .y { display: block; line-height: 1; }
+}
