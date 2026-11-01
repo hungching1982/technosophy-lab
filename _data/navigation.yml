@@ -9,10 +9,10 @@
   url: /research/
 - title: 出版
   url: /publications/
-- title: 消息
-  url: /news/
 - title: 成員
   url: /people/
+- title: 消息
+  url: /news/
 - title: 聯絡
   contact: true
 - title: 部落格
