@@ -43,8 +43,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="icon" href="{{ '/assets/brand/favicon.svg' | relative_url }}" type="image/svg+xml">
+{%- comment %}網站圖示：PNG 與 favicon.ico 給不支援 SVG 圖示的瀏覽器（部分手機瀏覽器），manifest 給 Android。{% endcomment %}
+<link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="16x16 32x32 48x48">
 <link rel="icon" href="{{ '/assets/brand/favicon-32.png' | relative_url }}" sizes="32x32" type="image/png">
+<link rel="icon" href="{{ '/assets/brand/icon-192.png' | relative_url }}" sizes="192x192" type="image/png">
+<link rel="icon" href="{{ '/assets/brand/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/assets/brand/apple-touch-icon.png' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 {%- if page.extra_css %}
