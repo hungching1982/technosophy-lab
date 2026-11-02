@@ -168,7 +168,9 @@ img { display: block; max-width: 100%; height: auto; }
 .f-lines { font-style: normal; margin: 16px 0 0; font-size: 13px; line-height: 1.85; color: #b9b9b2; }
 .f-name { font-size: 14px; font-weight: 500; color: var(--paper); letter-spacing: .04em; }
 .f-lines [lang="en"] { color: #d6d6d0; }
-.f-views { margin: 14px 0 0; font-size: 12px; letter-spacing: .04em; color: #8e8e88; font-variant-numeric: tabular-nums; }
+/* 累計到訪人次（assets/js/viewcount.js）：桌機在頁尾右下角、橘色斜塊左側；手機排在最下方 */
+.f-views { position: absolute; right: calc(96px + var(--gutter)); bottom: 32px; z-index: 2; margin: 0; padding: 4px 8px; border: 2px solid #b9b9b2; font-size: 13px; line-height: 1.5; letter-spacing: .06em; color: #d6d6d0; font-variant-numeric: tabular-nums; }
+.f-views[hidden] { display: none; }
 .f-links { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 5fr); gap: 32px; padding: 36px calc(var(--gutter) + 110px) 32px var(--gutter); }
 .site-footer h2 { margin: 2px 0 8px; font-size: 12px; letter-spacing: .14em; font-weight: 500; color: #a9a9a2; }
 .f-link { font-size: 14px; }
@@ -218,6 +220,7 @@ img { display: block; max-width: 100%; height: auto; }
 
   .site-footer { grid-template-columns: 1fr; }
   .site-footer::after { width: 48px; }
+  .f-views { position: static; justify-self: start; margin: 0 var(--gutter) 28px; }
   .f-id { margin-right: 52px; padding: 26px 12px 4px var(--gutter); }
   .f-links { grid-template-columns: 1fr; gap: 20px; padding: 22px 64px 26px var(--gutter); }
 }
