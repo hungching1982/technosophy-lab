@@ -1,4 +1,5 @@
 # 學術榮譽，由新到舊（依系上網頁）。
+# link：相關連結（報導等），link_text：連結文字（預設「連結」）。
 - year: '2026'
   text: 114 學年度國立中正大學教學優良獎
 - year: '2025'
@@ -15,6 +16,8 @@
   text: UNESCO 世界哲學日受邀講者（全球 25 位）
 - year: '2021'
   text: 荷蘭科技與公眾溝通中心（NEMO）官方刊物 Kennislink 專文採訪
+  link: https://www.nemokennislink.nl/publicaties/ook-niet-levende-dingen-beinvloeden-ons-gedrag/
+  link_text: 閱讀報導
 - year: '2020'
   text: 台灣科技與社會研究（STS）學會博士論文獎首獎
 - year: 2013–2016

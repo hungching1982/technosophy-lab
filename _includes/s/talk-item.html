@@ -1,2 +1,2 @@
 {%- assign t = include.t -%}
-<li data-kind="talk"><span class="y">{{ t.date }}</span><div class="t"><span{% if t.english %} lang="en"{% endif %}>{{ t.title }}</span><small>{% if t.city %}{{ t.city }}・{% endif %}{{ t.venue }}{% if t.note %}（{{ t.note }}）{% endif %}</small></div></li>
+<li data-kind="talk"><span class="y">{{ t.date }}</span><div class="t"><span{% if t.english %} lang="en"{% endif %}>{{ t.title }}</span><small>{% if t.city %}{{ t.city }}・{% endif %}{{ t.venue }}{% if t.note %}（{{ t.note }}）{% endif %}{% if t.link %}・<a class="textlink" href="{{ t.link }}" rel="noopener">{{ t.link_text | default: "相關連結" }}</a>{% endif %}</small></div></li>

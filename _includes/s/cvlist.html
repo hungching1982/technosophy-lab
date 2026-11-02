@@ -1,3 +1,3 @@
 {%- comment -%} 年份＋文字的清單；include.show 之後的項目加上 older，由外層的「顯示較早紀錄」一起展開。 {%- endcomment -%}
 {%- assign show = include.show | default: 999 -%}
-<ul>{% for x in include.list %}<li{% if forloop.index > show %} class="older"{% endif %}><span>{{ x.year | default: x.term }}</span><div>{{ x.text }}</div></li>{% endfor %}</ul>
+<ul>{% for x in include.list %}<li{% if forloop.index > show %} class="older"{% endif %}><span>{{ x.year | default: x.term }}</span><div>{{ x.text }}{% if x.link %} <a class="textlink" href="{{ x.link }}" rel="noopener"{% if x.link_lang %} lang="{{ x.link_lang }}"{% endif %}>{{ x.link_text | default: "連結" }}</a>{% endif %}</div></li>{% endfor %}</ul>
