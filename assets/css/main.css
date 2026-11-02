@@ -168,6 +168,7 @@ img { display: block; max-width: 100%; height: auto; }
 .f-lines { font-style: normal; margin: 16px 0 0; font-size: 13px; line-height: 1.85; color: #b9b9b2; }
 .f-name { font-size: 14px; font-weight: 500; color: var(--paper); letter-spacing: .04em; }
 .f-lines [lang="en"] { color: #d6d6d0; }
+.f-views { margin: 14px 0 0; font-size: 12px; letter-spacing: .04em; color: #8e8e88; font-variant-numeric: tabular-nums; }
 .f-links { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 5fr); gap: 32px; padding: 36px calc(var(--gutter) + 110px) 32px var(--gutter); }
 .site-footer h2 { margin: 2px 0 8px; font-size: 12px; letter-spacing: .14em; font-weight: 500; color: #a9a9a2; }
 .f-link { font-size: 14px; }

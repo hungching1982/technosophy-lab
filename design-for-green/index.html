@@ -11,7 +11,6 @@ image:
 layout: default
 extra_css: /assets/css/pages.css
 extra_css2: /assets/css/book.css
-viewcount: true
 ---
 {%- assign b = site.data.books | where: "id", "design-for-green-zh" | first -%}
 {%- assign d = site.data.dfg -%}
@@ -21,7 +20,7 @@ viewcount: true
   <div class="txt">
     <p class="eyebrow">專書 Book</p>
     <div class="tt"><h1 id="bk-title">設計永續</h1><p class="subt">技術干預的倫理與政治</p></div>
-    <p class="by"><a href="{{ '/people/' | relative_url }}">洪靖</a> 著／{{ b.translator }} 譯　{{ b.publisher }}，2026<span class="vc" data-viewcount="/design-for-green/" hidden>　·　本頁瀏覽 <span class="vc-n"></span> 次</span></p>
+    <p class="by"><a href="{{ '/people/' | relative_url }}">洪靖</a> 著／{{ b.translator }} 譯　{{ b.publisher }}，2026</p>
     <div class="quotes">
       {%- for q in d.quotes %}
       <blockquote><p>{{ q.text }}</p><footer><span{% if q.name contains "Verbeek" %} lang="en"{% endif %}>{{ q.name }}</span>｜{{ q.title }}</footer></blockquote>
