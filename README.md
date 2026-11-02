@@ -97,7 +97,8 @@
 
 - **活動**：在 `_data/news.yml` 的消息加上 `book: design-for-green`，就會自動列在專頁的「活動」（類別是「出版」的除外）。
 - **迴響**：寫在 `_data/dfg.yml` 最後的 `responses`，格式在檔案開頭。有一則以上時，區塊和上方目錄連結才會出現。
-- **購書與折扣**：在 `_data/books.yml` 的 `buy`。有 `discount` 的書店，名稱後會加上橘色小字；折扣結束時刪掉那一行。
+- **購書與折扣**：在 `_data/books.yml` 的 `buy`。有 `discount` 的書店，名稱後會加上橘色小字；折扣結束時刪掉那一行。書店的排列順序就是 `buy` 裡的順序。
+- **庫存標示**：在 `_data/stock.yml`，每行「書店名稱: 狀態」，例如 `博客來: 僅剩 2 本`、`誠品: 已售罄`，會以灰色小字顯示在書籍頁的書店連結旁。不需要時刪掉那一行。庫存變化快，記得隨時更新。
 - **書封圖**：`assets/img/book/` 裡的 `dfg_3d.webp`（開頭立體書封，876×1280）、`dfg_front.jpg`／`dfg_back.jpg`（900 寬）、`dfg_front_large.jpg`／`dfg_back_large.jpg`（點圖放大用，1600 寬）。換圖時保持同樣檔名與比例。出版頁與關於頁另用 `assets/img/cover_design_for_green_zh.jpg`、`assets/img/book_design_for_green_zh.webp`。
 - **論證的旅程**：桌機由 `assets/js/journey.js` 即時繪製；手機顯示 `assets/img/book/journey.jpg`。章節名稱改動時，兩者都要更新。
 - **試讀注釋**：注號用原書編號（7–20），桌機點注號會浮出注釋（`assets/js/footnotes.js`）。

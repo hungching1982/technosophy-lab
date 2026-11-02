@@ -180,3 +180,6 @@ html.lb-open { overflow: hidden; }
   .anchors a { border: 1px solid var(--black); padding: 4px 12px; font-size: 13px; font-weight: 500; }
   .anchors a:hover { background: var(--paper-2); color: var(--black); }
 }
+
+/* 書店庫存標示（_data/stock.yml） */
+.shop .stock { font-size: 12px; font-weight: 500; color: var(--ink-3); }

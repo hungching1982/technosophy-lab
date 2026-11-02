@@ -21,11 +21,11 @@
   cover_design: '蔡尚儒（<a class="textlink" href="https://shangrutsaiart.com/Index" rel="noopener">shangrutsai.art</a>）'
   # 購書：有 discount 的會在書籍專頁的書店名稱後加上橘色折扣小字（折扣變動時記得改或刪掉）
   buy:
-  - name: 誠品
-    url: https://www.eslite.com/product/10012107272683234325002
-    discount: 79 折
   - name: 三民
     url: https://www.sanmin.com.tw/product/index/015880957
+    discount: 79 折
+  - name: 誠品
+    url: https://www.eslite.com/product/10012107272683234325002
     discount: 79 折
   - name: 博客來
     url: https://www.books.com.tw/products/0011064025

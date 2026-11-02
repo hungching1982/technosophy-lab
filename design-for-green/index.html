@@ -27,7 +27,7 @@ extra_css2: /assets/css/book.css
       {%- endfor %}
     </div>
     <div class="buy" id="buy">
-      {%- for s in b.buy %}<span class="shop"><a class="textlink" href="{{ s.url }}" rel="noopener" data-goatcounter-click="書籍頁-購書-{{ s.name }}">{{ s.name }}</a>{% if s.discount %}<small class="disc">{{ s.discount }}</small>{% endif %}</span>{% endfor %}
+      {%- assign stock = site.data.stock[b.id] -%}{%- for s in b.buy %}<span class="shop"><a class="textlink" href="{{ s.url }}" rel="noopener" data-goatcounter-click="書籍頁-購書-{{ s.name }}">{{ s.name }}</a>{% if s.discount %}<small class="disc">{{ s.discount }}</small>{% endif %}{% assign st = stock[s.name] %}{% if st %}<small class="stock">{{ st }}</small>{% endif %}</span>{% endfor %}
     </div>
   </div>
 </section>
@@ -141,7 +141,7 @@ extra_css2: /assets/css/book.css
       <dt>定價</dt><dd>{{ b.price }}</dd>
       <dt>ISBN</dt><dd>978-626-7612-41-5</dd>
       <dt>封面設計</dt><dd>{{ b.cover_design }}</dd>
-      <dt>網路購書</dt><dd class="buy-list">{%- for s in b.buy %}<span class="shop"><a class="textlink" href="{{ s.url }}" rel="noopener" data-goatcounter-click="書籍頁-購書-{{ s.name }}-書籍資料">{{ s.name }}</a>{% if s.discount %}<small class="disc">{{ s.discount }}</small>{% endif %}</span>{% endfor %}</dd>
+      <dt>網路購書</dt><dd class="buy-list">{%- assign stock = site.data.stock[b.id] -%}{%- for s in b.buy %}<span class="shop"><a class="textlink" href="{{ s.url }}" rel="noopener" data-goatcounter-click="書籍頁-購書-{{ s.name }}-書籍資料">{{ s.name }}</a>{% if s.discount %}<small class="disc">{{ s.discount }}</small>{% endif %}{% assign st = stock[s.name] %}{% if st %}<small class="stock">{{ st }}</small>{% endif %}</span>{% endfor %}</dd>
     </dl>
     <div class="cite-book">
       <h3>引用本書</h3>
