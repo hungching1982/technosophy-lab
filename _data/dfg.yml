@@ -1,11 +1,13 @@
 # 《設計永續》專頁的內容。推薦序、作者序全文在 _includes/dfg/（已依書稿定稿校對）。
 # journey：論證的旅程；seg 是論證的段落（0 作者序、1 第一二章、2 第三四章、3 第五到七章、4 第八章、5 第九章）。
-# responses：迴響（座談紀錄、讀者心得、書評、報導）。空的時候整個區塊不顯示。
-#   格式：- date: '2026-11-20'
-#           type: 書評
-#           title: 標題
-#           source: 媒體或作者
-#           link: https://...
+# responses：迴響，放短句或短段落。空的時候整個區塊不顯示。依檔案順序排列（具名的放前面）。
+# responses_note：迴響區的說明文字（桌機在標題欄，手機在迴響之後）。
+#   格式：- text: 引文（照原文，不改字；刪節用「……」）
+#           name: 姓名（不願具名者寫讀者自訂的稱呼）
+#           name_lang: en（姓名是英文時加上，可省略）
+#           title: 頭銜或身分
+#           via: 出處平台，例如 Facebook、Instagram（可省略）
+#           link: https://...（可省略；有書評、報導等值得點進去看的長文時才加）
 quotes:
 - text: 我期待洪靖的讀者能夠接下這本書提出的挑戰：去設計、也去要求那些能幫助我們在這顆有限的星球上好好生活的技術。
   name: Peter-Paul Verbeek
@@ -137,5 +139,20 @@ citations:
     text: 'Hung, Ching. 2026. <i>Sheji yongxu: Jishu ganyu de lunli yu zhengzhi</i> 設計永續：技術干預的倫理與政治 [Design for Green: Ethics and Politics for Behavior-Steering Technology]. Translated by Hsu-Chun Liu. Hsinchu: National Yang Ming Chiao Tung University Press.'
   - label: APA
     text: 'Hung, C. (2026). <i>Sheji yongxu: Jishu ganyu de lunli yu zhengzhi</i> [Design for green: Ethics and politics for behavior-steering technology] (H.-C. Liu, Trans.). National Yang Ming Chiao Tung University Press.'
-# 迴響（格式見檔案開頭）。新增第一則時，把 [] 拿掉，在下一行開始寫清單。
-responses: []
+# 迴響（格式見檔案開頭）。具名的放前面；全部刪光時寫成 responses: []，整個區塊就不顯示。
+responses_note: 迴響經本人同意刊登；讀者可選擇不具名，身分經本實驗室確認。
+responses:
+- text: 這本書還滿有看頭的，乍看似乎很澀，細讀就非常有意思。
+  name: 陳憶寧
+  title: 國立政治大學廣告學系特聘教授
+  via: Facebook
+# （待翁老師確認後取消註解）
+# - text: 書名有「設計」，也有「永續」，但主題並不是老生常談的「永續設計」，而是在回答人類應用科技的正當性（Legitimacy）。……這本書沿著技術落地的軌跡，築起一座技術實作與反思的橋樑。
+#   name: 翁註重
+#   title: 國立雲林科技大學工業設計系教授
+#   via: Facebook
+- text: 設計師們我覺得可以看這本！完全是體驗設計、服務設計的範圍。
+  name: Alan
+  name_lang: en
+  title: UI/UX 設計師
+  via: Instagram

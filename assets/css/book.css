@@ -183,3 +183,25 @@ html.lb-open { overflow: hidden; }
 
 /* 書店庫存標示（_data/stock.yml） */
 .shop .stock { font-size: 12px; font-weight: 500; color: var(--ink-3); }
+
+/* 迴響：短句 */
+.resp { list-style: none; margin: 0; padding: 0; }
+.resp li { padding: 22px 0; border-top: 1px solid var(--hair); }
+.resp li:first-child { padding-top: 4px; border-top: 0; }
+.resp li:last-child { padding-bottom: 0; }
+.resp blockquote { margin: 0; }
+.resp p { margin: 0; max-width: 720px; font-size: 16px; line-height: 1.8; }
+.resp p { position: relative; padding-left: 17px; }
+.resp p::before { content: ""; position: absolute; left: 0; top: calc((1.8em - 1.25em) / 2); width: 3px; height: 1.25em; background: var(--orange); }
+.resp footer { margin-top: 10px; padding-left: 17px; font-size: 13px; color: var(--ink-2); }
+.resp footer b { font-weight: 500; color: var(--black); }
+.resp footer span { white-space: nowrap; }
+.resp footer span::before { content: "｜"; color: var(--ink-2); }
+.resp footer span[lang] { color: var(--ink-3); }
+.resp footer a { margin-left: .8em; }
+.resp-note { margin: 14px 0 0; font-size: 12.5px; color: var(--ink-3); line-height: 1.7; }
+.resp-note.rn-body { display: none; }
+@media (max-width: 760px) {
+  .resp-note.rn-head { display: none; }
+  .resp-note.rn-body { display: block; margin-top: 26px; padding-top: 14px; border-top: 1px solid var(--hair); }
+}
