@@ -123,8 +123,8 @@ extra_css2: /assets/css/book.css
 
 {%- if site.data.dfg.responses.size > 0 %}
 <section class="blk" id="responses" aria-labelledby="rs-title">
-  <div class="head"><p class="eyebrow">迴響 Responses</p><h2 id="rs-title">迴響</h2>{% if site.data.dfg.responses_note %}<p class="resp-note rn-head">{{ site.data.dfg.responses_note | replace: '；', '；<br>' }}</p>{% endif %}</div>
-  <div class="body"><ul class="resp">{% for r in site.data.dfg.responses %}<li><blockquote><p>{{ r.text }}</p><footer><b{% if r.name_lang %} lang="{{ r.name_lang }}"{% endif %}>{{ r.name }}</b><span>{{ r.title }}</span>{% if r.via %}<span lang="en">{{ r.via }}</span>{% endif %}{% if r.link %}<a class="textlink" href="{{ r.link }}" rel="noopener">全文</a>{% endif %}</footer></blockquote></li>{% endfor %}</ul>{% if site.data.dfg.responses_note %}<p class="resp-note rn-body">{{ site.data.dfg.responses_note | replace: '；', '；<br>' }}</p>{% endif %}</div>
+  <div class="head"><p class="eyebrow">迴響 Responses</p><h2 id="rs-title">迴響</h2>{% if site.data.dfg.responses_status %}<p class="resp-status">{{ site.data.dfg.responses_status }}</p>{% endif %}</div>
+  <div class="body"><ul class="resp">{% for r in site.data.dfg.responses %}<li><blockquote><p>{{ r.text }}</p><footer><b{% if r.name_lang %} lang="{{ r.name_lang }}"{% endif %}>{{ r.name }}</b><span>{{ r.title }}</span>{% if r.via %}<span lang="en">{{ r.via }}</span>{% endif %}{% if r.link %}<a class="textlink" href="{{ r.link }}" rel="noopener">全文</a>{% endif %}</footer></blockquote></li>{% endfor %}</ul>{% if site.data.dfg.responses_note %}<p class="resp-note">{{ site.data.dfg.responses_note | replace: '；', '；<br>' }}</p>{% endif %}</div>
 </section>
 {%- endif %}
 

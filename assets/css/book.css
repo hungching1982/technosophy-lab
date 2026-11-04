@@ -199,9 +199,6 @@ html.lb-open { overflow: hidden; }
 .resp footer span::before { content: "｜"; color: var(--ink-2); }
 .resp footer span[lang] { color: var(--ink-3); }
 .resp footer a { margin-left: .8em; }
-.resp-note { margin: 14px 0 0; font-size: 12.5px; color: var(--ink-3); line-height: 1.7; }
-.resp-note.rn-body { display: none; }
-@media (max-width: 760px) {
-  .resp-note.rn-head { display: none; }
-  .resp-note.rn-body { display: block; margin-top: 26px; padding-top: 14px; border-top: 1px solid var(--hair); }
-}
+.resp-status { margin: 10px 0 0; font-size: 12.5px; color: var(--ink-3); line-height: 1.7; }
+.resp-note { margin: 26px 0 0; padding-top: 14px; border-top: 1px solid var(--hair); font-size: 12.5px; color: var(--ink-3); line-height: 1.7; }
+
