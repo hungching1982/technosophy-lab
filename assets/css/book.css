@@ -198,7 +198,9 @@ html.lb-open { overflow: hidden; }
 .resp footer span { white-space: nowrap; }
 .resp footer span::before { content: "｜"; color: var(--ink-2); }
 .resp footer span[lang] { color: var(--ink-3); }
-.resp footer a { margin-left: .8em; }
+.resp footer span[lang] a { color: inherit; text-decoration: underline; text-decoration-color: var(--hair); text-underline-offset: 3px; }
+.resp footer span[lang] a:hover { color: var(--orange); text-decoration-color: currentColor; }
+.resp footer > a { margin-left: .8em; }
 .resp-status { margin: 10px 0 0; font-size: 12.5px; color: var(--ink-3); line-height: 1.7; }
 .resp-note { margin: 26px 0 0; padding-top: 14px; border-top: 1px solid var(--hair); font-size: 12.5px; color: var(--ink-3); line-height: 1.7; }
 

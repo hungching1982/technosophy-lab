@@ -8,6 +8,7 @@
 #           name_lang: en（姓名是英文時加上，可省略）
 #           title: 頭銜或身分
 #           via: 出處平台，例如 Facebook、Instagram（可省略）
+#           via_link: 出處平台的連結，例如讀者的 IG 帳號（可省略；有寫時出處會變成連結）
 #           link: https://...（可省略；有書評、報導等值得點進去看的長文時才加）
 quotes:
 - text: 我期待洪靖的讀者能夠接下這本書提出的挑戰：去設計、也去要求那些能幫助我們在這顆有限的星球上好好生活的技術。
@@ -157,3 +158,4 @@ responses:
   name_lang: en
   title: UI/UX 設計師
   via: Instagram
+  via_link: https://www.instagram.com/alans_uiuxdesign/
