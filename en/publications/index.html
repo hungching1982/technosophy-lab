@@ -35,7 +35,7 @@ zh_url: /publications/
     <div>
       <span class="y">{{ b.date }}</span>
       {%- capture lang_note %}{% unless b.english %} <span class="lnote">[in Chinese]</span>{% endunless %}{% endcapture %}
-      <h3>{% if b.link %}<a href="{{ b.link | relative_url }}"><i>{{ bt }}</i>{{ lang_note }}</a>{% else %}<i>{{ bt }}</i>{{ lang_note }}{% endif %}</h3>
+      <h3>{% if b.link %}<a href="{{ b.link_en | default: b.link | relative_url }}"><i>{{ bt }}</i>{{ lang_note }}</a>{% else %}<i>{{ bt }}</i>{{ lang_note }}{% endif %}</h3>
       <p>{{ b.authors_en | default: b.authors }}<br>{{ b.publisher_en | default: b.publisher }}</p>
       {%- if b.award_en %}<p class="award">{{ b.award_en }}</p>{% endif %}
     </div>

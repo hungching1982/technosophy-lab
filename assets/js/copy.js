@@ -3,7 +3,7 @@ document.addEventListener('click', function (e) {
   var b = e.target.closest('button[data-copy]');
   if (!b) return;
   var text = b.getAttribute('data-copy');
-  function done(ok) { var t = b.textContent; b.textContent = ok ? '已複製' : '請手動選取'; setTimeout(function () { b.textContent = t; }, 1600); }
+  function done(ok) { var t = b.textContent; var en = document.documentElement.lang === 'en'; b.textContent = ok ? (en ? 'Copied' : '已複製') : (en ? 'Select manually' : '請手動選取'); setTimeout(function () { b.textContent = t; }, 1600); }
   if (navigator.clipboard && window.isSecureContext) {
     navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
   } else {

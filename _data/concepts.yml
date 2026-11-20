@@ -9,6 +9,7 @@
   text_en: 'Behavior-steering technology is powerful, and that is exactly why it raises worries about freedom; nor has any argument succeeded in justifying where people should be steered. Piecemeal-behavioral engineering is a synthesis of B. F. Skinner’s behavioral engineering and Karl Popper’s piecemeal engineering, joined by their shared commitment to experimentation. The hyphen marks the two as equals: behavioral modification in a piecemeal fashion, and social reform through behavioral change. Rather than trying to justify where people should go, design targets identifiable harmful behaviors while making other options positively reinforcing, so that the whole procedure still counts as positive reinforcement and the problem of freedom tends not to appear. Because behavioral modification is experimental in nature, it proceeds at the scale of communities, where we can learn which designs work and fix problems before they become irreversible. Within agonistic democracy, it also becomes a thick concept: values emerge and consolidate in practice.'
   see_text_en: '<i>Design for Green</i> [in Chinese], Chapters 6–8'
   link: /design-for-green/
+  link_en: /en/design-for-green/#argument
 - name: 向下相容力
   en: Downward Compatibility
   text: 無論自由主義或社群主義，典型的民主模式都仰賴理性的同意與共識，因而預設了能運用理性、經由說理達成同意的人，也就是康德式人類圖像（<span lang="en">Kantian human imagery</span>）。然而，有限理性、選擇架構與技術中介的研究顯示，即使人終究能夠理性，也很少以這種方式行動。另一種人類圖像要求較少：人總是受到中介、助推或強化，也總是處在與他人和非人的關係之中。向下相容力指的是，建立在這種圖像上的民主，若人真的理性，依然能夠運作；反之，建立在康德式人類圖像上的民主，一旦前提落空，就會失去支撐。這也是轉向爭對民主的主要原因之一。
@@ -16,6 +17,7 @@
   text_en: 'Liberal and communitarian models of democracy seek consensus to justify collective behavioral change, which is possible only if people can be rational; both rest on a Kantian human imagery. Studies of bounded rationality, choice architecture, and technological mediation suggest that even if humans can ultimately be rational, it is unrealistic to assume they have unlimited time and energy to be so. A non-Kantian human imagery assumes less: humans are mediated, nudged, or reinforced beings, always in relation to other humans as well as to non-humans. Because this imagery is usually regarded as the “worse” one, a democracy built on it has downward compatibility: it still works even if humans do turn out to be rational. A democracy built on the Kantian human, by contrast, loses its footing once its premise fails. This is a central reason for turning to Chantal Mouffe’s agonistic democracy.'
   see_text_en: '<i>Design for Green</i> [in Chinese], Chapter 8'
   link: /design-for-green/
+  link_en: /en/design-for-green/#argument
 - name: 教育性環境
   en: Educational Environment
   text: 環境教育（<span lang="en">environmental education</span>）試圖透過知識改變行為，卻一再落入知行鴻溝（<span lang="en">knowing-doing gap</span>）。教育性環境換了起點：要改變的是行為，而心智不是必經之路。由多種行為嚮導技術構成的人造環境，若能讓人持續做對的事，它就在做教育的工作。它補足而非取代環境教育，不剝奪道德技能，反而提供反覆練習的場所。它的目標也不限於永續：禮貌、正義、性別平等，乃至照護責任的合理分配，都能透過環境來培養。
@@ -23,6 +25,7 @@
   text_en: 'Environmental education tries to change behavior by changing minds, yet keeps running into the knowing-doing gap. As B. F. Skinner reminds us, what needs to be changed is people’s behavior, not their minds; the mind is not a necessary detour. A built environment composed of behavior-steering technologies is educational in its own right: if the purpose of education is to direct people to do the right things, such an environment does exactly what education has been tasked to do. It complements rather than replaces environmental education. Far from causing moral deskilling, it gives people a place to practice moral behavior repeatedly, and it relieves them of the burden of deliberating over countless minor daily decisions. Nor need its aims be limited to sustainability: civility, justice, gender equality, and a fair distribution of care can also be cultivated through environments.'
   see_text_en: '<i>Design for Green</i> [in Chinese], Chapter 9'
   link: /design-for-green/
+  link_en: /en/design-for-green/#argument
 - name: 政治化技術
   en: Politicalizing Technology
   text: 技術的政治性常被視為需要化解的問題，於是有了科技民主化（<span lang="en">democratization of technology</span>）。政治化技術翻轉這個方向：依照慕孚的政治本性，排除不可能消失，完全民主化的技術無法企及；但技術權力也不必然傷害民主。該追問的不是如何消除技術權力，而是如何善用它：在爭對民主中，為被排除者的價值而設計，以技術抗衡技術，讓技術物成為逆霸權（<span lang="en">counter-hegemony</span>）的實作與民主的資源，也讓平凡技術物（<span lang="en">mundane artifacts</span>）重回技術研究的視野。
@@ -30,6 +33,7 @@
   text_en: 'Since Langdon Winner asked “Do artifacts have politics?”, the politics of technology has mostly been read negatively: technologies exclude, discriminate, or oppress, so the remedy is to democratize them. Politicalizing technology reverses this direction. Following Chantal Mouffe, the political, the antagonism between “we” and “they”, is constitutive of human societies; exclusion cannot be eradicated, and fully democratized technology is out of reach. Within agonistic democracy, the task is instead to create or strengthen confrontations by politicalizing technologies rather than depoliticalizing them, designing technologies that counter hegemonic ones and turning technological power into a resource for democracy. Just as Peter-Paul Verbeek’s moralizing technology integrates artifacts into our moral life, politicalizing technology makes them helpful for our political life. It also calls technology studies back to the mundane, low-tech artifacts that shape our behavior in the background.'
   see_text_en: '<i>Design for Green</i> [in Chinese], Chapter 9'
   link: /design-for-green/
+  link_en: /en/design-for-green/#argument
 - name: 由外而內
   en: Outside-in
   text: 主流的道德增強（<span lang="en">moral enhancement</span>）主張以藥物或神經技術強化同理心與道德動機，預設「內在先於外在」。由外而內指出，這條內在進路和環境教育一樣跨不過知行鴻溝，而行為本就不一定以知識或動機為前提。透過技術中介論（<span lang="en">technological mediation theory</span>）與行為強化理論（<span lang="en">behavioral reinforcement theory</span>），它把重點從改造內在能力，轉向設計讓道德行為更容易發生的外在條件：不侵入身體、影響可見、低技術可行，自由也被重新理解為在支持性環境中順暢行動。

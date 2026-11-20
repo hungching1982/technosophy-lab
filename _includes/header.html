@@ -15,9 +15,9 @@
     {%- endif %}
     {%- endfor %}
     {%- if en %}
-    <a class="lang" href="{{ page.zh_url | default: '/' | relative_url }}" lang="zh-Hant">中文</a>
+    <a class="lang" href="{{ page.zh_url | default: '/' | relative_url }}" lang="zh-Hant" data-noext>中文</a>
     {%- elsif site.english_ready %}
-    <a class="lang" href="{{ page.en_url | default: '/en/' | relative_url }}" lang="en">EN</a>
+    <a class="lang" href="{{ page.en_url | default: '/en/' | relative_url }}" lang="en" data-noext>EN</a>
     {%- endif %}
   </nav>
   <details class="menu">
@@ -33,9 +33,9 @@
       {%- endif %}
       {%- endfor %}
       {%- if en %}
-      <a href="{{ page.zh_url | default: '/' | relative_url }}" lang="zh-Hant">中文</a>
+      <a href="{{ page.zh_url | default: '/' | relative_url }}" lang="zh-Hant" data-noext>中文</a>
       {%- elsif site.english_ready %}
-      <a href="{{ page.en_url | default: '/en/' | relative_url }}" lang="en">English</a>
+      <a href="{{ page.en_url | default: '/en/' | relative_url }}" lang="en" data-noext>English</a>
       {%- endif %}
     </nav>
   </details>

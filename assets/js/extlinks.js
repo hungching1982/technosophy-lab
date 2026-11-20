@@ -5,12 +5,12 @@
   var links = document.querySelectorAll('a[href]');
   for (var i = 0; i < links.length; i++) {
     var a = links[i];
-    if (a.hasAttribute('data-zoom') || a.closest('sup.fn, .notes')) continue;
+    if (a.hasAttribute('data-zoom') || a.hasAttribute('data-noext') || a.closest('sup.fn, .notes')) continue;   // data-noext：語言切換等，不另開視窗
     var url;
     try { url = new URL(a.getAttribute('href'), location.href); } catch (e) { continue; }
     var external = url.protocol.indexOf('http') === 0 && url.host !== location.host;
     // 不在選單上的站內頁（書籍頁、課程頁），從其他頁面連過去時也視為對外連結
-    var special = ['/design-for-green/', '/courses/'].filter(function (p) { return url.pathname.indexOf(p) === 0; })[0];
+    var special = ['/design-for-green/', '/en/design-for-green/', '/courses/'].filter(function (p) { return url.pathname.indexOf(p) === 0; })[0];
     var book = url.host === location.host && special && here.indexOf(special) !== 0;
     if (!external && !book) continue;
     a.target = '_blank';
@@ -24,7 +24,7 @@
       var s = document.createElement('span'); s.setAttribute('aria-hidden', 'true'); s.className = 'ext-arrow'; s.textContent = ' ↗';
       a.appendChild(s);
     }
-    var sr = document.createElement('span'); sr.className = 'sr-only'; sr.textContent = '（另開新視窗）';
+    var sr = document.createElement('span'); sr.className = 'sr-only'; sr.textContent = document.documentElement.lang === 'en' ? ' (opens in a new window)' : '（另開新視窗）';
     a.appendChild(sr);
   }
 })();

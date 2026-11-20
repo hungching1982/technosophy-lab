@@ -1,0 +1,109 @@
+---
+title: 'Design for Green: Ethics and Politics for Behavior-Steering Technology'
+description: Ching Hung’s book (in Chinese, 2026) asks whether technology can, whether it should, and how it may intervene in human behavior. Forewords by Peter-Paul Verbeek and Daiwie Fu.
+layout: default
+lang: en_US
+zh_url: /design-for-green/
+nav_active: /en/publications/
+og_title_plain: true
+image:
+  path: /assets/img/og/og_book.jpg
+  width: 1200
+  height: 630
+  alt: 'Design for Green: Ethics and Politics for Behavior-Steering Technology, by Ching Hung (in Chinese)'
+extra_css: /assets/css/pages.css
+extra_css2: /assets/css/book.css
+---
+{%- comment -%}
+  《設計永續》英文專頁。內容在 _data/dfg_en.yml；Verbeek 推薦序原文在 _includes/dfg/verbeek_en.md。
+{%- endcomment -%}
+{%- assign b = site.data.books | where: "id", "design-for-green-zh" | first -%}
+{%- assign e = site.data.dfg_en -%}
+{%- assign aopdf = '/assets/files/Design_for_Green_Argument_Overview_v2.pdf' -%}
+<div class="bk">
+<section class="bk-hero" aria-labelledby="bk-title">
+  <div class="art"><img src="{{ '/assets/img/book/dfg_3d.webp' | relative_url }}" alt="3D cover of Design for Green [in Chinese]" width="438" height="640"></div>
+  <div class="txt">
+    <p class="eyebrow">Book [in Chinese]</p>
+    <div class="tt"><h1 id="bk-title" class="en-h1">Design for Green</h1><p class="subt">Ethics and Politics for Behavior-Steering Technology</p></div>
+    <p class="by"><a href="{{ '/en/people/' | relative_url }}">Ching Hung</a> · Chinese translation by Hsu-Chun Liu · National Yang Ming Chiao Tung University Press, 2026</p>
+    <div class="quotes">
+      <blockquote><p>{{ e.verbeek_quote }}</p><footer>Peter-Paul Verbeek | President, Royal Netherlands Academy of Arts and Sciences (KNAW)</footer></blockquote>
+      <blockquote><p>{{ e.fu_quote }}</p><footer>Daiwie Fu | Emeritus Professor, National Yang Ming Chiao Tung University (translated from the Chinese)</footer></blockquote>
+    </div>
+    <div class="actions"><a class="btn" href="{{ aopdf | relative_url }}" data-goatcounter-click="書籍頁EN-下載-Argument Overview">Argument Overview (PDF) <span class="arrow" aria-hidden="true">↓</span></a></div>
+  </div>
+</section>
+
+<nav class="anchors" aria-label="On this page">
+  <a href="#about">About</a><a href="#argument">The Argument</a><a href="#forewords">Forewords</a><a href="#events">Events</a><a href="#specs">Details</a>
+</nav>
+
+<section class="blk" id="about" aria-labelledby="ab-title">
+  <div class="head"><p class="eyebrow">About</p><h2 id="ab-title">About the Book</h2></div>
+  <div class="body longtext">
+    {%- for p in e.about %}<p>{{ p }}</p>{% endfor %}
+  </div>
+</section>
+
+<section class="blk" id="argument" aria-labelledby="arg-title">
+  <div class="head"><p class="eyebrow">Argument</p><h2 id="arg-title">The Argument</h2><p>A chapter-by-chapter summary. The full overview (17 pages) is available as a <a class="textlink" href="{{ aopdf | relative_url }}" data-goatcounter-click="書籍頁EN-下載-Argument Overview-章節">PDF</a>.</p></div>
+  <div class="body">
+    <ol class="chapters">
+      {%- for c in e.chapters %}
+      <li><span class="no">Ch. {{ forloop.index }}</span><div><h3>{{ c.title }}</h3><p>{{ c.text }}</p></div></li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="blk" id="forewords" aria-labelledby="fw-title">
+  <div class="head"><p class="eyebrow">Forewords</p><h2 id="fw-title">Forewords</h2></div>
+  <div class="body longtext">
+    {%- capture v %}{% include dfg/verbeek_en.md %}{% endcapture %}{% assign vp = v | markdownify | split: '</p>' %}
+    <article class="fw"><h3>Foreword</h3>
+      <p class="who"><b>Peter-Paul Verbeek</b><br>President, Royal Netherlands Academy of Arts and Sciences (KNAW)<br>Professor of Philosophy and Ethics of Science and Technology, University of Amsterdam</p>
+      {{ vp[0] }}</p>
+      <details><summary data-goatcounter-click="書籍頁EN-展開-推薦序Verbeek">Read the full foreword ↓</summary>{% for x in vp offset: 1 %}{{ x }}{% unless forloop.last %}</p>{% endunless %}{% endfor %}</details>
+    </article>
+    <article class="fw"><h3>{{ e.fu_title }}</h3>
+      <p class="who"><b>Daiwie Fu</b><br>Emeritus Professor, Institute of Science, Technology and Society, National Yang Ming Chiao Tung University</p>
+      {%- for p in e.fu_excerpt %}<p>{{ p }}</p>{% endfor %}
+      <p class="fw-note">Excerpt, translated from the Chinese.</p>
+    </article>
+  </div>
+</section>
+
+{%- assign ev = site.data.news | where: "book", "design-for-green" | where_exp: "n", "n.type != '出版'" | where_exp: "n", "n.en" %}
+<section class="blk" id="events" aria-labelledby="ev-title">
+  <div class="head"><p class="eyebrow">Events</p><h2 id="ev-title">Events</h2></div>
+  <div class="body"><ul class="rows{% if ev.size == 1 %} single{% endif %}">{% for n in ev %}{% include news-row.html item=n en=true %}{% endfor %}</ul></div>
+</section>
+
+<section class="blk" id="specs" aria-labelledby="sp-title">
+  <div class="head"><p class="eyebrow">Details</p><h2 id="sp-title">Book Details</h2></div>
+  <div class="body">
+    <dl class="specs">
+      <dt>Title</dt><dd><span lang="zh-Hant">設計永續：技術干預的倫理與政治</span><br><i>Design for Green: Ethics and Politics for Behavior-Steering Technology</i></dd>
+      <dt>Author</dt><dd><a href="{{ '/en/people/' | relative_url }}">Ching Hung</a></dd>
+      <dt>Translator</dt><dd>Hsu-Chun Liu</dd>
+      <dt>Publisher</dt><dd>National Yang Ming Chiao Tung University Press (Science, Technology and Society Series)</dd>
+      <dt>Published</dt><dd>October 17, 2026</dd>
+      <dt>Language</dt><dd>Traditional Chinese</dd>
+      <dt>Pages</dt><dd>{{ b.pages }}</dd>
+      <dt>ISBN</dt><dd>978-626-7612-41-5</dd>
+      <dt>Forewords</dt><dd>Peter-Paul Verbeek, Daiwie Fu</dd>
+      <dt>Buy</dt><dd class="buy-list">{%- for s in b.buy %}<span class="shop"><a class="textlink" href="{{ s.url }}" rel="noopener" data-goatcounter-click="書籍頁EN-購書-{{ s.name }}">{{ site.data.en.stores[s.name] | default: s.name }}</a></span>{% endfor %}</dd>
+    </dl>
+    <div class="cite-book">
+      <h3>Cite This Book</h3>
+      <ul>
+        {%- for c in site.data.dfg.citations.en %}
+        <li><span class="fmt">{{ c.label }}</span><p class="ctext">{{ c.text }}</p><button type="button" class="copy" data-copy="{{ c.text | strip_html | escape }}" aria-label="Copy {{ c.label }} citation">Copy</button></li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+</div>
+<script src="{{ '/assets/js/copy.js' | relative_url }}" defer></script>
