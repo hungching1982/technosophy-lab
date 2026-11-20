@@ -13,7 +13,7 @@
       if (tag) {
         var sr = document.createElement('span');
         sr.className = 'sr-only';
-        sr.textContent = '（即將舉行）';
+        sr.textContent = document.documentElement.lang === 'en' ? ' (upcoming)' : '（即將舉行）';
         tag.appendChild(sr);
       }
     }

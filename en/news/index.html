@@ -1,0 +1,36 @@
+---
+title: News
+description: Publications, awards, presentations, talks, and events from the past two years.
+layout: default
+lang: en_US
+extra_css: /assets/css/pages.css
+zh_url: /news/
+---
+{%- comment -%}
+  英文版消息頁：只列英文消息（lang: en）與加了 en: 欄位的中文消息。
+{%- endcomment -%}
+{% include news-items.html %}
+{%- assign news_en = "" | split: "" -%}
+{%- for n in news_kept -%}{%- if n.lang == "en" or n.en -%}{%- assign news_en = news_en | push: n -%}{%- endif -%}{%- endfor -%}
+{%- assign en_pinned = news_en | where: "pinned", true | first -%}
+{%- assign en_rest = news_en | where_exp: "n", "n.pinned != true" -%}
+{%- assign byyear = en_rest | group_by_exp: "n", "n.date | date: '%Y'" %}
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="head"><p class="eyebrow">News</p><h1 id="page-title">News</h1></div>
+  <div class="lede"><p>Selected publications, awards, presentations, talks, and events from the past two years. Most of our activities are held in Chinese; see the <a class="textlink" href="{{ '/news/' | relative_url }}">full list [in Chinese]</a>.</p></div>
+</section>
+<div id="newslist">
+  {%- for g in byyear %}
+  <section class="yeargroup" aria-labelledby="y{{ g.name }}">
+    <div class="head"><h2 id="y{{ g.name }}">{{ g.name }}</h2></div>
+    <div class="body">
+      {%- if forloop.first and en_pinned %}<div class="pinwrap-news">{% include news-featured.html item=en_pinned en=true %}</div>{% endif %}
+      <ul class="rows">
+        {%- for n in g.items %}
+        {% include news-row.html item=n en=true %}
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+  {%- endfor %}
+</div>

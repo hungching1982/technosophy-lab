@@ -1,0 +1,61 @@
+---
+title: About
+description: Starting from concrete problems to rebuild philosophical frameworks for technology—how Technosophy Lab works, and its major work.
+layout: default
+lang: en_US
+extra_css: /assets/css/pages.css
+zh_url: /about/
+---
+{% include s/method-steps-en.html %}
+<section class="statement" aria-labelledby="about-title">
+  <p class="eyebrow">About</p>
+  <h1 id="about-title"><span>Starting from concrete problems,</span><br><span>rebuilding how we think about technology.</span></h1>
+  <div class="cols">
+    <p>Technosophy Lab develops a problem-driven research program concerned with how technologies, environments, and institutions shape our behavior—and what those interactions require us to rethink about design, freedom, politics, and human agency.</p>
+  </div>
+</section>
+
+<section class="blk term" aria-labelledby="term-title">
+  <div class="head"><p class="eyebrow">Coinage</p><h2 id="term-title">Technosophy<small class="h2-sub" lang="zh-Hant">社技哲學</small></h2></div>
+  <div class="body">
+    <p>Technosophy is coined in contrast to philo-sophy, the love of wisdom.</p>
+    <p>It asks not only how philosophy evaluates technology, but what happens when we start from technology to test and re-examine established philosophical concepts. Technologies and material arrangements shape how we act, decide, and live together, and in doing so they expose the limits of familiar beliefs about freedom, agency, politics, and human imagery.</p>
+    <p>The Chinese name, <span lang="zh-Hant">社技哲學</span>, gathers society (<span lang="zh-Hant">社</span>), technology (<span lang="zh-Hant">技</span>), and philosophy (<span lang="zh-Hant">哲學</span>) into a single word. <span lang="zh-Hant">社技</span> is also a homophone of <span lang="zh-Hant">設計</span>, design: society and technology constitute each other and cannot be understood apart, so in building and shaping the world we have to think about, and work on, both at once.</p>
+  </div>
+</section>
+
+<div class="band-head"><h2>How We Work</h2></div>
+<ol class="method">
+  {%- for s in steps %}{% assign p = s | split: "|" %}
+  <li><span class="no">0{{ forloop.index }}</span><h3>{{ p[0] }}</h3><p>{{ p[1] }}</p></li>
+  {%- endfor %}
+</ol>
+
+<div class="tenets">
+  <div class="tenet"><h3>Problems before Disciplines</h3><p>Disciplines are resources, not containers for thought. The order runs from problem, to the conceptual resources it needs, to the reconstruction of a framework.</p></div>
+  <div class="tenet"><h3>Philosophy from Technology</h3><p>Technology plays three roles in our research at once: it supplies empirical material, raises conceptual problems, and becomes the object of intervention after reconstruction.</p></div>
+  <div class="tenet"><h3>After Diagnosis, Construction</h3><p>Diagnosis matters, but the core work is building arrangements that can work, fail, be criticized, and be revised.</p></div>
+</div>
+
+<section class="bookband" aria-labelledby="book-title">
+  <div class="txt">
+    <p class="eyebrow">Major Work</p>
+    <h2 id="book-title"><i>Design for Green: Ethics and Politics for Behavior-Steering Technology</i> is the fullest statement of this research program so far</h2>
+    <p>Published in Chinese in 2026, the book asks whether, whether it should, and how technology may intervene in human behavior—and how this rewrites our understanding of freedom, human imagery, and democracy. Technosophy Lab was founded so that the book's questions, methods, and theoretical framework can continue to be developed, tested, criticized, and extended.</p>
+    <div class="links"><a class="btn" href="{{ '/design-for-green/' | relative_url }}">About the Book [in Chinese] <span class="arrow" aria-hidden="true">→</span></a><a class="textlink" href="{{ '/en/publications/' | relative_url }}">All Publications</a></div>
+  </div>
+  <figure><img src="{{ '/assets/img/book_design_for_green_zh.webp' | relative_url }}" alt="3D cover of Design for Green: Ethics and Politics for Behavior-Steering Technology [in Chinese]" width="380" height="552"></figure>
+  <aside class="recs-by" aria-label="Forewords by">
+    <p class="eyebrow">Forewords by</p>
+    <ul>
+      <li><b>Peter-Paul Verbeek</b><span>President, Royal Netherlands Academy of Arts and Sciences (KNAW)</span></li>
+      <li><b>Daiwie Fu</b><span>Emeritus Professor, Institute of Science, Technology and Society, National Yang Ming Chiao Tung University</span></li>
+    </ul>
+  </aside>
+</section>
+
+<dl class="facts">
+  <div class="fact"><dt>Principal Investigator</dt><dd>Ching Hung <span lang="zh-Hant">洪靖</span><small>Assistant Professor, Bachelor Program of Interdisciplinary Studies, National Chung Cheng University</small></dd></div>
+  <div class="fact"><dt>Location</dt><dd>National Chung Cheng University<small>Room 403, Common Class Building, Chiayi, Taiwan</small></dd></div>
+  <div class="fact"><dt>Contact</dt><dd><a class="textlink" href="mailto:{{ site.data.host.email_public }}">{{ site.data.host.email_public }}</a><small>or message us on <a class="textlink" href="https://facebook.hungching.com/" rel="noopener" data-goatcounter-click="社群-關於頁EN-Facebook Lab">Facebook · Lab</a></small></dd></div>
+</dl>

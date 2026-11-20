@@ -1,2 +1,6 @@
 {%- assign p = include.p -%}
+{%- if include.en %}
+<div class="cite" lang="en">{% if p.english %}{{ p.text }}{% else %}{{ p.en | default: p.text }} [in Chinese]{% endif %}{% if p.award_en or p.link or p.note %}<div class="meta">{% if p.award_en %}<span class="award">{{ p.award_en }}</span>{% endif %}{% if p.note %}<span>{{ p.note }}</span>{% endif %}{% if p.link %}<a href="{{ p.link }}" rel="noopener">DOI / Online ↗</a>{% endif %}</div>{% endif %}</div>
+{%- else %}
 <div class="cite"{% if p.english %} lang="en"{% endif %}>{{ p.text }}{% if p.award or p.link or p.note %}<div class="meta">{% if p.award %}<span class="award" lang="zh-Hant">{{ p.award }}</span>{% endif %}{% if p.note %}<span lang="en">{{ p.note }}</span>{% endif %}{% if p.link %}<a href="{{ p.link }}" rel="noopener" lang="en">DOI／Online ↗</a>{% endif %}</div>{% endif %}</div>
+{%- endif %}

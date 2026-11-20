@@ -569,3 +569,7 @@ a.chip { text-decoration: none; }
 /* 以片語為單位換行（課程頁開頭與上課時間） */
 .page-hero .lede .nwb, .course-kv .nwb { display: inline-block; }
 .page-hero h1 .h1-sub { font-size: max(.42em, 14px); }
+
+/* 英文版：區塊內的說明段落 */
+.pnote { margin: 0 0 16px; max-width: 720px; font-size: 15px; line-height: 1.75; color: var(--ink-2); }
+html[lang="en"] .page-hero h1 .nw { white-space: normal; }

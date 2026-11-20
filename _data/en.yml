@@ -1,0 +1,15 @@
+# 英文版用的固定字串與對照。術語依專案文件「術語對照表」。
+types:
+  出版: Publication
+  獲獎: Award
+  發表: Presentation
+  演講: Talk
+  活動: Event
+  課程: Course
+names:
+  洪靖: Ching Hung
+stats:
+  書籍: Books
+  期刊論文: Journal Articles
+  會議論文: Conference Papers
+  研究計畫: Research Projects

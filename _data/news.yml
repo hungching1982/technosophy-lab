@@ -9,7 +9,8 @@
 #              有 who 時，標題顯示為「who｜title」；活動本身當主詞時不寫 who。
 #   title      標題：論文或講題、書名、獎項名稱、活動名稱
 #   summary    第二行（可省略）：場合。時間，城市：地點。主辦單位。
-#   lang: en   title 與 summary 是英文時加上
+#   lang: en   title 與 summary 是英文時加上（英文版會自動列出）
+#   en         英文版要列出這則中文消息時加上：en: 底下寫 title、summary、link_text（可省略），縮排兩格
 #   link       連結（可省略）；站內頁面以 / 開頭
 #   link_text  連結文字，例如：報名表單、官方報導、研討會資訊、關於此書
 #   pinned     置頂（同時只放一則）
@@ -26,6 +27,9 @@
   title: 始於技術的哲學：《設計永續》學術論壇
   summary: 重磅學者跨領域與談。週六 13:30–17:30，嘉義：國立中正大學。議程與報名方式近日公布。
   book: design-for-green
+  en:
+    title: "Philosophy from Technology: A Symposium on <i>Design for Green</i>"
+    summary: "Leading scholars across disciplines in conversation. Saturday, 13:30–17:30, Chiayi: National Chung Cheng University. Program and registration to be announced. Held in Chinese."
 
 - date: 2026-11-29
   type: 活動
@@ -60,6 +64,10 @@
   link_text: 關於此書
   pinned: true
   book: design-for-green
+  en:
+    title: "Design for Green: Ethics and Politics for Behavior-Steering Technology [in Chinese]"
+    summary: "National Yang Ming Chiao Tung University Press. ISBN: 9786267612415."
+    link_text: About the book [in Chinese]
 
 - date: 2026-10-17
   type: 活動

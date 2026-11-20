@@ -1,2 +1,3 @@
 {%- assign t = include.item -%}
-{%- if t.who %}{{ t.who }}｜{% endif %}{% if t.lang %}<span lang="{{ t.lang }}">{{ t.title }}</span>{% else %}{{ t.title }}{% endif %}
+{%- if include.en and t.en -%}{%- assign tt = t.en.title -%}{%- assign tl = "en" -%}{%- else -%}{%- assign tt = t.title -%}{%- assign tl = t.lang -%}{%- endif -%}
+{%- if t.who %}{% if include.en %}{{ site.data.en.names[t.who] | default: t.who }}{% else %}{{ t.who }}{% endif %}｜{% endif %}{% if tl %}<span lang="{{ tl }}">{{ tt }}</span>{% else %}{{ tt }}{% endif %}

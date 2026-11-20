@@ -1,0 +1,19 @@
+# 英文版上方選單（/en/ 底下的頁面使用）。格式同 navigation.yml。
+# 聯絡表單是中文的，英文版的「Contact」改用 email。
+- title: Home
+  url: /en/
+- title: About
+  url: /en/about/
+- title: Research
+  url: /en/research/
+- title: Publications
+  url: /en/publications/
+- title: People
+  url: /en/people/
+- title: News
+  url: /en/news/
+- title: Contact
+  url: mailto:technosophy@hungching.com
+- title: Blog
+  url: https://blog.hungching.com/
+  external: true

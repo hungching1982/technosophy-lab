@@ -1,7 +1,7 @@
 {%- assign f = include.item -%}
 <article class="featured" data-date="{{ f.date | date: '%Y-%m-%d' }}">
-  <div class="f-meta">{% include news-date.html item=f %}<span class="tag">{{ f.type }}</span></div>
-  <h3>{% include news-title.html item=f %}</h3>
-  {%- if f.summary %}<p{% if f.lang %} lang="{{ f.lang }}"{% endif %}>{{ f.summary }}</p>{% endif %}
-  {% include news-link.html item=f %}
+  <div class="f-meta">{% include news-date.html item=f %}<span class="tag">{% if include.en %}{{ site.data.en.types[f.type] | default: f.type }}{% else %}{{ f.type }}{% endif %}</span></div>
+  <h3>{% include news-title.html item=f en=include.en %}</h3>
+  {%- if include.en and f.en %}{% if f.en.summary %}<p lang="en">{{ f.en.summary }}</p>{% endif %}{% elsif f.summary %}<p{% if f.lang %} lang="{{ f.lang }}"{% endif %}>{{ f.summary }}</p>{% endif %}
+  {% include news-link.html item=f en=include.en %}
 </article>

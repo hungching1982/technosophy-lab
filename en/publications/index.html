@@ -1,0 +1,87 @@
+---
+title: Publications
+description: Ching Hung's books, journal articles, book chapters, conference papers, and invited talks.
+layout: default
+lang: en_US
+extra_css: /assets/css/pages.css
+zh_url: /publications/
+---
+{%- assign mono = site.data.books | where: "kind", "monograph" -%}
+{%- assign diss = site.data.books | where: "kind", "dissertation" -%}
+{%- assign nj = site.data.publications | where: "kind", "journal" -%}
+{%- assign nc = site.data.publications | where: "kind", "chapter" -%}
+{%- assign np = site.data.publications | where: "kind", "conference" -%}
+{%- assign talks_en = site.data.talks | where: "english", true -%}
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="head"><p class="eyebrow">Publications</p><h1 id="page-title">Publications and Presentations</h1></div>
+  <div class="lede">
+    <p>Books, journal articles, book chapters, a doctoral dissertation, conference papers, and invited talks. Works in Chinese are marked [in Chinese]; English titles of these works are translations.</p>
+    <div class="counts">
+      <div><b>{{ mono.size }}</b><span>Books</span></div>
+      <div><b>{{ nj.size }}</b><span>Journal Articles</span></div>
+      <div><b>{{ nc.size }}</b><span>Book Chapters</span></div>
+      <div><b>{{ diss.size }}</b><span>Dissertation</span></div>
+      <div><b>{{ np.size }}</b><span>Conference Papers</span></div>
+      <div><b>{{ site.data.talks.size }}<sup class="plus">+</sup></b><span>Invited Talks</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="shelf flat" aria-label="Books">
+  {%- for b in site.data.books %}
+  {%- assign bt = b.title_en | default: b.title %}
+  <article class="book">
+    <div class="cover"><img src="{{ b.cover | relative_url }}" alt="Cover of {{ bt }}" width="420" height="597" loading="lazy"></div>
+    <div>
+      <span class="y">{{ b.date }}</span>
+      {%- capture lang_note %}{% unless b.english %} <span class="lnote">[in Chinese]</span>{% endunless %}{% endcapture %}
+      <h3>{% if b.link %}<a href="{{ b.link | relative_url }}"><i>{{ bt }}</i>{{ lang_note }}</a>{% else %}<i>{{ bt }}</i>{{ lang_note }}{% endif %}</h3>
+      <p>{{ b.authors_en | default: b.authors }}<br>{{ b.publisher_en | default: b.publisher }}</p>
+      {%- if b.award_en %}<p class="award">{{ b.award_en }}</p>{% endif %}
+    </div>
+  </article>
+  {%- endfor %}
+</div>
+
+<nav class="pubbar" aria-label="Jump to section">
+  <span class="label">Jump to</span>
+  <div class="chips">
+    <a class="chip" href="#g-monograph">Books</a>
+    <a class="chip" href="#g-journal">Journal Articles</a>
+    <a class="chip" href="#g-chapter">Book Chapters</a>
+    <a class="chip" href="#g-dissertation">Dissertation</a>
+    <a class="chip" href="#g-conference">Conference Papers</a>
+    <a class="chip" href="#g-talk">Invited Talks</a>
+  </div>
+</nav>
+
+{%- assign groups = "monograph|Books;journal|Journal Articles;chapter|Book Chapters;dissertation|Doctoral Dissertation;conference|Conference Papers" | split: ";" %}
+<div id="publist">
+  {%- for g in groups %}{% assign gg = g | split: "|" %}{% assign k = gg[0] %}
+  <section class="blk pgroup" aria-labelledby="g-{{ k }}">
+    <div class="head"><h2 id="g-{{ k }}">{{ gg[1] }}</h2></div>
+    <div class="body"><ul class="ylist flush">
+      {%- if k == "monograph" or k == "dissertation" %}
+      {%- assign items = site.data.books | where: "kind", k %}
+      {%- for b in items %}
+      <li><span class="y">{{ b.year }}</span><div class="cite" lang="en">{% if b.english %}{{ b.cite }}{% else %}{{ b.cite_en }} [in Chinese]{% endif %}{% if b.award_en or b.review %}<div class="meta">{% if b.award_en %}<span class="award">{{ b.award_en }}</span>{% endif %}{% if b.review %}<a href="{{ b.review }}" rel="noopener">Book review [in Chinese] ↗</a>{% endif %}</div>{% endif %}</div></li>
+      {%- endfor %}
+      {%- else %}
+      {%- assign items = site.data.publications | where: "kind", k %}
+      {%- for p in items %}
+      <li><span class="y">{% if p.year == "即將出版" %}Forthcoming{% else %}{{ p.year }}{% endif %}</span>{% include s/cite.html p=p en=true %}</li>
+      {%- endfor %}
+      {%- endif %}
+    </ul></div>
+  </section>
+  {%- endfor %}
+  <section class="blk pgroup" aria-labelledby="g-talk">
+    <div class="head"><h2 id="g-talk">Invited Talks</h2></div>
+    <div class="body">
+      <p class="pnote">More than {{ site.data.talks.size }} invited talks, mostly in Chinese, at universities, research institutes, and public venues in Taiwan, including Academia Sinica, National Taiwan University, National Tsing Hua University, the Taipei International Book Exhibition, and MoCA Taipei. Talks given in English:</p>
+      <ul class="ylist flush">{% for t in talks_en %}{% include s/talk-item.html t=t %}{% endfor %}</ul>
+      <p class="more-below"><a class="textlink" href="{{ '/publications/#g-talk' | relative_url }}">Full list [in Chinese] →</a></p>
+    </div>
+  </section>
+</div>
+<div class="essays"><p>Over <b>120</b> public essays in Chinese, in outlets including <i>Business Weekly</i>, <i>PanSci</i>, <i>Independent Review @ CommonWealth Magazine</i>, and <i>La Vie</i>.</p><a class="btn" href="https://blog.hungching.com/p/publications.html" rel="noopener">Full list on the blog [in Chinese] <span class="arrow" aria-hidden="true">↗</span></a></div>

@@ -248,3 +248,10 @@ html { scroll-padding-top: calc(var(--hdr) + 12px); }
 .rows { border-top: 0; }
 .rows > li:last-child { border-bottom: 0; }
 .rows:has(+ details) > li:last-child { border-bottom: 1px solid var(--hair); }
+
+/* 英文版（/en/）：英文句子較長，標題允許換行 */
+html[lang="en"] .intro h1 span,
+html[lang="en"] .statement h1 span { white-space: normal; }
+html[lang="en"] .eyebrow [lang="zh-Hant"] { white-space: nowrap; }
+html[lang="en"] body { font-family: "Source Sans 3", var(--sans); }
+html[lang="en"] [lang="en"] { font-family: inherit; }

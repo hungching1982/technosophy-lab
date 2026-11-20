@@ -8,6 +8,9 @@
 {%- endif -%}
 {%- comment %}seo 外掛把圖片的 alt 寫進結構化資料，但 schema.org 的 ImageObject 沒有 alt，改成 caption（og:image:alt 不受影響）。{% endcomment -%}
 {%- assign seo_tags = seo_tags | replace: '"alt":"', '"caption":"' | replace: '"@type":"imageObject"', '"@type":"ImageObject"' -%}
+{%- if page.lang == "en_US" -%}
+{%- assign seo_tags = seo_tags | replace: site.title, "Technosophy Lab" | replace: site.tagline, "Philosophy from Technology" | replace: "｜Technosophy Lab", " | Technosophy Lab" | replace: "Technosophy Lab | Technosophy Lab", "Technosophy Lab" -%}
+{%- endif %}
 {{ seo_tags }}
 {%- if page.url == "/" %}
 {%- comment %}機構資料標記（給搜尋引擎，讀者看不到）。Lab 的社群帳號列在 sameAs；主理人的個人帳號列在 founder。網址用平台原網址，不用 hungching.com 的轉址。{% endcomment %}
@@ -40,9 +43,21 @@
 }
 </script>
 {%- endif %}
+{%- comment %}中英文對應頁：英文頁寫 zh_url，中文頁寫 en_url，產生 hreflang。{% endcomment %}
+{%- if page.lang == "en_US" and page.zh_url %}
+<link rel="alternate" hreflang="zh-Hant" href="{{ site.url }}{{ page.zh_url }}">
+<link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.url }}">
+{%- elsif page.en_url and site.english_ready %}
+<link rel="alternate" hreflang="zh-Hant" href="{{ site.url }}{{ page.url }}">
+<link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.en_url }}">
+{%- endif %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+{%- if page.lang == "en_US" %}
+{%- comment %}英文版：Noto Sans TC 會把 ’ 等標點排成全形，英文頁改用字形相同的 Source Sans 3（Noto Sans TC 的拉丁字母即源自此字型）。{% endcomment %}
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+{%- endif %}
 {%- comment %}網站圖示：PNG 與 favicon.ico 給不支援 SVG 圖示的瀏覽器（部分手機瀏覽器），manifest 給 Android。{% endcomment %}
 <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="16x16 32x32 48x48">
 <link rel="icon" href="{{ '/assets/brand/favicon-32.png' | relative_url }}" sizes="32x32" type="image/png">

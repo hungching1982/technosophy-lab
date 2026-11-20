@@ -13,7 +13,7 @@ lang: zh_TW
 author: 洪靖 Ching Hung
 
 # 英文版完成後改成 true，右上角才會出現 EN 按鈕
-english_ready: false
+english_ready: true
 
 # 聯絡表單網址：選單「聯絡」、頁尾、關於頁都連到這裡
 contact_form: "https://forms.gle/EU4Bvk571gBMQ3ZA9"

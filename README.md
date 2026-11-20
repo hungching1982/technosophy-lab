@@ -135,7 +135,23 @@
 
 ## 英文版
 
-英文版完成後，把 `_config.yml` 的 `english_ready: false` 改成 `true`，右上角才會出現 EN 按鈕。
+網址在 `/en/` 底下：首頁、關於、研究、出版、成員、消息六頁。英文版是精簡的國際版，不是中文版的完整翻譯；《設計永續》英文專頁尚未製作，書的連結先連到中文書籍頁。
+
+- **用語**：一律依專案文件「術語對照表」。美式拼字、邏輯標點；中文作品在書名或標題後加 `[in Chinese]`。
+- **資料共用**：英文版和中文版讀同一份資料檔，英文寫在各筆的英文欄位，各檔開頭有說明：
+  - `areas.yml`：`title_en`、`text_en`
+  - `concepts.yml`：`text_en`、`see_text_en`、`link_en`
+  - `projects.yml`：`funder_en`、`role_en`（題名用原本的 `en`）
+  - `books.yml`：`title_en`、`authors_en`、`publisher_en`、`cite_en`、`award_en`
+  - `publications.yml`：中文作品的英文書目寫在 `en`；`award_en`
+  - `host.yml`：`title_en`、`affiliation_en`、`roles_en`、`links_en`，學經歷各筆的 `en`、`note_en`
+  - `honors.yml`、`teaching.yml`：`en`（教學成績另有 `term_en`，例如 Fall 2025）
+- **新增一筆資料時**，記得一起寫英文欄位；沒寫的話，英文頁會顯示中文。
+- **消息**：英文版只列兩種：英文消息（`lang: en`），以及加了 `en:` 的中文消息（底下寫 `title`、`summary`，可加 `link_text`）。不需要給國際讀者看的中文消息，不必加。
+- **固定字串**：消息類別、首頁數字欄名稱等寫在 `_data/en.yml`；英文選單在 `_data/navigation_en.yml`。英文版的「Contact」用 email，因為聯絡表單是中文的。
+- **中英對應**：中文頁開頭寫 `en_url`、英文頁寫 `zh_url`，右上角的語言按鈕就會連到對應頁面，也會產生給搜尋引擎的 hreflang 標記。
+- **字型**：英文頁用 Source Sans 3（Noto Sans TC 的拉丁字母就來自這套字型），避免撇號等標點被排成全形。
+- `_config.yml` 的 `english_ready` 控制中文頁右上角的 EN 按鈕；改成 `false` 就會隱藏。
 
 ---
 

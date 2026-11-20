@@ -1,36 +1,41 @@
 {%- assign cur = page.nav_active | default: page.url -%}
+{%- if page.lang == "en_US" -%}{%- assign en = true -%}{%- assign navs = site.data.navigation_en -%}{%- assign home = '/en/' -%}{%- else -%}{%- assign en = false -%}{%- assign navs = site.data.navigation -%}{%- assign home = '/' -%}{%- endif -%}
 <header class="site-header wrap">
-  <a class="brand" href="{{ '/' | relative_url }}" aria-label="Technosophy Lab 社技哲學實驗室 首頁">
+  <a class="brand" href="{{ home | relative_url }}" aria-label="{% if en %}Technosophy Lab home{% else %}Technosophy Lab 社技哲學實驗室 首頁{% endif %}">
     <img src="{{ '/assets/brand/logo_P2_black_orange.png' | relative_url }}" alt="Technosophy Lab" width="346" height="33">
   </a>
-  <nav class="nav" aria-label="主要選單">
-    {%- for item in site.data.navigation %}
+  <nav class="nav" aria-label="{% if en %}Main menu{% else %}主要選單{% endif %}">
+    {%- for item in navs %}
     {%- if item.contact %}
     <a class="ext" href="{{ site.contact_form }}" target="_blank" rel="noopener">{{ item.title }}<span aria-hidden="true">↗</span></a>
     {%- elsif item.external %}
     <a class="ext" href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}<span aria-hidden="true">↗</span></a>
     {%- else %}
-    <a href="{{ item.url | relative_url }}"{% if item.url == "/" %}{% if page.url == "/" %} aria-current="page"{% endif %}{% elsif cur contains item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+    <a href="{{ item.url | relative_url }}"{% if item.url == home %}{% if page.url == home %} aria-current="page"{% endif %}{% elsif cur contains item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
     {%- endif %}
     {%- endfor %}
-    {%- if site.english_ready %}
-    <a class="lang" href="{{ '/en/' | relative_url }}" lang="en">EN</a>
+    {%- if en %}
+    <a class="lang" href="{{ page.zh_url | default: '/' | relative_url }}" lang="zh-Hant">中文</a>
+    {%- elsif site.english_ready %}
+    <a class="lang" href="{{ page.en_url | default: '/en/' | relative_url }}" lang="en">EN</a>
     {%- endif %}
   </nav>
   <details class="menu">
-    <summary>選單</summary>
-    <nav aria-label="行動版選單">
-      {%- for item in site.data.navigation %}
+    <summary>{% if en %}Menu{% else %}選單{% endif %}</summary>
+    <nav aria-label="{% if en %}Mobile menu{% else %}行動版選單{% endif %}">
+      {%- for item in navs %}
       {%- if item.contact %}
       <a href="{{ site.contact_form }}" target="_blank" rel="noopener">{{ item.title }} ↗</a>
       {%- elsif item.external %}
       <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }} ↗</a>
       {%- else %}
-      <a href="{{ item.url | relative_url }}"{% if item.url == "/" %}{% if page.url == "/" %} aria-current="page"{% endif %}{% elsif cur contains item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+      <a href="{{ item.url | relative_url }}"{% if item.url == home %}{% if page.url == home %} aria-current="page"{% endif %}{% elsif cur contains item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
       {%- endif %}
       {%- endfor %}
-      {%- if site.english_ready %}
-      <a href="{{ '/en/' | relative_url }}" lang="en">English</a>
+      {%- if en %}
+      <a href="{{ page.zh_url | default: '/' | relative_url }}" lang="zh-Hant">中文</a>
+      {%- elsif site.english_ready %}
+      <a href="{{ page.en_url | default: '/en/' | relative_url }}" lang="en">English</a>
       {%- endif %}
     </nav>
   </details>

@@ -1,15 +1,20 @@
+{%- if page.lang == "en_US" -%}{%- assign en = true -%}{%- else -%}{%- assign en = false -%}{%- endif -%}
 <footer class="site-footer">
   <div class="f-id">
     <img src="{{ '/assets/brand/logo_P2_reverse_white_orange.png' | relative_url }}" alt="Technosophy Lab" width="230" height="22">
+    {%- if en %}
+    <address class="f-lines" lang="en"><span class="f-name" lang="zh-Hant">社技哲學實驗室</span><br>Initiated by Ching Hung 洪靖<br>Bachelor Program of Interdisciplinary Studies<br>National Chung Cheng University<br>Room 403, Common Class Building</address>
+    {%- else %}
     <address class="f-lines"><span class="f-name">社技哲學實驗室</span><br><span lang="en">Initiated by 洪靖 Ching Hung</span><br>國立中正大學紫荊不分系學士學位學程<br>共同教室大樓 403 室</address>
+    {%- endif %}
   </div>
   <div class="f-links">
     <div class="col">
-      <h2>聯絡 <span lang="en">Contact</span></h2>
-      <a class="f-link" href="{{ site.contact_form }}" rel="noopener">聯絡表單 <span aria-hidden="true">↗</span></a>
+      <h2>{% if en %}Contact{% else %}聯絡 <span lang="en">Contact</span>{% endif %}</h2>
+      {% if en %}<a class="f-link" href="mailto:{{ site.data.host.email_public }}">{{ site.data.host.email_public }}</a>{% else %}<a class="f-link" href="{{ site.contact_form }}" rel="noopener">聯絡表單 <span aria-hidden="true">↗</span></a>{% endif %}
     </div>
     <div class="col">
-      <h2>追蹤 <span lang="en">Follow</span></h2>
+      <h2>{% if en %}Follow{% else %}追蹤 <span lang="en">Follow</span>{% endif %}</h2>
       <ul class="social" lang="en">
         {%- for s in site.data.social %}
         <li><a href="{{ s.url }}" rel="noopener" data-goatcounter-click="社群-頁尾-{{ s.label | replace: ' · ', ' ' }}">{{ s.label }}</a></li>
@@ -17,5 +22,5 @@
       </ul>
     </div>
   </div>
-  <p class="f-views" data-viewcount="TOTAL" hidden>累計到訪 <span class="vc-n"></span> 人次</p>
+  <p class="f-views" data-viewcount="TOTAL" hidden>{% if en %}Total visits: <span class="vc-n"></span>{% else %}累計到訪 <span class="vc-n"></span> 人次{% endif %}</p>
 </footer>

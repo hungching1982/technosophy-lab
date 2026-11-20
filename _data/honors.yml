@@ -1,28 +1,42 @@
 # 學術榮譽，由新到舊（依系上網頁）。
 # link：相關連結（報導等），link_text：連結文字（預設「連結」）。
+# en：英文版用的文字；link_text_en：英文版的連結文字。
 - year: '2026'
   text: 114 學年度國立中正大學教學優良獎
+  en: Excellent Teaching Performance Award, National Chung Cheng University
 - year: '2025'
   text: 114 年台綜大年輕學者創新研發成果選拔人社領域優等獎
+  en: Excellence Award in Humanities and Social Sciences, Young Scholars’ Innovative R&D Results Selection, Taiwan Comprehensive University System
 - year: '2024'
   text: 113 學年度國立中正大學青年學者獎
+  en: Young Scholar Award, National Chung Cheng University
 - year: '2023'
   text: 全球環境獎項 The Earthshot Prize 官方提名機構國立成功大學提名入圍
+  en: Official Nominee for The Earthshot Prize, nominated by National Cheng Kung University, Taiwan’s official nominator
 - year: '2023'
   text: 台灣科技與社會研究（STS）學會王玉豐年輕學者論文紀念獎
+  en: Early Career Paper Award, Taiwan STS Association
 - year: 2023–2025
   text: 國科會 2030 跨世代年輕學者方案新秀學者研究計畫
+  en: Emerging Young Scholars Grant, 2030 Cross-Generation Young Scholars Program, National Science and Technology Council
 - year: '2021'
   text: UNESCO 世界哲學日受邀講者（全球 25 位）
+  en: Invited Speaker (one of 25 globally), UNESCO World Philosophy Day
 - year: '2021'
   text: 荷蘭科技與公眾溝通中心（NEMO）官方刊物 Kennislink 專文採訪
+  en: Featured interview in <i>Kennislink</i>, published by NEMO Science Museum, the Netherlands
+  link_text_en: Read the interview [in Dutch]
   link: https://www.nemokennislink.nl/publicaties/ook-niet-levende-dingen-beinvloeden-ons-gedrag/
   link_text: 閱讀報導
 - year: '2020'
   text: 台灣科技與社會研究（STS）學會博士論文獎首獎
+  en: Excellent Doctoral Dissertation Prize, Taiwan STS Association
 - year: 2013–2016
   text: 教育部留學獎學金
+  en: Government Scholarship for Overseas Study, Ministry of Education
 - year: '2013'
   text: 國立清華大學社會學研究所博士班入學獎學金
+  en: Doctoral Program Entrance Scholarship, Institute of Sociology, National Tsing Hua University
 - year: '2012'
   text: 台達電子文教基金會荷蘭環境獎學金（博士）
+  en: Delta Netherlands Environmental Scholarship (Doctoral), Delta Electronics Foundation

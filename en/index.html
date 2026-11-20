@@ -1,0 +1,70 @@
+---
+layout: default
+lang: en_US
+description: Technosophy Lab develops a research program that begins with concrete technological and social problems and uses them to rethink behavior, technology, design, politics, and human agency.
+zh_url: /
+---
+{%- comment -%}
+  英文版首頁。對應中文版 /index.html。
+  消息只列出英文消息（lang: en）與加了 en: 欄位的中文消息。
+{%- endcomment -%}
+<section class="hero" aria-labelledby="hero-title">
+  <div class="intro">
+    <p class="eyebrow">Technosophy Lab · <span lang="zh-Hant">社技哲學實驗室</span></p>
+    <h1 id="hero-title"><span>Technology as the</span><br><span>starting point for</span><br><span>remaking philosophy.</span></h1>
+    <p class="lead">Starting from concrete sociotechnical problems, we rethink action, freedom, design, and politics.</p>
+    <div class="actions">
+      <a class="btn" href="{{ '/en/research/' | relative_url }}">Our Research <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+
+  <aside class="host" aria-label="Principal Investigator">
+    <p class="eyebrow">Principal Investigator</p>
+    <figure class="host-art">
+      <img src="{{ '/assets/img/host.jpg' | relative_url }}" alt="Ching Hung speaking at a panel discussion" width="440" height="550">
+      <img class="tint" src="{{ '/assets/img/host_tint.jpg' | relative_url }}" alt="" width="440" height="550" aria-hidden="true">
+      <span class="dots" aria-hidden="true"></span>
+    </figure>
+    <div class="meta">
+      <p class="host-name">Ching Hung<small lang="zh-Hant">洪靖</small></p>
+      <p class="host-role">Assistant Professor, Bachelor Program of Interdisciplinary Studies, National Chung Cheng University</p>
+      <a class="textlink" href="{{ '/en/people/' | relative_url }}">About the PI →</a>
+    </div>
+  </aside>
+
+  <aside class="stats" aria-label="Research record">
+    {%- for s in site.data.stats %}
+    <div class="stat"><b>{{ s.value }}</b><span>{{ site.data.en.stats[s.label] | default: s.label }}</span></div>
+    {%- endfor %}
+  </aside>
+</section>
+
+<div class="areas" aria-label="Areas of research">
+  {%- for a in site.data.areas %}
+  <div class="area"><span class="no">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span><h3>{{ a.title_en | default: a.en }}</h3><p>{{ a.text_en }}</p></div>
+  {%- endfor %}
+</div>
+
+{% include news-items.html %}
+{%- assign news_en = "" | split: "" -%}
+{%- for n in news_kept -%}{%- if n.lang == "en" or n.en -%}{%- assign news_en = news_en | push: n -%}{%- endif -%}{%- endfor -%}
+{%- assign en_pinned = news_en | where: "pinned", true | first -%}
+{%- assign en_rest = news_en | where_exp: "n", "n.pinned != true" -%}
+<section class="section" aria-labelledby="news-title">
+  <div class="head">
+    <p class="eyebrow">News</p>
+    <h2 id="news-title">Latest News</h2>
+    <p>Publications, awards, presentations, talks, courses, and events</p>
+  </div>
+  <div class="body">
+    {%- if en_pinned %}
+    {% include news-featured.html item=en_pinned en=true %}
+    {%- endif %}
+    <ul class="rows latest">
+      {%- for n in en_rest limit: 5 %}
+      {% include news-row.html item=n en=true %}
+      {%- endfor %}
+    </ul>
+    <p class="more-below"><a class="textlink" href="{{ '/en/news/' | relative_url }}">All news →</a></p>
+  </div>
+</section>

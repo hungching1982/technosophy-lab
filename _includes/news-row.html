@@ -1,3 +1,3 @@
 {%- assign n = include.item -%}
-<li class="row" data-date="{{ n.date | date: '%Y-%m-%d' }}">{% include news-date.html item=n %}<span class="tag">{{ n.type }}</span>
-  <div><h3>{% include news-title.html item=n %}</h3>{% if n.summary %}<p{% if n.lang %} lang="{{ n.lang }}"{% endif %}>{{ n.summary }}</p>{% endif %}{% if n.link %}<p class="go">{% include news-link.html item=n %}</p>{% endif %}</div></li>
+<li class="row" data-date="{{ n.date | date: '%Y-%m-%d' }}">{% include news-date.html item=n %}<span class="tag">{% if include.en %}{{ site.data.en.types[n.type] | default: n.type }}{% else %}{{ n.type }}{% endif %}</span>
+  <div><h3>{% include news-title.html item=n en=include.en %}</h3>{% if include.en and n.en %}{% if n.en.summary %}<p lang="en">{{ n.en.summary }}</p>{% endif %}{% elsif n.summary %}<p{% if n.lang %} lang="{{ n.lang }}"{% endif %}>{{ n.summary }}</p>{% endif %}{% if n.link or n.en.link %}<p class="go">{% include news-link.html item=n en=include.en %}</p>{% endif %}</div></li>

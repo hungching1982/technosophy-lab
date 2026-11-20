@@ -1,0 +1,56 @@
+---
+title: People
+description: Principal Investigator Ching Hung, the team, and student achievements at Technosophy Lab.
+layout: default
+lang: en_US
+extra_css: /assets/css/pages.css
+zh_url: /people/
+---
+{%- assign h = site.data.host %}
+{%- assign current = site.data.members | where_exp: "m", "m.to == nil" %}
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="head"><p class="eyebrow">People</p><h1 id="page-title">People</h1></div>
+  <div class="lede"><p>Technosophy Lab was initiated by Ching Hung. Its members are mainly students at National Chung Cheng University, who work on cases, data, fieldwork, and design.</p></div>
+</section>
+
+<section class="hostcard" aria-labelledby="host-name">
+  <div class="pic"><p class="eyebrow">Principal Investigator</p><figure class="host-art"><img src="{{ '/assets/img/host.jpg' | relative_url }}" alt="Ching Hung speaking at a panel discussion" width="440" height="550"><img class="tint" src="{{ '/assets/img/host_tint.jpg' | relative_url }}" alt="" width="440" height="550" aria-hidden="true"><span class="dots" aria-hidden="true"></span></figure></div>
+  <div class="info">
+    <div><h2 class="name" id="host-name">{{ h.name_en }}<small lang="zh-Hant">{{ h.name }}</small></h2><p class="role">{{ h.title_en }}, {{ h.affiliation_en }}</p></div>
+    <ul class="roles">{% for r in h.roles_en %}<li>{{ r }}</li>{% endfor %}</ul>
+    <div class="cv">
+      <div><h3>Education</h3><ul>{% for e in h.education %}<li><span>{{ e.years }}</span><div>{{ e.en }}{% if e.note_en %}<small>{{ e.note_en }}</small>{% endif %}</div></li>{% endfor %}</ul></div>
+      <div class="cv-col"><h3>Appointments</h3><ul>{% for e in h.appointments %}<li><span>{{ e.years }}</span><div>{{ e.en }}</div></li>{% endfor %}</ul></div>
+    </div>
+    <p class="hostlinks">{% for l in h.links_en %}<a class="textlink" href="{{ l.url }}" rel="noopener"{% if l.label == "Facebook" or l.label == "Instagram" or l.label == "X" %} data-goatcounter-click="社群-成員頁主理人EN-{{ l.label }}"{% endif %}>{{ l.label }} <span aria-hidden="true">↗</span></a>{% endfor %}</p>
+  </div>
+</section>
+
+<section class="blk" aria-labelledby="hon-title">
+  <div class="head"><p class="eyebrow">Honors</p><h2 id="hon-title">Academic and Teaching Honors</h2></div>
+  <div class="body">
+    <div class="honfold">
+    <div class="cv">
+      <div><h3>Academic Honors and Grants</h3>{% include s/cvlist.html list=site.data.honors show=9 en=true %}</div>
+      <div><h3>Teaching Awards</h3>{% include s/cvlist.html list=site.data.teaching show=8 en=true %}</div>
+    </div>
+    {%- if site.data.honors.size > 9 or site.data.teaching.size > 8 %}
+    <details class="talks-more more-talks cv-more"><summary>Show earlier records ↓</summary></details>
+    {%- endif %}
+    </div>
+  </div>
+</section>
+
+<section class="blk" aria-labelledby="team-title">
+  <div class="head"><p class="eyebrow">Team</p><h2 id="team-title">Team</h2></div>
+  <div class="body">
+    <p class="pnote">The team currently has {{ current.size }} student members from different departments of National Chung Cheng University, who take part in research, administration, and visual communication. <a class="textlink" href="{{ '/people/#team-title' | relative_url }}">Current and former members [in Chinese] →</a></p>
+  </div>
+</section>
+
+<section class="blk" aria-labelledby="rec-title">
+  <div class="head"><p class="eyebrow">Students</p><h2 id="rec-title">Student Achievements</h2></div>
+  <div class="body">
+    <p class="pnote">Competitions, awards, and conference presentations by students, including but not limited to team members—among them gold medals for Team CCU-Taiwan at the iGEM competition. <a class="textlink" href="{{ '/people/#rec-title' | relative_url }}">Full record [in Chinese] →</a></p>
+  </div>
+</section>

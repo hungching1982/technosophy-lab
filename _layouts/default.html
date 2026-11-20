@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="zh-Hant"{% if site.goatcounter %} data-gc="{{ site.goatcounter }}"{% endif %}>
+{%- assign en = false -%}{%- if page.lang == "en_US" -%}{%- assign en = true -%}{%- endif -%}
+<html lang="{% if en %}en{% else %}zh-Hant{% endif %}"{% if site.goatcounter %} data-gc="{{ site.goatcounter }}"{% endif %}>
 <head>
 {% include head.html %}
 </head>
 <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
-<a class="skip" href="#main">跳到主要內容</a>
+<a class="skip" href="#main">{% if en %}Skip to main content{% else %}跳到主要內容{% endif %}</a>
 <div class="frame">
   {% include header.html %}
   <main id="main">

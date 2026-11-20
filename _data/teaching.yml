@@ -1,21 +1,42 @@
 # 教學成績，由新到舊（依系上網頁）。term 寫學年度與學期，例如 114-1。
+# term_en、en：英文版用（例如 Fall 2025）。
 - term: 114-1
   text: 國立中正大學教學感謝狀：跨領域專題研究（一）
+  term_en: Fall 2025
+  en: Commendable Course Award, National Chung Cheng University — <i>Interdisciplinary Capstone Project (I)</i>
 - term: 113-2
   text: 全國專業倫理個案競賽佳作（150 組參賽）：生物醫學的科學、技術與社會（學生期末報告）
+  term_en: Spring 2025
+  en: Honorable Mention (out of 150 teams), National Professional Ethics Competition — <i>Introduction to Biomedicine’s Science, Technology, and Society</i> (students’ final report)
 - term: 113-1
   text: 國立中正大學教學感謝狀：系統性創新方法與實務
+  term_en: Fall 2024
+  en: Commendable Course Award, National Chung Cheng University — <i>Introduction to Systematic Innovation</i>
 - term: 112-2
   text: 國立中正大學教學感謝狀：紫荊學習規劃（二）
+  term_en: Spring 2024
+  en: Commendable Course Award, National Chung Cheng University — <i>Academic Planning for Students in the Interdisciplinary Studies Program II</i>
 - term: 112-1
   text: 國立中正大學教學感謝狀：紫荊學習規劃（一）
+  term_en: Fall 2023
+  en: Commendable Course Award, National Chung Cheng University — <i>Academic Planning for Students in the Interdisciplinary Studies Program I</i>
 - term: 111-2
   text: 國立中正大學教學感謝狀：技術哲學導論
+  term_en: Spring 2023
+  en: Commendable Course Award, National Chung Cheng University — <i>Introduction to Philosophy of Technology</i>
 - term: 111-1
   text: 國立中正大學教學感謝狀：社會設計導論、科技與社會
+  term_en: Fall 2022
+  en: Commendable Course Award, National Chung Cheng University — <i>Introduction to Social Design</i> and <i>Technology and Society</i>
 - term: 110-2
   text: 國立陽明交通大學票選特色課程：技術哲學導論
+  term_en: Spring 2022
+  en: Voted Featured Course, National Yang Ming Chiao Tung University — <i>Introduction to Philosophy of Technology</i>
 - term: 110-1
   text: 國立高雄大學全校優良課程：科技與社會
+  term_en: Fall 2021
+  en: Commendable Course Award, National University of Kaohsiung — <i>Science, Technology and Society</i>
 - term: 109-1
   text: 全國專業倫理個案競賽優等（191 組參賽）：科技與工程倫理（國立高雄大學，學生期末報告）
+  term_en: Fall 2020
+  en: Excellence Award (out of 191 teams), National Professional Ethics Competition — <i>Technology and Engineering Ethics</i> (National University of Kaohsiung; students’ final report)
