@@ -61,7 +61,7 @@ extra_css2: /assets/css/book.css
   <div class="head"><p class="eyebrow">Forewords</p><h2 id="fw-title">Forewords</h2></div>
   <div class="body longtext">
     {%- capture v %}{% include dfg/verbeek_en.md %}{% endcapture %}{% assign vp = v | markdownify | split: '</p>' %}
-    <article class="fw"><h3>Foreword</h3>
+    <article class="fw"><h3>Philosophy from Technology</h3>
       <p class="who"><b>Peter-Paul Verbeek</b><br>President, Royal Netherlands Academy of Arts and Sciences (KNAW)<br>Professor of Philosophy and Ethics of Science and Technology, University of Amsterdam</p>
       {{ vp[0] }}</p>
       <details><summary data-goatcounter-click="書籍頁EN-展開-推薦序Verbeek">Read the full foreword ↓</summary>{% for x in vp offset: 1 %}{{ x }}{% unless forloop.last %}</p>{% endunless %}{% endfor %}</details>
