@@ -30,8 +30,9 @@
 .c-taupe { color: var(--taupe); }
 
 
-/* ---------- 開頭 ---------- */
-.sy-hero { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); border-bottom: 1px solid var(--rule); }
+/* ---------- 開頭 ----------
+   桌機：左欄寬度隨標題，書封在標題右側剩下的空間裡左右置中 */
+.sy-hero { display: grid; grid-template-columns: auto minmax(0, 1fr); border-bottom: 1px solid var(--rule); }
 .sy-hero .ttl { padding: clamp(40px, 5.5vw, 88px) var(--gutter) clamp(28px, 3vw, 44px); }
 .sy-hero .ttl .eyebrow { font-size: 15px; }
 /* 字級都由英文副標的字級推出：主標、中文副標分散對齊到英文的寬度 */
@@ -111,7 +112,6 @@
 .sy-names small { margin-left: 6px; font-size: 13px; font-weight: 400; color: var(--ink-2); }
 
 @media (max-width: 1080px) {
-  .sy-hero { grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); }
   .sy-facts { grid-template-columns: 1fr 1fr; }
   .sy-facts .place .big { white-space: normal; }
   .sy-facts .act { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--line); }
