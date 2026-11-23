@@ -1,0 +1,118 @@
+---
+title: 技術思考．思考技術：《設計永續》跨域論壇
+description: 2027 年 1 月 9 日（六）13:30–17:30，國立中正大學行政大樓西棟聚心廳。兩場與談與綜合討論，需報名。
+layout: default
+body_class: sym
+extra_css: /assets/css/pages.css
+extra_css2: /assets/css/symposium.css
+nav_active: /news/
+# 報名表單網址：拿到之後填在引號裡，按鈕就會出現
+register_url: ""
+---
+{%- assign b = site.data.books | where: "id", "design-for-green-zh" | first -%}
+<section class="sy-hero" aria-labelledby="page-title">
+  <div class="ttl">
+    <p class="eyebrow">論壇 Book Symposium</p>
+    <div class="sy-lockup">
+      <h1 id="page-title"><span class="l"><span class="c-blue">技術</span><span class="c-choc">思考</span></span><span class="vh">．</span><span class="l"><span class="c-blue">思考</span><span class="c-choc">技術</span></span></h1>
+      <p class="sub"><span class="halt">《</span>設計永續<span class="halt">》</span>跨域論壇</p>
+      <p class="en" lang="en">Technical Thinking, Thinking Technology: A Symposium on <i>Design for Green</i></p>
+    </div>
+  </div>
+  <div class="art"><img src="{{ '/assets/img/book/dfg_3d.webp' | relative_url }}" alt="《設計永續》立體書封" width="438" height="640"></div>
+  <div class="sy-facts">
+    <div class="date"><span class="lb">日期</span><div class="dbox"><p class="big">2027.01.09</p><p class="sm"><span>週六</span><span>13:30–17:30</span></p></div></div>
+    <div class="place"><span class="lb">地點</span><p class="big">國立中正大學 行政大樓西棟 聚心廳</p><p class="sm">嘉義縣民雄鄉大學路一段 168 號　<a class="textlink" href="https://maps.app.goo.gl/gbzvD3eehfHN3eeJ6" target="_blank" rel="noopener">Google Map</a></p></div>
+    <div class="act"><span class="lb">報名</span>
+      {%- if page.register_url != "" %}
+      <a class="btn sy-btn" href="{{ page.register_url }}" target="_blank" rel="noopener">線上報名 <span class="arrow" aria-hidden="true">→</span></a>
+      {%- else %}
+      <span class="sy-pending">報名表單即將公布</span>
+      {%- endif %}
+    </div>
+  </div>
+</section>
+
+<section class="blk" aria-labelledby="book-title">
+  <div class="head"><p class="eyebrow">書籍 The Book</p><h2 id="book-title">討論書籍</h2></div>
+  <div class="body sy-book">
+    <h3><span class="halt">《</span>設計永續：技術干預的倫理與政治<span class="halt">》</span></h3>
+    <dl class="kv course-kv">
+      <dt>作者</dt><dd><span class="nm"><a href="{{ '/people/' | relative_url }}">洪靖</a></span><span class="af">國立中正大學紫荊不分系助理教授</span></dd>
+      <dt>譯者</dt><dd>{{ b.translator }}</dd>
+      <dt>出版社</dt><dd>{{ b.publisher }}</dd>
+      <dt>出版日期</dt><dd>{{ b.pubdate }}</dd>
+      <dt>專文推薦</dt><dd><span class="rcm"><span class="nm" lang="en">Peter-Paul Verbeek</span><span class="af">{{ site.data.dfg.quotes[0].title }}</span></span><span class="rcm"><span class="nm">傅大為</span><span class="af">{{ site.data.dfg.quotes[1].title }}</span></span></dd>
+    </dl>
+    <p class="more"><a class="textlink" href="{{ '/design-for-green/' | relative_url }}">關於此書</a></p>
+  </div>
+</section>
+
+<section class="blk" aria-labelledby="ppl-title">
+  <div class="head"><p class="eyebrow">與會學者 Participants</p><h2 id="ppl-title">與會學者</h2><p>按筆劃順序排列</p></div>
+  <div class="body">
+    {%- comment -%} 依姓氏筆畫；同筆畫依名字第一字筆畫 {%- endcomment %}
+    <ul class="sy-roster">
+      <li><span class="nm">杜嘉玲</span><span class="af"><span class="sc">長榮大學</span><span class="tt">應用哲學系副教授</span></span></li>
+      <li><span class="nm">李翠萍</span><span class="af"><span class="sc">中正大學</span><span class="tt">政治學系教授兼教務長</span><span class="rec">（錄影評論）</span></span></li>
+      <li><span class="nm">洪世謙</span><span class="af"><span class="sc">中山大學</span><span class="tt">哲學研究所教授／社會創新研究所所長</span></span></li>
+      <li><span class="nm">宮保睿</span><span class="af"><span class="sc">實踐大學</span><span class="tt">工業產品設計學系副教授</span><span class="rec">（錄影評論）</span></span></li>
+      <li><span class="nm">翁註重</span><span class="af"><span class="sc">雲林科技大學</span><span class="tt">工業設計系教授</span></span></li>
+      <li><span class="nm">郭文華</span><span class="af"><span class="sc">陽明交通大學</span><span class="tt">科技與社會研究所特聘教授／國際 STS 學會（4S）會長</span></span></li>
+      <li><span class="nm">陳恒安</span><span class="af"><span class="sc">成功大學</span><span class="tt">歷史學系教授</span></span></li>
+      <li><span class="nm">陳瑞麟</span><span class="af"><span class="sc">中正大學</span><span class="tt">哲學系講座教授</span></span></li>
+      <li><span class="nm">陳憶寧</span><span class="af"><span class="sc">政治大學</span><span class="tt">廣告學系特聘教授兼國合長</span></span></li>
+      <li><span class="nm">魏楚陽</span><span class="af"><span class="sc">中正大學</span><span class="tt">政治學系副教授</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="blk" aria-labelledby="prog-title">
+  <div class="head"><p class="eyebrow">議程 Program</p><h2 id="prog-title">當日議程</h2></div>
+  <div class="body">
+    <ol class="sy-prog">
+      <li class="minor"><span class="tm">13:00–13:30</span><span class="what">報到／入座</span></li>
+      <li><span class="tm">13:30–13:40</span><span class="what">開場</span></li>
+      <li class="session">
+        <span class="tm">13:40–15:10</span>
+        <div class="sy-sess">
+          <h3 class="sy-srow"><span lang="en">Session 1</span><span class="c-blue">從設計到行為</span></h3>
+          <dl>
+            <dt>主持</dt><dd><ul class="sy-names"><li>杜嘉玲</li></ul></dd>
+            <dt>與談</dt><dd><ul class="sy-names"><li>陳憶寧</li><li>洪世謙</li><li>翁註重</li><li>李翠萍<small>錄影評論</small></li></ul></dd>
+            <dt>回應</dt><dd><ul class="sy-names"><li>洪靖</li></ul></dd>
+            <dt>討論</dt><dd class="plain">聽眾現場提問與分享</dd>
+          </dl>
+        </div>
+      </li>
+      <li class="minor"><span class="tm">15:10–15:30</span><span class="what">小憩／點心</span></li>
+      <li class="session">
+        <span class="tm">15:30–16:50</span>
+        <div class="sy-sess">
+          <h3 class="sy-srow"><span lang="en">Session 2</span><span class="c-choc">從技術到政治</span></h3>
+          <dl>
+            <dt>主持</dt><dd><ul class="sy-names"><li>陳恒安</li></ul></dd>
+            <dt>與談</dt><dd><ul class="sy-names"><li>郭文華</li><li>陳瑞麟</li><li>魏楚陽</li><li>宮保睿<small>錄影評論</small></li></ul></dd>
+            <dt>回應</dt><dd><ul class="sy-names"><li>洪靖</li></ul></dd>
+            <dt>討論</dt><dd class="plain">聽眾現場提問與分享</dd>
+          </dl>
+        </div>
+      </li>
+      <li class="minor"><span class="tm">16:50–17:00</span><span class="what">小憩／飲料</span></li>
+      <li><span class="tm">17:00–17:30</span><span class="what"><span class="c-taupe sy-rowname">綜合討論</span></span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="blk" aria-labelledby="info-title">
+  <div class="head"><p class="eyebrow">資訊 Details</p><h2 id="info-title">活動資訊</h2></div>
+  <div class="body">
+    <dl class="kv course-kv">
+      <dt>時間</dt><dd>2027 年 1 月 9 日（星期六）<span class="nwb">13:30–17:30</span><br><span class="nwb">13:00 開始報到</span></dd>
+      <dt>地點</dt><dd>國立中正大學 行政大樓西棟 聚心廳<br><a class="textlink" href="https://maps.app.goo.gl/gbzvD3eehfHN3eeJ6" target="_blank" rel="noopener">Google Map</a></dd>
+      <dt>主辦</dt><dd>國科會人文驅動之未來社會關鍵課題研究與發展「編織農工鑲嵌的未來地景：嘉義科技產業廊帶的公正轉型與共構實踐」計畫</dd>
+      <dt>協辦</dt><dd><span class="blkline">國立中正大學紫荊不分系學士學位學程</span><span class="blkline">國科會人文驅動之未來社會關鍵課題研究與發展「建構以社會設計與創意為中心的跨域人文：行動中的科技創新、公民感知與跨域連接」計畫</span></dd>
+      <dt>報名</dt><dd>{%- if page.register_url != "" -%}<a class="textlink" href="{{ page.register_url }}" target="_blank" rel="noopener">線上報名表單</a>{%- else -%}報名表單即將公布{%- endif -%}</dd>
+    </dl>
+  </div>
+</section>
