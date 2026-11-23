@@ -54,6 +54,7 @@
 .sy-facts .place .big { white-space: nowrap; }
 .sy-facts .sm { margin: 8px 0 0; font-size: 15px; color: var(--ink-2); }
 .sy-facts .date .sm { color: var(--black); font-weight: 500; }
+.sy-facts .textlink { white-space: nowrap; }
 /* 第二行左右撐開，讓「17:30」與上一行的「09」右側切齊 */
 .sy-facts .dbox { display: inline-block; }
 .sy-facts .dbox .big { text-align: justify; text-align-last: justify; text-justify: inter-character; }
@@ -116,13 +117,16 @@
   .sy-facts .act { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--line); }
 }
 @media (max-width: 760px) {
-  .sy-hero { grid-template-columns: minmax(0, 1fr) auto; }
-  .sy-lockup { --T: clamp(40px, 12.5vw, 60px); width: auto; }
-  .sy-hero .sub { font-size: calc(var(--T) * .44); }
+  /* 手機：書封獨立一個區塊，夾在標題與日期地點之間（同書籍頁的做法，但不加底色） */
+  .sy-hero { grid-template-columns: minmax(0, 1fr); }
+  .sy-hero .ttl { padding-bottom: 32px; }
+  /* 主標與副標分散對齊到版心寬；字級隨版心寬縮放（上限 72px），副標比例同桌機 */
+  .sy-hero .ttl { container-type: inline-size; }
+  .sy-lockup { --T: min(calc(100cqw / 4.4), 72px); width: min(100%, calc(var(--T) * 4.4)); }
+  .sy-hero .sub { font-size: calc(var(--T) * .456); }
   .sy-hero .en { font-size: 13px; white-space: normal; margin-top: 12px; }
-  .sy-hero .ttl { padding-right: 8px; }
-  .sy-hero .art { align-items: flex-end; padding: 0 var(--gutter) clamp(28px, 3vw, 44px) 0; }
-  .sy-hero .art img { width: 22vw; min-width: 76px; }
+  .sy-hero .art { padding: 36px var(--gutter); border-top: 1px solid var(--hair); }
+  .sy-hero .art img { width: min(52%, 240px); }
   .sy-facts { grid-template-columns: 1fr; }
   .sy-facts > * + * { border-left: 0; border-top: 1px solid var(--line); }
   .sy-roster li { grid-template-columns: 1fr; gap: 2px; }
